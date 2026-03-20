@@ -442,6 +442,43 @@ body {
     gap: 20px;
 }
 
+.practice-guide {
+    padding: 18px 24px;
+}
+
+.guide-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.guide-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.guide-step-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-gradient);
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
 /* ── Glass Cards ── */
 .glass-card {
     background: var(--bg-card);
@@ -511,6 +548,21 @@ body {
     padding: 8px 0;
 }
 
+.image-note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: var(--info-bg);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.image-note i {
+    color: var(--info);
+    margin-right: 8px;
+}
+
 /* ── Answer Card / Form ── */
 .form-group {
     margin-bottom: 20px;
@@ -574,6 +626,82 @@ body {
 .form-textarea:focus {
     border-color: var(--accent-primary);
     box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.option-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.option-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.option-card.selected {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.12);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.option-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.option-badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.option-card.selected .option-badge {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    color: white;
+}
+
+.option-content {
+    min-width: 0;
+}
+
+.option-title {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.option-text {
+    color: var(--text-primary);
+    font-size: 15px;
+    line-height: 1.6;
+    word-break: break-word;
 }
 
 .char-count {
@@ -722,6 +850,49 @@ body {
     font-size: 15px;
     color: var(--text-secondary);
     line-height: 1.5;
+}
+
+.result-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.meta-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid var(--border-color);
+    background: var(--bg-input);
+    color: var(--text-secondary);
+}
+
+.meta-pill-correct {
+    background: var(--success-bg);
+    color: var(--success);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.meta-pill-incorrect {
+    background: var(--danger-bg);
+    color: var(--danger);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.meta-pill-warning {
+    background: var(--warning-bg);
+    color: var(--warning);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.meta-pill-neutral {
+    background: var(--info-bg);
+    color: var(--info);
+    border-color: rgba(59, 130, 246, 0.3);
 }
 
 /* ── Answer Comparison ── */
@@ -1055,6 +1226,11 @@ body {
         text-align: center;
     }
 
+    .guide-steps,
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+
     .practice-section {
         padding: 20px 12px 60px;
     }
@@ -1065,6 +1241,10 @@ body {
 
     .nav-container {
         padding: 0 12px;
+    }
+
+    .result-meta {
+        justify-content: center;
     }
 }
 

@@ -1,0 +1,8 @@
+i want this code in the qwen3-4b.ipynb file, in structured way
+TRAIN_PATH = "/kaggle/input/datasets/mkhanshovon43/map-ds/DS/train.csv"
+TEST_PATH = "/kaggle/input/datasets/mkhanshovon43/map-ds/DS/test.csv"
+OUTPUT_ROOT = Path("/kaggle/working/map_multi_llm_runs")
+these are paths
+I'll run it in kaggle using H100
+First i'll try the quick_run to ensure the correctness, then full training
+After training the model should be saved using it's name

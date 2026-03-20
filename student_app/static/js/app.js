@@ -1,15 +1,7 @@
-/**
- * MAP — Math Practice Portal
- * Student-facing frontend logic
- */
-
-// ============================================================
-// THEME MANAGEMENT
-// ============================================================
 const ThemeManager = {
     init() {
-        const saved = localStorage.getItem('map-student-theme') || 'dark';
-        this.set(saved);
+        const savedTheme = localStorage.getItem('map-student-theme') || 'dark';
+        this.set(savedTheme);
         document.getElementById('themeToggle').addEventListener('click', () => this.toggle());
     },
 
@@ -26,9 +18,7 @@ const ThemeManager = {
     }
 };
 
-// ============================================================
-// TOAST NOTIFICATIONS
-// ============================================================
+
 const Toast = {
     show(message, type = 'success') {
         const container = document.getElementById('toastContainer');
@@ -39,6 +29,7 @@ const Toast = {
             <span>${message}</span>
         `;
         container.appendChild(toast);
+
         setTimeout(() => {
             toast.style.animation = 'toastOut 0.3s ease-in forwards';
             setTimeout(() => toast.remove(), 300);
@@ -46,16 +37,13 @@ const Toast = {
     }
 };
 
-// ============================================================
-// SCORE TRACKER
-// ============================================================
+
 const Score = {
     correct: 0,
     wrong: 0,
     total: 0,
 
     init() {
-        // Load from session
         const saved = sessionStorage.getItem('map-student-score');
         if (saved) {
             const data = JSON.parse(saved);
@@ -67,9 +55,12 @@ const Score = {
     },
 
     add(isCorrect) {
-        this.total++;
-        if (isCorrect) this.correct++;
-        else this.wrong++;
+        this.total += 1;
+        if (isCorrect) {
+            this.correct += 1;
+        } else {
+            this.wrong += 1;
+        }
         this.save();
         this.render();
     },
@@ -78,7 +69,7 @@ const Score = {
         sessionStorage.setItem('map-student-score', JSON.stringify({
             correct: this.correct,
             wrong: this.wrong,
-            total: this.total,
+            total: this.total
         }));
     },
 
@@ -89,44 +80,31 @@ const Score = {
     }
 };
 
-// ============================================================
-// PRACTICE APP
-// ============================================================
+
 const Practice = {
     currentQuestion: null,
     questionNumber: 0,
     isSubmitting: false,
 
     init() {
-        // Start button
         document.getElementById('startBtn').addEventListener('click', () => this.start());
-
-        // Submit form
-        document.getElementById('answerForm').addEventListener('submit', (e) => {
-            e.preventDefault();
+        document.getElementById('skipBtn').addEventListener('click', () => this.loadQuestion());
+        document.getElementById('nextBtn').addEventListener('click', () => this.nextQuestion());
+        document.getElementById('answerForm').addEventListener('submit', (event) => {
+            event.preventDefault();
             this.submit();
         });
 
-        // Skip button
-        document.getElementById('skipBtn').addEventListener('click', () => this.loadQuestion());
-
-        // Next button
-        document.getElementById('nextBtn').addEventListener('click', () => this.nextQuestion());
-
-        // Character counter
         const textarea = document.getElementById('studentExplanation');
         textarea.addEventListener('input', () => {
             document.getElementById('charCount').textContent = textarea.value.length;
         });
 
-        // Star rating
-        document.querySelectorAll('.star-btn').forEach(btn => {
-            btn.addEventListener('click', () => this.rate(parseInt(btn.dataset.rating)));
+        document.querySelectorAll('.star-btn').forEach((button) => {
+            button.addEventListener('click', () => this.rate(parseInt(button.dataset.rating, 10)));
         });
 
-        // Check if already started (page refresh)
-        const inProgress = sessionStorage.getItem('map-student-started');
-        if (inProgress === 'true') {
+        if (sessionStorage.getItem('map-student-started') === 'true') {
             this.start();
         }
     },
@@ -135,84 +113,131 @@ const Practice = {
         sessionStorage.setItem('map-student-started', 'true');
         document.getElementById('welcomeHero').style.display = 'none';
         document.getElementById('practiceSection').style.display = 'block';
-        await this.loadQuestion();
+
+        if (!this.currentQuestion) {
+            await this.loadQuestion();
+        }
     },
 
     async loadQuestion() {
-        // Reset UI
-        document.getElementById('feedbackPanel').style.display = 'none';
-        document.getElementById('answerCard').style.display = 'block';
-        document.getElementById('studentAnswer').value = '';
-        document.getElementById('studentExplanation').value = '';
-        document.getElementById('charCount').textContent = '0';
-        document.getElementById('submitBtn').disabled = false;
-
-        // Reset star rating
-        document.querySelectorAll('.star-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById('ratingThanks').style.display = 'none';
-        document.getElementById('starRating').style.display = 'flex';
-
-        this.questionNumber++;
+        this.resetQuestionUI();
+        this.questionNumber += 1;
         document.getElementById('questionNumber').textContent = this.questionNumber;
 
         try {
-            const res = await fetch('/api/question');
-            const data = await res.json();
+            const response = await fetch('/api/question');
+            const data = await response.json();
 
-            if (data.error) {
-                document.getElementById('questionText').textContent = 'Error loading question. Please try again.';
-                return;
+            if (!response.ok || data.error) {
+                throw new Error(data.error || 'Could not load the question.');
             }
 
             this.currentQuestion = data;
             document.getElementById('questionText').innerHTML = this.formatQuestionText(data.text);
-
-            // Render LaTeX if available
-            if (window.renderMathInElement) {
-                renderMathInElement(document.getElementById('questionText'), {
-                    delimiters: [
-                        { left: '\\(', right: '\\)', display: false },
-                        { left: '\\[', right: '\\]', display: true },
-                        { left: '$$', right: '$$', display: true },
-                        { left: '$', right: '$', display: false },
-                    ],
-                    throwOnError: false,
-                });
-            }
-
-            // Scroll to question
+            this.renderOptions(data.options);
+            this.renderMath(document.getElementById('questionText'));
             document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-        } catch (e) {
-            console.error('Failed to load question:', e);
-            document.getElementById('questionText').textContent = 'Failed to load question. Please check your connection.';
+        } catch (error) {
+            console.error(error);
+            document.getElementById('questionText').textContent = 'We could not load a question right now.';
+            Toast.show(error.message || 'Failed to load question.', 'error');
         }
+    },
+
+    resetQuestionUI() {
+        document.getElementById('feedbackPanel').style.display = 'none';
+        document.getElementById('answerCard').style.display = 'block';
+        document.getElementById('studentExplanation').value = '';
+        document.getElementById('charCount').textContent = '0';
+        document.getElementById('answerOptions').innerHTML = '';
+        this.resetSubmitButton();
+
+        document.querySelectorAll('.star-btn').forEach((button) => button.classList.remove('active'));
+        document.getElementById('ratingThanks').style.display = 'none';
+        document.getElementById('starRating').style.display = 'flex';
     },
 
     formatQuestionText(text) {
-        // Highlight [Image: ...] descriptions
-        return text.replace(
-            /\[Image: (.*?)\]/gi,
-            '<div class="image-note"><i class="fas fa-image"></i> <em>$1</em></div>'
-        );
+        return text
+            .replace(/\n/g, '<br>')
+            .replace(/\[Image:\s*(.*?)\]/gi, '<div class="image-note"><i class="fas fa-image"></i> <em>$1</em></div>');
+    },
+
+    renderOptions(options) {
+        const container = document.getElementById('answerOptions');
+        container.innerHTML = '';
+
+        options.forEach((option) => {
+            const label = document.createElement('label');
+            label.className = 'option-card';
+
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 'selectedAnswer';
+            input.value = option.text;
+            input.className = 'option-input';
+
+            const badge = document.createElement('span');
+            badge.className = 'option-badge';
+            badge.textContent = option.id;
+
+            const content = document.createElement('div');
+            content.className = 'option-content';
+
+            const title = document.createElement('div');
+            title.className = 'option-title';
+            title.textContent = `Option ${option.id}`;
+
+            const body = document.createElement('div');
+            body.className = 'option-text';
+            body.textContent = option.text;
+
+            content.appendChild(title);
+            content.appendChild(body);
+            label.appendChild(input);
+            label.appendChild(badge);
+            label.appendChild(content);
+            container.appendChild(label);
+
+            input.addEventListener('change', () => this.syncOptionSelection());
+        });
+
+        this.syncOptionSelection();
+        this.renderMath(container);
+    },
+
+    syncOptionSelection() {
+        document.querySelectorAll('.option-card').forEach((card) => {
+            const checked = card.querySelector('.option-input')?.checked;
+            card.classList.toggle('selected', Boolean(checked));
+        });
+    },
+
+    getSelectedAnswer() {
+        const checked = document.querySelector('input[name="selectedAnswer"]:checked');
+        return checked ? checked.value : '';
     },
 
     async submit() {
-        if (this.isSubmitting || !this.currentQuestion) return;
+        if (this.isSubmitting || !this.currentQuestion) {
+            return;
+        }
 
-        const answer = document.getElementById('studentAnswer').value.trim();
+        const selectedAnswer = this.getSelectedAnswer();
         const explanation = document.getElementById('studentExplanation').value.trim();
 
-        if (!answer) {
-            Toast.show('Please enter your answer.', 'error');
+        if (!selectedAnswer) {
+            Toast.show('Choose one answer option first.', 'error');
             return;
         }
+
         if (!explanation) {
-            Toast.show('Please explain your reasoning.', 'error');
+            Toast.show('Explain how you solved the question.', 'error');
             return;
         }
-        if (explanation.length < 10) {
-            Toast.show('Please provide a more detailed explanation (at least 10 characters).', 'error');
+
+        if (explanation.length < 20) {
+            Toast.show('Please write a little more so the app can judge your reasoning.', 'error');
             return;
         }
 
@@ -220,28 +245,26 @@ const Practice = {
         this.showLoading();
 
         try {
-            const res = await fetch('/api/submit', {
+            const response = await fetch('/api/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     question_id: this.currentQuestion.id,
-                    student_answer: answer,
-                    student_explanation: explanation,
-                }),
+                    selected_answer: selectedAnswer,
+                    student_explanation: explanation
+                })
             });
 
-            if (!res.ok) throw new Error(`Server error: ${res.status}`);
-
-            const data = await res.json();
-
-            if (data.success) {
-                Score.add(data.feedback.is_correct);
-                this.showFeedback(data.feedback);
-            } else {
-                throw new Error(data.error || 'Submission failed');
+            const data = await response.json();
+            if (!response.ok || !data.success) {
+                throw new Error(data.error || 'Submission failed.');
             }
-        } catch (e) {
-            Toast.show(`Error: ${e.message}`, 'error');
+
+            Score.add(data.feedback.is_correct);
+            this.showFeedback(data.feedback);
+        } catch (error) {
+            console.error(error);
+            Toast.show(error.message || 'Could not submit your answer.', 'error');
             this.resetSubmitButton();
         } finally {
             this.isSubmitting = false;
@@ -249,32 +272,26 @@ const Practice = {
     },
 
     showLoading() {
-        const btn = document.getElementById('submitBtn');
-        btn.disabled = true;
-        btn.querySelector('span').style.display = 'none';
-        btn.querySelector('.btn-loader').style.display = 'flex';
+        const button = document.getElementById('submitBtn');
+        button.disabled = true;
+        button.querySelector('span').style.display = 'none';
+        button.querySelector('.btn-loader').style.display = 'flex';
     },
 
     resetSubmitButton() {
-        const btn = document.getElementById('submitBtn');
-        btn.disabled = false;
-        btn.querySelector('span').style.display = 'inline';
-        btn.querySelector('.btn-loader').style.display = 'none';
+        const button = document.getElementById('submitBtn');
+        button.disabled = false;
+        button.querySelector('span').style.display = 'inline';
+        button.querySelector('.btn-loader').style.display = 'none';
     },
 
     showFeedback(feedback) {
         this.resetSubmitButton();
-
-        // Hide answer form, show feedback
         document.getElementById('answerCard').style.display = 'none';
         document.getElementById('feedbackPanel').style.display = 'block';
 
-        // Result Banner
         const iconWrap = document.getElementById('resultIconWrap');
         const icon = document.getElementById('resultIcon');
-        const headline = document.getElementById('resultHeadline');
-        const message = document.getElementById('resultMessage');
-
         iconWrap.className = 'result-icon-wrap';
         if (feedback.is_correct) {
             iconWrap.classList.add('correct');
@@ -284,74 +301,61 @@ const Practice = {
             icon.className = 'fas fa-times-circle';
         }
 
-        // Apply color to headline
+        const headline = document.getElementById('resultHeadline');
         headline.textContent = feedback.result_headline;
         headline.style.color = feedback.result_color;
-        message.textContent = feedback.result_message;
+        document.getElementById('resultMessage').textContent = feedback.result_message;
 
-        // Answer comparison
-        document.getElementById('yourAnswerDisplay').textContent = feedback.student_answer;
-        const correctDisplay = document.getElementById('correctAnswerDisplay');
-        correctDisplay.textContent = feedback.correct_answer;
+        const answerVerdict = document.getElementById('answerVerdict');
+        const reasoningVerdict = document.getElementById('reasoningVerdict');
+        answerVerdict.textContent = feedback.answer_label;
+        reasoningVerdict.textContent = feedback.reasoning_label;
+        answerVerdict.className = `meta-pill ${feedback.is_correct ? 'meta-pill-correct' : 'meta-pill-incorrect'}`;
+        reasoningVerdict.className = `meta-pill ${feedback.has_misconception ? 'meta-pill-warning' : 'meta-pill-neutral'}`;
 
-        // Render LaTeX in answers
-        if (window.renderMathInElement) {
-            renderMathInElement(correctDisplay, {
-                delimiters: [
-                    { left: '\\(', right: '\\)', display: false },
-                    { left: '\\[', right: '\\]', display: true },
-                    { left: '$$', right: '$$', display: true },
-                    { left: '$', right: '$', display: false },
-                ],
-                throwOnError: false,
-            });
-        }
+        const yourAnswer = document.getElementById('yourAnswerDisplay');
+        const correctAnswer = document.getElementById('correctAnswerDisplay');
+        yourAnswer.textContent = feedback.selected_answer;
+        correctAnswer.textContent = feedback.correct_answer;
+        this.renderMath(yourAnswer);
+        this.renderMath(correctAnswer);
 
-        // Correct solution
-        const solutionEl = document.getElementById('solutionContent');
-        if (feedback.correct_explanation) {
-            solutionEl.textContent = feedback.correct_explanation;
-        } else {
-            solutionEl.textContent = 'The correct answer is ' + feedback.correct_answer + '.';
-        }
+        const solution = document.getElementById('solutionContent');
+        solution.textContent = feedback.correct_explanation;
+        this.renderMath(solution);
 
-        // Misconception card
-        const misconCard = document.getElementById('misconceptionCard');
+        const misconceptionCard = document.getElementById('misconceptionCard');
+        const whatWentWrongSection = document.getElementById('whatWentWrongSection');
         if (feedback.has_misconception) {
-            misconCard.style.display = 'block';
+            misconceptionCard.style.display = 'block';
             document.getElementById('misconceptionName').textContent = feedback.misconception_name;
-
-            const whatWrong = document.getElementById('whatWentWrong');
-            if (feedback.what_went_wrong) {
-                whatWrong.textContent = feedback.what_went_wrong;
-                whatWrong.parentElement.style.display = 'block';
-            } else {
-                whatWrong.parentElement.style.display = 'none';
-            }
-
             document.getElementById('misconceptionTip').textContent = feedback.misconception_tip;
+
+            if (feedback.what_went_wrong) {
+                whatWentWrongSection.style.display = 'block';
+                document.getElementById('whatWentWrong').textContent = feedback.what_went_wrong;
+            } else {
+                whatWentWrongSection.style.display = 'none';
+            }
         } else {
-            misconCard.style.display = 'none';
+            misconceptionCard.style.display = 'none';
         }
 
-        // Scroll to feedback
         setTimeout(() => {
             document.getElementById('feedbackPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
     },
 
     nextQuestion() {
+        this.currentQuestion = null;
         this.loadQuestion();
-        // Scroll to top of practice section
         document.getElementById('practiceSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
     },
 
     async rate(rating) {
-        // Highlight stars
-        document.querySelectorAll('.star-btn').forEach(btn => {
-            const r = parseInt(btn.dataset.rating);
-            if (r <= rating) btn.classList.add('active');
-            else btn.classList.remove('active');
+        document.querySelectorAll('.star-btn').forEach((button) => {
+            const buttonRating = parseInt(button.dataset.rating, 10);
+            button.classList.toggle('active', buttonRating <= rating);
         });
 
         try {
@@ -360,39 +364,40 @@ const Practice = {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     question_id: this.currentQuestion?.id || 'unknown',
-                    rating: rating,
-                    comment: null,
-                }),
+                    rating,
+                    comment: null
+                })
             });
 
             setTimeout(() => {
                 document.getElementById('starRating').style.display = 'none';
                 document.getElementById('ratingThanks').style.display = 'flex';
-            }, 500);
-
-            Toast.show('Thanks for your feedback!', 'success');
-        } catch (e) {
-            console.warn('Could not send rating:', e);
+            }, 400);
+        } catch (error) {
+            console.warn('Could not send rating:', error);
         }
+    },
+
+    renderMath(target) {
+        if (!target || !window.renderMathInElement) {
+            return;
+        }
+
+        renderMathInElement(target, {
+            delimiters: [
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true },
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false }
+            ],
+            throwOnError: false
+        });
     }
 };
 
-// ============================================================
-// INITIALIZE
-// ============================================================
+
 document.addEventListener('DOMContentLoaded', () => {
     ThemeManager.init();
     Score.init();
     Practice.init();
-
-    // Initialize KaTeX auto-render if loaded
-    if (window.renderMathInElement) {
-        renderMathInElement(document.body, {
-            delimiters: [
-                { left: '\\(', right: '\\)', display: false },
-                { left: '\\[', right: '\\]', display: true },
-            ],
-            throwOnError: false,
-        });
-    }
 });

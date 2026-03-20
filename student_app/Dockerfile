@@ -1,25 +1,17 @@
 FROM python:3.11-slim
 
-WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
 
-# Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app/student_app
 
-# Copy application
-COPY . .
+COPY student_app/requirements.txt /app/student_app/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-# Also copy the dataset (needed for questions)
-# In production, mount or copy DS/ folder alongside the app
-# or use the built-in fallback questions
-COPY ../DS /app/DS 2>/dev/null || true
+COPY student_app/ /app/student_app/
+COPY DS/ /app/DS/
 
-# Expose port
 EXPOSE 8001
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8001/')" || exit 1
-
-# Run with uvicorn
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8001}"]

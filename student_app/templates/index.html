@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAP — Math Practice Portal</title>
+    <title>MAP Student Practice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <!-- Background -->
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
     <div class="floating-orbs">
@@ -23,7 +22,6 @@
         <div class="orb orb-3"></div>
     </div>
 
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="/" class="nav-brand">
@@ -32,7 +30,7 @@
                 </div>
                 <div class="brand-text">
                     <span class="brand-name">MAP</span>
-                    <span class="brand-sub">Math Practice Portal</span>
+                    <span class="brand-sub">Student Practice</span>
                 </div>
             </a>
             <div class="nav-center">
@@ -61,52 +59,62 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
-
-        <!-- Welcome Hero (shown initially) -->
         <section class="hero" id="welcomeHero">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <i class="fas fa-sparkles"></i> Practice Makes Perfect
+                    <i class="fas fa-user-graduate"></i> Student-facing practice mode
                 </div>
                 <h1 class="hero-title">
-                    Sharpen Your<br>
-                    <span class="gradient-text">Math Skills</span>
+                    Choose. Explain.<br>
+                    <span class="gradient-text">Learn the right method.</span>
                 </h1>
                 <p class="hero-desc">
-                    Answer math questions, explain your reasoning, and get instant AI-powered feedback 
-                    that helps you understand where you went right — or where your thinking needs adjusting.
+                    Read a math question, choose one MCQ option, explain how you solved it, and get a clear verdict with the correct method and any misconception highlighted.
                 </p>
                 <div class="hero-features">
                     <div class="feature-item">
-                        <div class="feature-icon"><i class="fas fa-brain"></i></div>
-                        <span>Practice Questions</span>
+                        <div class="feature-icon"><i class="fas fa-list-check"></i></div>
+                        <span>Pick an MCQ</span>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-icon"><i class="fas fa-comments"></i></div>
-                        <span>Instant Feedback</span>
+                        <div class="feature-icon"><i class="fas fa-pen"></i></div>
+                        <span>Explain Thinking</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-stamp"></i></div>
+                        <span>Get Verdicts</span>
                     </div>
                     <div class="feature-item">
                         <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
-                        <span>Learn from Mistakes</span>
-                    </div>
-                    <div class="feature-item">
-                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                        <span>Track Progress</span>
+                        <span>Fix Misconceptions</span>
                     </div>
                 </div>
                 <button class="hero-cta" id="startBtn">
-                    <i class="fas fa-play"></i> Start Practicing
+                    <i class="fas fa-play"></i> Start Practice
                 </button>
             </div>
         </section>
 
-        <!-- Question + Answer Section -->
         <section class="practice-section" id="practiceSection" style="display: none;">
             <div class="practice-container">
+                <div class="glass-card practice-guide">
+                    <div class="guide-steps">
+                        <div class="guide-step">
+                            <span class="guide-step-number">1</span>
+                            <span>Choose one option</span>
+                        </div>
+                        <div class="guide-step">
+                            <span class="guide-step-number">2</span>
+                            <span>Explain your reasoning</span>
+                        </div>
+                        <div class="guide-step">
+                            <span class="guide-step-number">3</span>
+                            <span>Review the verdict and fix the misconception</span>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Question Card -->
                 <div class="glass-card question-card" id="questionCard">
                     <div class="card-header">
                         <div class="question-badge">
@@ -114,7 +122,7 @@
                             Question <span id="questionNumber">1</span>
                         </div>
                         <button class="btn btn-ghost btn-sm" id="skipBtn" title="Skip this question">
-                            <i class="fas fa-forward"></i> Skip
+                            <i class="fas fa-forward"></i> New Question
                         </button>
                     </div>
                     <div class="question-text" id="questionText">
@@ -122,35 +130,28 @@
                     </div>
                 </div>
 
-                <!-- Answer Form -->
                 <div class="glass-card answer-card" id="answerCard">
                     <div class="card-header">
-                        <h3><i class="fas fa-pen"></i> Your Response</h3>
+                        <h3><i class="fas fa-pencil-ruler"></i> Your Response</h3>
                     </div>
                     <form id="answerForm">
                         <div class="form-group">
                             <label class="form-label">
-                                <i class="fas fa-calculator"></i> Your Answer
+                                <i class="fas fa-list-ul"></i> Step 1: Choose one answer
                             </label>
-                            <input 
-                                type="text" 
-                                id="studentAnswer" 
-                                class="form-input"
-                                placeholder="Type your answer here (e.g., 1/3, 5x, 24cm²...)"
-                                required
-                                autocomplete="off"
-                            >
+                            <div class="option-grid" id="answerOptions"></div>
                         </div>
+
                         <div class="form-group">
                             <label class="form-label">
-                                <i class="fas fa-comment-dots"></i> Explain Your Reasoning
-                                <span class="label-hint">Tell us HOW you got your answer</span>
+                                <i class="fas fa-comment-dots"></i> Step 2: Explain how you solved it
+                                <span class="label-hint">Use a short step-by-step explanation</span>
                             </label>
-                            <textarea 
-                                id="studentExplanation" 
-                                class="form-textarea" 
-                                rows="4"
-                                placeholder="Explain step by step how you worked out your answer..."
+                            <textarea
+                                id="studentExplanation"
+                                class="form-textarea"
+                                rows="5"
+                                placeholder="Example: I found one fifth first, then multiplied by 3 because the question asks for three fifths."
                                 required
                             ></textarea>
                             <div class="char-count">
@@ -158,9 +159,10 @@
                                 <span class="char-hint">(aim for at least 20)</span>
                             </div>
                         </div>
+
                         <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
                             <i class="fas fa-paper-plane"></i>
-                            <span>Submit Answer</span>
+                            <span>Check My Answer</span>
                             <div class="btn-loader" style="display:none">
                                 <div class="spinner"></div>
                             </div>
@@ -168,10 +170,7 @@
                     </form>
                 </div>
 
-                <!-- Feedback Panel (hidden until submission) -->
                 <div class="feedback-panel" id="feedbackPanel" style="display: none;">
-                    
-                    <!-- Result Banner -->
                     <div class="glass-card result-banner" id="resultBanner">
                         <div class="result-icon-wrap" id="resultIconWrap">
                             <i class="fas fa-check-circle" id="resultIcon"></i>
@@ -179,63 +178,63 @@
                         <div class="result-text">
                             <h2 id="resultHeadline">Correct!</h2>
                             <p id="resultMessage">Your answer and reasoning are solid.</p>
+                            <div class="result-meta">
+                                <span class="meta-pill" id="answerVerdict">Choice: correct</span>
+                                <span class="meta-pill" id="reasoningVerdict">Reasoning: strong</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Answer Comparison -->
                     <div class="glass-card comparison-card">
                         <h3 class="card-title">
-                            <i class="fas fa-arrows-left-right"></i> Answer Comparison
+                            <i class="fas fa-arrows-left-right"></i> Choice Review
                         </h3>
                         <div class="comparison-grid">
                             <div class="comparison-item your-answer">
-                                <div class="comparison-label">Your Answer</div>
-                                <div class="comparison-value" id="yourAnswerDisplay">—</div>
+                                <div class="comparison-label">Your Choice</div>
+                                <div class="comparison-value" id="yourAnswerDisplay">-</div>
                             </div>
                             <div class="comparison-vs">
                                 <i class="fas fa-arrows-left-right"></i>
                             </div>
                             <div class="comparison-item correct-answer">
                                 <div class="comparison-label">Correct Answer</div>
-                                <div class="comparison-value" id="correctAnswerDisplay">—</div>
+                                <div class="comparison-value" id="correctAnswerDisplay">-</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Correct Solution -->
                     <div class="glass-card solution-card">
                         <h3 class="card-title">
-                            <i class="fas fa-lightbulb"></i> How to Solve This
+                            <i class="fas fa-lightbulb"></i> Correct Way to Solve It
                         </h3>
                         <div class="solution-content" id="solutionContent">
                             Loading solution...
                         </div>
                     </div>
 
-                    <!-- Misconception Card (shown only when misconception detected) -->
                     <div class="glass-card misconception-card" id="misconceptionCard" style="display: none;">
                         <div class="misconception-header">
                             <div class="misconception-icon-wrap">
                                 <i class="fas fa-exclamation-triangle"></i>
                             </div>
                             <div>
-                                <h3 id="misconceptionName">Misconception Detected</h3>
-                                <p class="misconception-subtitle">Here's where your thinking went off track</p>
+                                <h3 id="misconceptionName">Misconception detected</h3>
+                                <p class="misconception-subtitle">This is the idea we should correct next</p>
                             </div>
                         </div>
                         <div class="misconception-body">
-                            <div class="misconception-section">
-                                <h4><i class="fas fa-search"></i> What Went Wrong</h4>
+                            <div class="misconception-section" id="whatWentWrongSection">
+                                <h4><i class="fas fa-search"></i> What went wrong</h4>
                                 <p id="whatWentWrong"></p>
                             </div>
                             <div class="misconception-section tip-section">
-                                <h4><i class="fas fa-lightbulb"></i> How to Fix It</h4>
+                                <h4><i class="fas fa-lightbulb"></i> How to fix it</h4>
                                 <p id="misconceptionTip"></p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Rating -->
                     <div class="glass-card rating-card">
                         <h3 class="card-title">
                             <i class="fas fa-star"></i> Was this feedback helpful?
@@ -252,32 +251,26 @@
                         </div>
                     </div>
 
-                    <!-- Next Question Button -->
                     <button class="btn btn-primary btn-full btn-next" id="nextBtn">
                         <i class="fas fa-arrow-right"></i> Next Question
                     </button>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand">
                 <i class="fas fa-graduation-cap"></i>
-                <span>MAP — Math Practice Portal</span>
+                <span>MAP Student Practice</span>
             </div>
             <div class="footer-info">
-                <span>CSE 330 Machine Learning Project</span>
-                <span class="footer-dot">•</span>
-                <span>AI-Powered Feedback</span>
+                <span>MCQ + explanation + misconception feedback</span>
             </div>
         </div>
     </footer>
 
-    <!-- Toast Notifications -->
     <div class="toast-container" id="toastContainer"></div>
 
     <script src="/static/js/app.js"></script>
