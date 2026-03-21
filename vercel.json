@@ -1,0 +1,27 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/**/*.py": {
+      "includeFiles": "{DS/train.csv,student_app/templates/**,student_app/static/**}",
+      "excludeFiles": "{Final_Model/**,web_app/**,__pycache__/**,**/*.ipynb,**/*.pdf,**/*.joblib,**/*.pyc,MAP_Pipeline_Report.html,render.yaml}"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/health",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/static/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index"
+    }
+  ]
+}

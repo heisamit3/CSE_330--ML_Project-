@@ -28,6 +28,31 @@ python app.py
 
 Open `http://localhost:8001`.
 
+## Easiest deployment without Docker
+
+Use Vercel with your GitHub repo. This project now includes a Vercel entrypoint in `api/index.py`, a root `requirements.txt`, and a `vercel.json` file so you can deploy without Docker.
+
+### Steps
+
+1. Push this repository to GitHub.
+2. Sign in to Vercel and import that GitHub repo as a new project.
+3. Keep the default project root as the repository root.
+4. Deploy the project.
+5. Open the deployed URL.
+
+### What Vercel will use
+
+- Python entrypoint: `api/index.py`
+- Dependencies: root `requirements.txt`
+- Routing: root `vercel.json`
+
+Notes:
+
+- The deployed app reads the dataset from `DS/train.csv`.
+- If `DS/train.csv` is missing, the app still works by falling back to built-in example questions.
+- Static UI files remain available at `/static/...`.
+- The Vercel config excludes the large training notebooks from the serverless bundle.
+
 ## Deploy with Docker
 
 Build from the repository root so the container can include both `student_app/` and `DS/`:

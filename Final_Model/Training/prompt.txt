@@ -1,4 +1,4 @@
-i want this code in the qwen3-4b.ipynb file, in structured way
+i want this code in the qwen3-8b.ipynb file, in structured way
 TRAIN_PATH = "/kaggle/input/datasets/mkhanshovon43/map-ds/DS/train.csv"
 TEST_PATH = "/kaggle/input/datasets/mkhanshovon43/map-ds/DS/test.csv"
 OUTPUT_ROOT = Path("/kaggle/working/map_multi_llm_runs")

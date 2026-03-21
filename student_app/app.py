@@ -732,6 +732,11 @@ async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
+@app.get("/health")
+async def health():
+    return JSONResponse({"status": "ok", "questions_loaded": len(QUESTIONS_DB)})
+
+
 @app.get("/api/question")
 async def get_question(question_id: Optional[str] = None):
     if not QUESTIONS_DB:
