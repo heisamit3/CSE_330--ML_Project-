@@ -10,4 +10,4 @@
 
 5. Add uncertainty-aware prediction: “not confident enough; send to teacher” for hard cases
 
-6. Try out all of GPT
+6. Explain the reason of the model response from the model in the teacher facing ui
