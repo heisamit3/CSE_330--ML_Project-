@@ -1,13 +1,7 @@
-1. Have to create a teacher facing UI also, to monitor (model performance analysis) and provide the ground truth
+1. Misconception Hierarchy
 
-1.1 teacher can add set of questions with mcqs
+2. Hierarchical diagnosis
 
-2. Gonna create some questions (not present in train.csv) and try them on the model (it's like the basic)
+3. Add uncertainty-aware prediction: “not confident enough; send to teacher” for hard cases
 
-3. Misconception Hierarchy
-
-4. Hierarchical diagnosis
-
-5. Add uncertainty-aware prediction: “not confident enough; send to teacher” for hard cases
-
-6. Explain the reason of the model response from the model in the teacher facing ui
+4. Explain the reason of the model response from the model in the teacher facing ui

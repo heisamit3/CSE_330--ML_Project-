@@ -1,2 +1,11 @@
-1. Ensemble
+1.0.1 at the next ui, show the explanation
+problem : bolse correct, then explanation er time e bolse misc
+1.1 improving exp ai
+1.2 don't repeat the same question
 2. teacher facing ui
+3. Have to create a teacher facing UI also, to monitor (model performance analysis) and provide the ground truth
+
+3.1 teacher can add set of questions with mcqs
+
+3.2 Gonna create some questions (not present in train.csv) and try them on the model (it's like the basic)
+4. Ensemble
