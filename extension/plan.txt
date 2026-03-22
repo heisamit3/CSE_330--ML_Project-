@@ -1,5 +1,7 @@
 1. Have to create a teacher facing UI also, to monitor (model performance analysis) and provide the ground truth
 
+1.1 teacher can add set of questions with mcqs
+
 2. Gonna create some questions (not present in train.csv) and try them on the model (it's like the basic)
 
 3. Misconception Hierarchy
