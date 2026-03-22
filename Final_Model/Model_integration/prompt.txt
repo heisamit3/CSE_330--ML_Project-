@@ -1,0 +1,1 @@
+I have a pipeline ready(q3-4b-exp.ipynb) that can predict and also have an explainable ai that can provide explanations. U have to integrate it with the UI(student_app). And I wanna know can I run the model in my laptop. If not what should I do for it, do I need to deploy the model somewhere? Don't change anything, just me the plans.
