@@ -36,26 +36,6 @@ function App() {
     }
   }, [loadQuestion]);
 
-  // Show toast for errors
-  useEffect(() => {
-    if (questionError) {
-      showToast(questionError, 'error');
-    }
-  }, [questionError]);
-
-  useEffect(() => {
-    if (submitError) {
-      showToast(submitError, 'error');
-    }
-  }, [submitError]);
-
-  const toggleTheme = useCallback(() => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem(config.storageKeys.theme, newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  }, [theme]);
-
   const showToast = useCallback((message, type = 'success') => {
     const id = Date.now();
     setToasts((prev) => [...prev, { id, message, type }]);
@@ -63,6 +43,26 @@ function App() {
       setToasts((prev) => prev.filter((t) => t.id !== id));
     }, 3000);
   }, []);
+
+  // Show toast for errors
+  useEffect(() => {
+    if (questionError) {
+      showToast(questionError, 'error');
+    }
+  }, [questionError, showToast]);
+
+  useEffect(() => {
+    if (submitError) {
+      showToast(submitError, 'error');
+    }
+  }, [submitError, showToast]);
+
+  const toggleTheme = useCallback(() => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    localStorage.setItem(config.storageKeys.theme, newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  }, [theme]);
 
   const handleStart = useCallback(() => {
     sessionStorage.setItem(config.storageKeys.started, 'true');

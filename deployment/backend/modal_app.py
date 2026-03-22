@@ -29,31 +29,54 @@ image = (
         "huggingface-hub>=0.20.0",
         "bitsandbytes>=0.41.0",
     )
-)
-
-# Mount local data directory
-data_mount = modal.Mount.from_local_dir(
-    "./data",
-    remote_path="/app/data",
-)
-
-# Mount app code
-app_mount = modal.Mount.from_local_dir(
-    "./app",
-    remote_path="/app/app",
+    .add_local_dir("./data", remote_path="/app/data")
+    .add_local_dir("./app", remote_path="/app/app")
 )
 
 
 @app.cls(
     image=image,
     gpu="T4",  # Use T4 GPU (cheapest option with good performance)
-    mounts=[data_mount, app_mount],
-    container_idle_timeout=300,  # Keep warm for 5 minutes
+    scaledown_window=300,  # Keep warm for 5 minutes
     secrets=[modal.Secret.from_name("hf-secret")],  # HuggingFace token
     timeout=600,  # 10 minute timeout for requests
 )
 class MisconceptionAPI:
     """Modal class for the API deployment."""
+
+    def _cors_response(self, data: dict):
+        """Wrap response with CORS headers."""
+        from fastapi.responses import JSONResponse
+        return JSONResponse(
+            content=data,
+            headers={
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type",
+            }
+        )
+
+    def _cors_preflight(self):
+        """Handle OPTIONS preflight requests."""
+        from fastapi.responses import Response
+        return Response(
+            status_code=200,
+            headers={
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+                "Access-Control-Allow-Headers": "Content-Type",
+            }
+        )
+
+    @modal.fastapi_endpoint(method="OPTIONS")
+    def predict_options(self):
+        """CORS preflight for predict endpoint."""
+        return self._cors_preflight()
+
+    @modal.fastapi_endpoint(method="OPTIONS")
+    def submit_options(self):
+        """CORS preflight for submit endpoint."""
+        return self._cors_preflight()
 
     @modal.enter()
     def startup(self):
@@ -79,7 +102,7 @@ class MisconceptionAPI:
         self.service.load()
         print("API initialized!")
 
-    @modal.web_endpoint(method="GET")
+    @modal.fastapi_endpoint(method="GET")
     def health(self):
         """Health check endpoint."""
         from app.models import get_classifier, get_explainer
@@ -87,15 +110,15 @@ class MisconceptionAPI:
         classifier = get_classifier()
         explainer = get_explainer()
 
-        return {
+        return self._cors_response({
             "status": "ok",
             "model_loaded": classifier.is_loaded,
             "explainer_loaded": explainer.is_loaded,
             "kb_entries": explainer.kb_count,
             "label_classes": classifier.n_classes if classifier.is_loaded else 0,
-        }
+        })
 
-    @modal.web_endpoint(method="POST")
+    @modal.fastapi_endpoint(method="POST")
     def predict(self, request: dict):
         """Prediction endpoint."""
         try:
@@ -106,11 +129,11 @@ class MisconceptionAPI:
                 student_explanation=request.get("student_explanation", ""),
                 is_correct=request.get("is_correct"),
             )
-            return result
+            return self._cors_response(result)
         except Exception as e:
-            return {"success": False, "error": str(e)}
+            return self._cors_response({"success": False, "error": str(e)})
 
-    @modal.web_endpoint(method="POST")
+    @modal.fastapi_endpoint(method="POST")
     def submit(self, request: dict):
         """Legacy submit endpoint for UI compatibility."""
         from app.main import QUESTIONS_DB
@@ -118,7 +141,7 @@ class MisconceptionAPI:
 
         question_id = request.get("question_id", "")
         if question_id not in QUESTIONS_DB:
-            return {"success": False, "error": "Question not found"}
+            return self._cors_response({"success": False, "error": "Question not found"})
 
         question = QUESTIONS_DB[question_id]
         selected_answer = normalize_space(
@@ -127,7 +150,7 @@ class MisconceptionAPI:
         explanation = normalize_space(request.get("student_explanation", ""))
 
         if not selected_answer:
-            return {"success": False, "error": "Please choose an answer"}
+            return self._cors_response({"success": False, "error": "Please choose an answer"})
 
         try:
             feedback = self.service.get_legacy_feedback(
@@ -137,18 +160,18 @@ class MisconceptionAPI:
                 student_explanation=explanation,
                 options=question["options"],
             )
-            return {"success": True, "feedback": feedback}
+            return self._cors_response({"success": True, "feedback": feedback})
         except Exception as e:
-            return {"success": False, "error": str(e)}
+            return self._cors_response({"success": False, "error": str(e)})
 
-    @modal.web_endpoint(method="GET")
+    @modal.fastapi_endpoint(method="GET")
     def question(self, question_id: str = None):
         """Get a question."""
         import random
         from app.main import QUESTIONS_DB
 
         if not QUESTIONS_DB:
-            return {"error": "No questions available"}
+            return self._cors_response({"error": "No questions available"})
 
         if question_id and question_id in QUESTIONS_DB:
             q = QUESTIONS_DB[question_id]
@@ -160,24 +183,24 @@ class MisconceptionAPI:
             for i, opt in enumerate(q["options"])
         ]
 
-        return {
+        return self._cors_response({
             "id": q["id"],
             "text": q["text"],
             "options": options,
             "has_image": "[Image:" in q["text"] or "[image:" in q["text"].lower(),
-        }
+        })
 
-    @modal.web_endpoint(method="GET")
+    @modal.fastapi_endpoint(method="GET")
     def labels(self):
         """Get all labels."""
         from app.models import get_classifier
 
         classifier = get_classifier()
         if not classifier.is_loaded:
-            return {"error": "Model not loaded"}
+            return self._cors_response({"error": "Model not loaded"})
 
         labels = classifier.get_labels()
-        return {"labels": labels, "count": len(labels)}
+        return self._cors_response({"labels": labels, "count": len(labels)})
 
 
 # For local testing with `modal serve`

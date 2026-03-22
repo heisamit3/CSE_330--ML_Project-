@@ -1,0 +1,772 @@
+{
+  "Incomplete": {
+    "plain_definition": "Incomplete refers to a misunderstanding where a student provides an answer that is partially correct but fails to fully simplify the fraction or recognize the correct numerator and denominator.",
+    "typical_wrong_thought": [
+      "Only counting the unshaded parts without considering the total number of parts",
+      "Failing to simplify the fraction to its lowest terms",
+      "Assuming the total number of parts is incorrect",
+      "Not recognizing that the shaded and unshaded parts should both be considered in the fraction"
+    ],
+    "correct_rule": [
+      "To find the fraction of the shape that is not shaded, count the number of unshaded parts and divide by the total number of parts.",
+      "Simplify the resulting fraction to its lowest terms by dividing both the numerator and denominator by their greatest common divisor.",
+      "Ensure that the total number of parts is accurate and that the parts are equal in size."
+    ],
+    "fix_steps": [
+      "Identify the total number of equal parts in the shape.",
+      "Count the number of unshaded parts.",
+      "Write the fraction as unshaded parts over total parts.",
+      "Simplify the fraction by dividing both numerator and denominator by their greatest common divisor.",
+      "Check that the fraction is in its simplest form.",
+      "Verify that the parts are equal and the counting is accurate."
+    ],
+    "quick_check": "What fraction of the shape is not shaded? Give your answer in its simplest form. [Image: A circle split into 8 equal parts. 5 of them are shaded.]",
+    "tiny_example": "Total parts: 8\nUnshaded parts: 3\nFraction: 3/8\nSimplified: 3/8"
+  },
+  "Additive": {
+    "plain_definition": "Students make this mistake: Additive.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  },
+  "Duplication": {
+    "plain_definition": "Duplication is a misconception where students multiply both the numerator and denominator of a fraction by the same number, even when they should only multiply the numerator by the number.",
+    "typical_wrong_thought": [
+      "Multiplying the denominator by the whole number is necessary to keep the fraction equivalent.",
+      "To multiply a fraction by a whole number, both parts of the fraction must be multiplied by that number.",
+      "The denominator should always be multiplied by the whole number to maintain the value of the fraction."
+    ],
+    "correct_rule": [
+      "To multiply a fraction by a whole number, multiply the numerator of the fraction by the whole number.",
+      "The denominator of the fraction remains unchanged unless the fraction is being multiplied by another fraction.",
+      "Simplifying the result is a separate step after multiplication."
+    ],
+    "fix_steps": [
+      "Identify the fraction and the whole number being multiplied.",
+      "Multiply the numerator of the fraction by the whole number.",
+      "Keep the denominator of the fraction the same.",
+      "Simplify the resulting fraction if possible.",
+      "Check if the answer makes sense in relation to the original fraction.",
+      "Use visual models or number lines to reinforce the concept."
+    ],
+    "quick_check": "Calculate $ \\frac{3}{4} \\times 6 $",
+    "tiny_example": "To multiply $ \\frac{2}{3} \\times 5 $, multiply 2 by 5 to get 10. The denominator stays 3. So, the answer is $ \\frac{10}{3} $, not $ \\frac{10}{15} $."
+  },
+  "Subtraction": {
+    "plain_definition": "Students make this mistake: Subtraction.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  },
+  "Positive": {
+    "plain_definition": "The misconception is believing that subtracting a negative number always results in a positive number, without considering the actual operation of subtraction.",
+    "typical_wrong_thought": [
+      "Two minuses make a positive",
+      "Negative minus negative is always positive",
+      "Subtracting a negative is like adding a positive"
+    ],
+    "correct_rule": [
+      "Subtracting a negative number is the same as adding its positive counterpart.",
+      "To subtract a negative, you add the opposite of that number.",
+      "The result of (-8) - (-5) is (-8) + 5 = -3."
+    ],
+    "fix_steps": [
+      "Understand that subtracting a negative number is equivalent to adding its positive version.",
+      "Rewrite the expression as addition of the opposite: (-8) - (-5) becomes (-8) + 5.",
+      "Perform the addition: (-8) + 5 = -3.",
+      "Check your answer by considering the signs and operations involved.",
+      "Use a number line to visualize the movement when subtracting a negative.",
+      "Practice with different negative numbers to reinforce the concept."
+    ],
+    "quick_check": "What is (-7) - (-4)?",
+    "tiny_example": "(-8) - (-5) = (-8) + 5 = -3\nSubtracting a negative is like adding a positive.\nUse a number line to see the result."
+  },
+  "Wrong_term": {
+    "plain_definition": "Wrong_term refers to a misunderstanding where a student incorrectly identifies the pattern or rule governing a sequence, leading to an incorrect answer.",
+    "typical_wrong_thought": [
+      "The pattern is simply adding 4 each time",
+      "The difference between terms is always 4",
+      "The next term is found by adding 4 to the previous term",
+      "The pattern is linear with a constant difference"
+    ],
+    "correct_rule": [
+      "The sequence increases by 4 each time",
+      "The pattern is an arithmetic sequence with a common difference of 4",
+      "Each term is 4 more than the previous term",
+      "The nth term can be found by starting at 6 and adding 4(n-1)"
+    ],
+    "fix_steps": [
+      "Identify the difference between consecutive terms in the sequence.",
+      "Check if the difference is consistent across all terms.",
+      "Confirm that the pattern is arithmetic with a common difference of 4.",
+      "Use the formula for the nth term of an arithmetic sequence: a_n = a_1 + (n-1)d.",
+      "Apply the formula to find the next term in the sequence.",
+      "Verify the answer by counting the dots in the next pattern if possible."
+    ],
+    "quick_check": "Dots have been arranged in these patterns: [Image: Pattern 1 consists of 6 dots, Pattern 2 consists of 10 dots, Pattern 3 consists of 14 dots and Pattern 4 consists of 18 dots] How many dots would the 5th pattern have?",
+    "tiny_example": "Pattern 1: 6 dots\nPattern 2: 10 dots\nPattern 3: 14 dots\nPattern 4: 18 dots\nPattern 5: 22 dots"
+  },
+  "Irrelevant": {
+    "plain_definition": "Irrelevant refers to a misconception where a student uses information that is not directly related to the problem at hand to solve it.",
+    "typical_wrong_thought": [
+      "Focusing on numbers that are not part of the equation",
+      "Using patterns or tables that don't apply to the current problem",
+      "Ignoring the structure of the equation and focusing on unrelated facts"
+    ],
+    "correct_rule": [
+      "Always focus on the relationship between the numbers in the equation.",
+      "Use cross-multiplication to solve proportions correctly.",
+      "Check that all steps are relevant to solving for the unknown variable."
+    ],
+    "fix_steps": [
+      "Identify the equation and the unknown variable you are solving for.",
+      "Write down the correct method for solving proportions (cross-multiplication).",
+      "Apply the method step by step, ensuring each step is relevant to the problem.",
+      "Check your answer by substituting it back into the original equation.",
+      "Review the problem to ensure you are not using irrelevant information.",
+      "Practice with similar problems to reinforce correct problem-solving strategies."
+    ],
+    "quick_check": "\\( \\frac{x}{5} = \\frac{4}{10} \\) What is the value of \\( x \\)?",
+    "tiny_example": "In the equation \\( \\frac{A}{10} = \\frac{9}{15} \\), the correct approach is to cross-multiply: 15A = 90, so A = 6. Students who answer 3 are using irrelevant information like the 3 times table, which does not apply here."
+  },
+  "Wrong_fraction": {
+    "plain_definition": "Wrong_fraction is a misconception where students incorrectly interpret or calculate fractions, often leading to errors in finding parts of a whole or comparing fractions.",
+    "typical_wrong_thought": [
+      "Multiplying the numerator by the denominator to find the total",
+      "Dividing the denominator by the numerator to find the total",
+      "Adding the numerator and denominator to find the total",
+      "Misapplying fraction multiplication or division rules"
+    ],
+    "correct_rule": [
+      "To find a fraction of a quantity, multiply the quantity by the fraction.",
+      "To find the remaining part, subtract the given fraction from 1 and multiply by the total.",
+      "Fractions represent parts of a whole, so the denominator is the total number of parts."
+    ],
+    "fix_steps": [
+      "Understand that a fraction like 3/8 means 3 parts out of 8 total parts.",
+      "Calculate the total number of parts by multiplying the denominator by the total quantity.",
+      "Find the number of parts represented by the fraction by multiplying the numerator by the total quantity.",
+      "Subtract the number of parts represented by the fraction from the total to find the remaining parts.",
+      "Check if the answer makes sense in the context of the problem."
+    ],
+    "quick_check": "A pizza is cut into 6 slices. If you eat 2/6 of the pizza, how many slices did you eat?",
+    "tiny_example": "If 3/8 of 24 balls are yellow, first find 1/8 of 24 (which is 3), then multiply by 3 to get 9 yellow balls. Subtract 9 from 24 to find 15 green balls."
+  },
+  "Inversion": {
+    "plain_definition": "Inversion refers to the incorrect belief that when multiplying a fraction by a whole number, only the denominator is multiplied, while the numerator remains unchanged.",
+    "typical_wrong_thought": [
+      "Multiplying a fraction by a whole number only affects the denominator.",
+      "The numerator stays the same when multiplying by a whole number.",
+      "You only multiply the denominator by the whole number."
+    ],
+    "correct_rule": [
+      "When multiplying a fraction by a whole number, multiply the numerator by the whole number and keep the denominator the same.",
+      "The whole number is multiplied by the numerator of the fraction.",
+      "The denominator remains unchanged during multiplication."
+    ],
+    "fix_steps": [
+      "Identify the fraction and the whole number in the problem.",
+      "Multiply the numerator of the fraction by the whole number.",
+      "Keep the denominator of the fraction unchanged.",
+      "Write the result as a new fraction with the new numerator and original denominator.",
+      "Simplify the fraction if possible."
+    ],
+    "quick_check": "Calculate $ \\frac{3}{4} \\times 6 $",
+    "tiny_example": "To multiply $ \\frac{2}{3} \\times 5 $, multiply 2 by 5 to get 10, and keep the denominator 3. The result is $ \\frac{10}{3} $."
+  },
+  "Mult": {
+    "plain_definition": "The misconception 'Mult' refers to a student's incorrect understanding of division involving fractions, where they may incorrectly interpret the operation as a multiplication or misapply the concept of 'how many times' a number fits into another.",
+    "typical_wrong_thought": [
+      "Dividing by a number is the same as multiplying by that number.",
+      "The division of a fraction by a whole number is the same as finding half of that number.",
+      "The result of dividing a fraction by a whole number is always a larger number."
+    ],
+    "correct_rule": [
+      "Dividing a fraction by a whole number is the same as multiplying the fraction by the reciprocal of the whole number.",
+      "To divide a fraction by a whole number, you can multiply the fraction by 1 over that whole number.",
+      "The result of dividing a fraction by a whole number is generally a smaller number, not necessarily larger."
+    ],
+    "fix_steps": [
+      "Understand that dividing by a number is the same as multiplying by its reciprocal.",
+      "Convert the division problem into a multiplication problem by using the reciprocal of the divisor.",
+      "Multiply the fraction by the reciprocal of the whole number.",
+      "Simplify the resulting fraction if possible.",
+      "Check if the answer makes sense in terms of size relative to the original fraction.",
+      "Use visual models or number lines to reinforce the concept of division with fractions.",
+      "Practice with multiple examples to solidify the correct understanding."
+    ],
+    "quick_check": "Calculate $ \\frac{3}{4} \\div 2 $",
+    "tiny_example": "To divide $ \\frac{1}{2} $ by 6, you multiply $ \\frac{1}{2} $ by $ \\frac{1}{6} $, which gives $ \\frac{1}{12} $. The correct answer is $ \\frac{1}{12} $, not 3."
+  },
+  "Denominator-only_change": {
+    "plain_definition": "Students make this mistake: Denominator-only_change.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  },
+  "Whole_numbers_larger": {
+    "plain_definition": "Whole numbers are the set of numbers that include all positive integers and zero. They are used to count objects and represent quantities without fractions or decimals.",
+    "typical_wrong_thought": [
+      "Whole numbers are larger than any other type of number.",
+      "The term 'whole number' means the number itself is large.",
+      "If a number is a whole number, it automatically has a greater value than others."
+    ],
+    "correct_rule": [
+      "Whole numbers are not inherently larger than other numbers; their size depends on their actual value.",
+      "To compare numbers, you must look at their numerical value, not their classification as whole numbers.",
+      "The term 'whole number' refers to the type of number, not its magnitude."
+    ],
+    "fix_steps": [
+      "Understand that 'whole number' is a category, not a measure of size.",
+      "Compare numbers based on their actual numerical value, not their type.",
+      "Review the definition of whole numbers: they include 0, 1, 2, 3, and so on.",
+      "Practice comparing numbers across different types (e.g., whole numbers, fractions, decimals).",
+      "Use number lines to visualize the relative sizes of numbers.",
+      "Ask yourself: 'Is the number's value the reason it is considered greater?'"
+    ],
+    "quick_check": "Which number is greater: 5 or 10?",
+    "tiny_example": "Whole numbers are 0, 1, 2, 3, etc.\\n5 is a whole number, but 10 is also a whole number.\\n10 is greater than 5 because it has a larger value."
+  },
+  "Adding_across": {
+    "plain_definition": "Adding_across is a misconception where students add numerators and denominators separately instead of finding a common denominator first.",
+    "typical_wrong_thought": [
+      "You just add the top numbers and the bottom numbers together.",
+      "Adding the numerators and denominators gives the correct answer.",
+      "The denominator doesn't need to be the same when adding fractions."
+    ],
+    "correct_rule": [
+      "To add fractions, they must have the same denominator.",
+      "Find a common denominator by using the least common multiple of the denominators.",
+      "Rewrite each fraction with the common denominator.",
+      "Add the numerators and keep the common denominator."
+    ],
+    "fix_steps": [
+      "Identify the denominators of the fractions.",
+      "Find the least common denominator (LCD) of the two denominators.",
+      "Convert each fraction to an equivalent fraction with the LCD as the denominator.",
+      "Add the numerators of the equivalent fractions and keep the common denominator.",
+      "Simplify the resulting fraction if possible."
+    ],
+    "quick_check": "\\( \\frac{2}{4}+\\frac{1}{6}= \\)",
+    "tiny_example": "To add \\( \\frac{1}{2} + \\frac{1}{3} \\):\\n1. Find LCD of 2 and 3, which is 6.\\n2. Convert fractions: \\( \\frac{3}{6} + \\( \\frac{2}{6} \\).\\n3. Add numerators: \\( 3 + 2 = 5 \\).\\n4. Result: \\( \\frac{5}{6} \\)."
+  },
+  "WNB": {
+    "plain_definition": "Students make this mistake: WNB.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  },
+  "Tacking": {
+    "plain_definition": "Tacking is a common misconception where students incorrectly add or subtract the absolute values of numbers without considering the signs, leading to errors in operations involving negative numbers.",
+    "typical_wrong_thought": [
+      "Ignoring the signs when subtracting negative numbers",
+      "Adding the absolute values and applying a negative sign to the result",
+      "Thinking that subtracting a negative is like subtracting its positive counterpart"
+    ],
+    "correct_rule": [
+      "Subtracting a negative number is the same as adding its positive counterpart.",
+      "When subtracting integers, change the subtraction sign to addition and change the sign of the second number.",
+      "Always consider the signs of the numbers when performing operations."
+    ],
+    "fix_steps": [
+      "Remember that subtracting a negative number is like adding its positive version.",
+      "Convert the problem to addition by changing the minus sign to a plus sign and flipping the sign of the second number.",
+      "For example, (-8) - (-5) becomes (-8) + 5.",
+      "Simplify the expression by adding the numbers: -8 + 5 = -3.",
+      "Check your answer by using a number line or counting up/down from the first number.",
+      "Practice with multiple examples to reinforce the concept."
+    ],
+    "quick_check": "What number belongs in the box?\n(-7) - (-4) = \n\\square",
+    "tiny_example": "(-8) - (-5) = (-8) + 5 = -3\nSubtracting a negative is like adding its positive.\nAlways flip the sign of the second number when subtracting."
+  },
+  "Unknowable": {
+    "plain_definition": "The 'Unknowable' misconception occurs when a student believes that certain mathematical problems cannot be solved with the given information, even though the information is sufficient to find a solution.",
+    "typical_wrong_thought": [
+      "You need more information to solve the problem.",
+      "The problem is impossible to answer with the given data.",
+      "There isn't enough data to form an equation."
+    ],
+    "correct_rule": [
+      "If the problem provides enough information to calculate the unknown, it is solvable.",
+      "In regular polygons, each interior angle can be used to find the number of sides using the formula: (n-2)*180/n = interior angle.",
+      "You don't need to know the sum of all angles to find the number of sides if one angle is given."
+    ],
+    "fix_steps": [
+      "Identify what information is given in the problem.",
+      "Determine if the information is sufficient to solve for the unknown.",
+      "Recall the formula for interior angles of regular polygons.",
+      "Apply the formula to the given angle to find the number of sides.",
+      "Check if the answer makes sense in the context of polygon properties.",
+      "If unsure, try plugging in possible values to test the solution.",
+      "Use diagrams or examples to verify the logic of the solution."
+    ],
+    "quick_check": "This is part of a regular polygon. How many sides does it have? [Image: A diagram showing an obtuse angle labelled 144 degrees]",
+    "tiny_example": "Given an interior angle of 144° in a regular polygon, the formula (n-2)*180/n = 144 can be solved for n. Plugging in, 144n = 180n - 360 → 36n = 360 → n = 10. So the polygon has 10 sides."
+  },
+  "Wrong_Fraction": {
+    "plain_definition": "Wrong_Fraction is a misconception where students incorrectly apply fraction operations, often by misunderstanding how to multiply fractions by whole numbers or misinterpreting the numerator and denominator.",
+    "typical_wrong_thought": [
+      "I think fractions are about dividing the whole into parts and then subtracting.",
+      "Multiplying the denominator by the whole number gives the correct answer.",
+      "The numerator is the total number of items, and the denominator is the number of groups."
+    ],
+    "correct_rule": [
+      "To find a fraction of a whole number, multiply the fraction by the whole number.",
+      "The numerator represents how many parts you are taking, and the denominator represents the total number of equal parts.",
+      "When multiplying a fraction by a whole number, you can multiply the numerator by the whole number and keep the denominator the same."
+    ],
+    "fix_steps": [
+      "Understand that a fraction like 3/5 means 3 parts out of 5 equal parts.",
+      "To find 3/5 of 120, first divide 120 by 5 to find one part (24).",
+      "Then multiply that result by 3 to find three parts (24 x 3 = 72).",
+      "Check that the answer is less than the original number if the fraction is less than 1.",
+      "Use visual models or number lines to represent the fraction and the whole number.",
+      "Practice with different fractions and whole numbers to reinforce the concept."
+    ],
+    "quick_check": "A box contains 150 counters. 2/3 of the counters are green. How many green counters are there?",
+    "tiny_example": "To find 2/3 of 150: 150 ÷ 3 = 50; 50 × 2 = 100. So, 100 counters are green."
+  },
+  "SwapDividend": {
+    "plain_definition": "SwapDividend is a misconception where students incorrectly swap the dividend and divisor when dividing fractions, leading to incorrect results.",
+    "typical_wrong_thought": [
+      "Dividing by a number is the same as multiplying by that number.",
+      "Fractions can be divided by flipping the divisor and multiplying.",
+      "The order of numbers in division doesn't matter."
+    ],
+    "correct_rule": [
+      "Dividing by a number is the same as multiplying by its reciprocal.",
+      "To divide fractions, multiply the first fraction by the reciprocal of the second fraction.",
+      "The order of the numbers in division matters; dividing by 6 is not the same as dividing 6."
+    ],
+    "fix_steps": [
+      "Understand that division by a number is equivalent to multiplication by its reciprocal.",
+      "Identify the dividend and divisor in the problem.",
+      "Convert the divisor to its reciprocal by flipping the numerator and denominator.",
+      "Multiply the dividend by the reciprocal of the divisor.",
+      "Simplify the resulting fraction if possible.",
+      "Check your answer by estimating or using a different method.",
+      "Use visual models or real-world examples to reinforce the concept."
+    ],
+    "quick_check": "Calculate $ \\frac{3}{4} \\div 2 $",
+    "tiny_example": "To divide $ \\frac{1}{2} \\div 6 $, you multiply $ \\frac{1}{2} $ by $ \\frac{1}{6} $, which gives $ \\frac{1}{12} $. If you swap them, you get $ 6 \\div \\frac{1}{2} = 12 $, which is different."
+  },
+  "Scale": {
+    "plain_definition": "Scale refers to the factor by which a quantity is multiplied or divided to change its size, often in the context of graphs, models, or measurements.",
+    "typical_wrong_thought": [
+      "Scale is the same as size or magnitude without any reference point.",
+      "Scale is only used in math problems and not in real life.",
+      "Scale is a way to measure time or distance directly, not as a ratio."
+    ],
+    "correct_rule": [
+      "Scale is a ratio that compares the size of a representation to the actual size.",
+      "Scale is used to enlarge or reduce drawings, maps, or models proportionally.",
+      "Scale is essential for interpreting graphs, charts, and diagrams accurately."
+    ],
+    "fix_steps": [
+      "Understand that scale is a ratio, not an absolute value.",
+      "Identify the scale factor by comparing the representation to the actual size.",
+      "Apply the scale factor consistently to all measurements in the representation.",
+      "Use scale to interpret and create proportional drawings or models.",
+      "Check that the scale is applied correctly in all directions (length, width, height).",
+      "Practice converting between scaled measurements and actual measurements."
+    ],
+    "quick_check": "A map has a scale of 1:100,000. If a distance on the map is 2 cm, how many kilometers is that in real life?",
+    "tiny_example": "If a model car is 1/10 the size of the real car, and the real car is 4 meters long, the model is 0.4 meters long. Scale = 1:10."
+  },
+  "Not_variable": {
+    "plain_definition": "A variable is a symbol that represents an unknown value in a mathematical expression. It can take on different values depending on the context.",
+    "typical_wrong_thought": [
+      "Variables are fixed numbers, not symbols that can change.",
+      "I can guess the value of a variable by looking at other numbers in the problem.",
+      "I think the variable is a letter that just stands for itself, not a placeholder for a number."
+    ],
+    "correct_rule": [
+      "A variable is a symbol (usually a letter) that represents an unknown number in an equation.",
+      "To solve for a variable, you need to isolate it on one side of the equation.",
+      "Variables can take on different values depending on the equation."
+    ],
+    "fix_steps": [
+      "Understand that a variable is a symbol that stands for an unknown number.",
+      "Learn that variables can be solved for by performing inverse operations on both sides of the equation.",
+      "Practice identifying variables in equations and solving for them step by step.",
+      "Use algebraic methods to isolate the variable and find its value.",
+      "Check your solution by substituting the value back into the original equation.",
+      "Review the concept of variables in different contexts to reinforce understanding."
+    ],
+    "quick_check": "Solve for x in the equation 3x = 15.",
+    "tiny_example": "In the equation 2y = 24, y is a variable that represents the unknown number. To find y, divide both sides by 2: y = 24 ÷ 2 = 12. So, y = 12."
+  },
+  "Firstterm": {
+    "plain_definition": "The first term is the initial value in a sequence, usually represented as the value of the sequence at the first position (n = 1).",
+    "typical_wrong_thought": [
+      "The first term is the same as the common difference.",
+      "The first term is the number of terms in the sequence.",
+      "The first term is the value that increases by the same amount each time."
+    ],
+    "correct_rule": [
+      "The first term is the value of the sequence when n = 1.",
+      "It is the starting point of the sequence and is not necessarily related to the common difference.",
+      "It is used in formulas for arithmetic and geometric sequences."
+    ],
+    "fix_steps": [
+      "Identify the first pattern in the sequence (usually Pattern 1).",
+      "Count the number of dots or items in that first pattern.",
+      "This count is the first term of the sequence.",
+      "Verify that the first term is not confused with the common difference or the number of terms.",
+      "Use the first term in any sequence formula or pattern recognition.",
+      "Check if the first term is consistent across different types of sequences."
+    ],
+    "quick_check": "Dots have been arranged in these patterns: [Image: Pattern 1 consists of 3 dots, Pattern 2 consists of 7 dots, Pattern 3 consists of 11 dots] How many dots would the first term be?",
+    "tiny_example": "Pattern 1: 3 dots\nPattern 2: 7 dots\nPattern 3: 11 dots\nFirst term: 3"
+  },
+  "Adding_terms": {
+    "plain_definition": "Adding_terms is a misconception where students incorrectly add the coefficient to the constant term instead of dividing both sides by the coefficient to isolate the variable.",
+    "typical_wrong_thought": [
+      "I think I should add the coefficient to the constant term to find the variable.",
+      "If I add the number to the coefficient, it will equal the total.",
+      "The variable is the number that, when added to the coefficient, gives the total."
+    ],
+    "correct_rule": [
+      "To solve an equation like 2y = 24, you should divide both sides by the coefficient of the variable (2) to isolate y.",
+      "The goal is to get the variable by itself on one side of the equation.",
+      "Division is the inverse operation of multiplication and is used to undo the coefficient."
+    ],
+    "fix_steps": [
+      "Start with the equation: 2y = 24.",
+      "Identify the coefficient of the variable, which is 2 in this case.",
+      "Divide both sides of the equation by 2: (2y)/2 = 24/2.",
+      "Simplify both sides: y = 12.",
+      "Check your answer by substituting y = 12 back into the original equation: 2(12) = 24.",
+      "Verify that both sides of the equation are equal, confirming the solution is correct."
+    ],
+    "quick_check": "What is the value of x in the equation 3x = 15?",
+    "tiny_example": "Equation: 3x = 15\nWrong thought: 3 + x = 15, so x = 12\nCorrect step: Divide both sides by 3: x = 15/3 = 5"
+  },
+  "Multiplying_by_4": {
+    "plain_definition": "Students make this mistake: Multiplying_by_4.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  },
+  "FlipChange": {
+    "plain_definition": "FlipChange is a misconception where students incorrectly apply the rule of flipping the divisor when dividing fractions, leading to errors in calculations.",
+    "typical_wrong_thought": [
+      "Dividing by a fraction is the same as multiplying by its denominator.",
+      "You flip the divisor and multiply when dividing fractions, even when the divisor is a whole number.",
+      "Dividing by a number is the same as dividing the numerator by that number."
+    ],
+    "correct_rule": [
+      "Dividing by a whole number is the same as multiplying by its reciprocal.",
+      "To divide by a whole number, you can multiply by the reciprocal of that number.",
+      "For example, $ \\frac{1}{2} \\div 6 $ is the same as $ \\frac{1}{2} \\times \\frac{1}{6} $."
+    ],
+    "fix_steps": [
+      "Understand that dividing by a whole number is the same as multiplying by its reciprocal.",
+      "Identify the divisor (the number you are dividing by) and find its reciprocal.",
+      "Multiply the original fraction by the reciprocal of the divisor.",
+      "Simplify the resulting fraction if possible.",
+      "Check your answer by estimating or using a different method.",
+      "Use visual models or number lines to reinforce the concept."
+    ],
+    "quick_check": "Calculate $ \\frac{3}{4} \\div 2 $",
+    "tiny_example": "To divide $ \\frac{1}{2} $ by 6, you multiply $ \\frac{1}{2} $ by $ \\frac{1}{6} $, which gives $ \\frac{1}{12} $."
+  },
+  "Division": {
+    "plain_definition": "Division is the operation of splitting a quantity into equal parts. It is the inverse of multiplication.",
+    "typical_wrong_thought": [
+      "Dividing is always the way to find a fraction of something.",
+      "You can always subtract fractions to find a part of a part.",
+      "Multiplication is the only operation needed when dealing with fractions."
+    ],
+    "correct_rule": [
+      "To find a fraction of a fraction, you multiply the two fractions.",
+      "To find how much of a part is eaten or taken, you multiply the fraction of the whole by the fraction of the part.",
+      "Subtraction is used when you are finding the remaining part after some has been taken away."
+    ],
+    "fix_steps": [
+      "Identify the whole and the part you are working with.",
+      "Determine what fraction of the part is being taken or eaten.",
+      "Multiply the fraction of the whole by the fraction of the part to find the fraction of the whole that has been taken.",
+      "Check if the question is asking for the remaining part or the taken part to decide whether to subtract or multiply.",
+      "Use visual models or real-world examples to understand the relationship between the fractions.",
+      "Practice with different types of fraction problems to build conceptual understanding."
+    ],
+    "quick_check": "What fraction of the whole cake has Robert eaten if Sally has 1/2 of a cake and Robert eats 1/4 of that piece?",
+    "tiny_example": "Sally has 1/2 of a cake. Robert eats 1/4 of that piece. To find how much of the whole cake Robert ate, multiply 1/2 by 1/4. 1/2 × 1/4 = 1/8. So Robert ate 1/8 of the whole cake."
+  },
+  "Definition": {
+    "plain_definition": "A regular polygon is a polygon that is both equiangular and equilateral, meaning all sides are equal in length and all interior angles are equal in measure.",
+    "typical_wrong_thought": [
+      "A polygon with more sides must have a larger angle.",
+      "The number of sides can be guessed by doubling or halving the number of sides of a common polygon.",
+      "An obtuse angle in a polygon automatically means it has a specific number of sides."
+    ],
+    "correct_rule": [
+      "In a regular polygon, the measure of each interior angle is given by the formula: (n-2)*180/n, where n is the number of sides.",
+      "To find the number of sides, rearrange the formula to solve for n: n = 360/(180 - interior angle).",
+      "Each interior angle in a regular polygon is directly related to the number of sides."
+    ],
+    "fix_steps": [
+      "Identify the measure of the interior angle from the diagram.",
+      "Use the formula for the interior angle of a regular polygon: (n-2)*180/n.",
+      "Rearrange the formula to solve for n: n = 360/(180 - interior angle).",
+      "Plug in the given angle measure and calculate n.",
+      "Check that the result is a whole number, as the number of sides must be an integer.",
+      "Verify that the calculated angle matches the given angle using the formula."
+    ],
+    "quick_check": "This is part of a regular polygon. How many sides does it have? [Image: A diagram showing an obtuse angle labelled 135 degrees]",
+    "tiny_example": "If an interior angle is 135 degrees, then n = 360/(180 - 135) = 360/45 = 8. So the polygon has 8 sides."
+  },
+  "Interior": {
+    "plain_definition": "The interior angle of a regular polygon is the angle formed inside the polygon at one of its vertices.",
+    "typical_wrong_thought": [
+      "Interior angles are the same as exterior angles.",
+      "Interior angles can be calculated by multiplying the number of sides by the exterior angle.",
+      "The sum of interior angles is always 360 degrees regardless of the number of sides."
+    ],
+    "correct_rule": [
+      "The sum of the interior angles of a regular polygon is (n-2)*180 degrees.",
+      "Each interior angle of a regular polygon is [(n-2)*180]/n degrees.",
+      "The sum of an interior angle and its corresponding exterior angle is 180 degrees."
+    ],
+    "fix_steps": [
+      "Identify the given interior angle measure.",
+      "Recall the formula for each interior angle: [(n-2)*180]/n.",
+      "Set up the equation with the given angle measure and solve for n.",
+      "Check that the solution makes sense in the context of polygon angles.",
+      "Verify by calculating the sum of interior angles using the found number of sides.",
+      "Ensure that the answer is a whole number, as polygons have whole numbers of sides."
+    ],
+    "quick_check": "What is the number of sides of a regular polygon if each interior angle is 120 degrees?",
+    "tiny_example": "If an interior angle is 120 degrees, then [(n-2)*180]/n = 120. Solving gives n = 6. A hexagon has 6 sides."
+  },
+  "Longer_is_bigger": {
+    "plain_definition": "The misconception that longer numbers are always bigger is incorrect. The length of a number does not determine its size; the position of digits (place value) is what matters.",
+    "typical_wrong_thought": [
+      "A number with more digits is always larger.",
+      "A number with more decimal places is larger.",
+      "The more digits after the decimal, the bigger the number."
+    ],
+    "correct_rule": [
+      "Compare numbers digit by digit starting from the leftmost digit.",
+      "If the digits are the same up to a certain place, the number with the larger digit in that place is greater.",
+      "Decimal places matter only in relation to their position (tenths, hundredths, etc.)."
+    ],
+    "fix_steps": [
+      "Understand that place value determines the size of a number, not the number of digits or decimal places.",
+      "Compare numbers starting from the leftmost digit and move right until a difference is found.",
+      "If one number has fewer digits, it is smaller than a number with more digits (unless the shorter number is a decimal with leading zeros).",
+      "When comparing decimals, align the decimal points and compare each place value step by step.",
+      "Practice comparing numbers with different lengths and decimal places.",
+      "Use visual aids like place value charts to reinforce the concept.",
+      "Check your answers by estimating the size of the numbers before comparing."
+    ],
+    "quick_check": "Which number is greater: 0.999 or 1.0?",
+    "tiny_example": "Compare 0.5 and 0.500. They are equal. Compare 0.3 and 0.25. 0.3 is larger because 3 tenths is more than 2 tenths."
+  },
+  "Ignores_zeroes": {
+    "plain_definition": "Ignores_zeroes is a misconception where students overlook or misinterpret the significance of zeros in decimal numbers, especially when comparing their values.",
+    "typical_wrong_thought": [
+      "Zeros in decimal numbers don't affect the value of the number.",
+      "The number of zeros determines the size of the number.",
+      "Trailing zeros after the decimal point are not important for comparison."
+    ],
+    "correct_rule": [
+      "Zeros in decimal numbers can affect the value depending on their position.",
+      "Leading zeros (before the first non-zero digit) do not change the value of a number.",
+      "Trailing zeros (after the decimal point) can affect the precision but not the magnitude when comparing numbers.",
+      "When comparing decimal numbers, start from the leftmost digit and move right, considering the place value of each digit."
+    ],
+    "fix_steps": [
+      "Understand that zeros in different positions have different effects on the value of a number.",
+      "Practice comparing numbers with varying numbers of zeros in different positions.",
+      "Identify the place value of each digit in a decimal number.",
+      "Compare numbers digit by digit, starting from the highest place value.",
+      "Use visual aids like number lines or place value charts to reinforce understanding.",
+      "Review examples where zeros are critical in determining the size of a number.",
+      "Ask questions that require careful attention to the placement of zeros in decimal numbers."
+    ],
+    "quick_check": "Which number is greater: 0.05 or 0.50?",
+    "tiny_example": "Compare 0.05 and 0.50. The correct answer is 0.50 because the 5 in the tenths place is greater than the 0 in the tenths place of 0.05. Zeros in the hundredths place do not affect the comparison when the tenths place differs."
+  },
+  "Shorter_is_bigger": {
+    "plain_definition": "The misconception that a number with fewer decimal places is larger than one with more decimal places.",
+    "typical_wrong_thought": [
+      "More decimal places make a number smaller.",
+      "Numbers with fewer digits are always bigger.",
+      "The position of digits in a decimal number determines size in reverse."
+    ],
+    "correct_rule": [
+      "When comparing decimals, start from the leftmost digit and compare each place value in order.",
+      "A number with more digits in the whole number part is larger, regardless of decimal places.",
+      "If the whole number parts are equal, compare the decimal places from left to right."
+    ],
+    "fix_steps": [
+      "Review the place value chart to understand the value of each digit in a decimal number.",
+      "Compare whole number parts first; if they are different, the larger whole number is the larger number.",
+      "If whole number parts are the same, compare the decimal places starting from the tenths place.",
+      "Use visual aids like number lines or place value grids to reinforce the concept.",
+      "Practice comparing decimals with different numbers of decimal places.",
+      "Check your answers by converting decimals to fractions or using estimation."
+    ],
+    "quick_check": "Which number is greater: 3.45 or 3.6?",
+    "tiny_example": "Compare 5.1 and 5.09.\nWhole number parts are equal (5).\nCompare decimal places: 1 (tenths) vs 0 (tenths).\nSince 1 > 0, 5.1 is greater than 5.09."
+  },
+  "Base_rate": {
+    "plain_definition": "Base rate is a misunderstanding where students assume that increasing the number of workers directly divides the total time without considering the proportional relationship between workers and time.",
+    "typical_wrong_thought": [
+      "More people mean less time, so just divide the total time by the number of people.",
+      "The total time is fixed, so adding more people doesn't change the time needed.",
+      "The number of people and time are inversely proportional, so dividing time by people gives the correct answer."
+    ],
+    "correct_rule": [
+      "When more people work on a task, the time required decreases proportionally.",
+      "The total work is constant, so time is inversely proportional to the number of workers.",
+      "Use the formula: Time = (Total Work) / (Number of Workers)."
+    ],
+    "fix_steps": [
+      "Identify the total work done by the original number of workers.",
+      "Calculate the work rate per worker by dividing total work by the number of workers.",
+      "Multiply the work rate by the new number of workers to find the total work.",
+      "Divide the total work by the new number of workers to find the new time.",
+      "Check that the new time is less than the original time when more workers are added."
+    ],
+    "quick_check": "If 4 people can paint a house in 6 hours, how long would it take 12 people?",
+    "tiny_example": "3 people take 192 hours to build a wall. Total work = 3 * 192 = 576 person-hours. 12 people: 576 / 12 = 48 hours."
+  },
+  "Inverse_operation": {
+    "plain_definition": "Inverse operation refers to the opposite mathematical operation used to solve for a variable.",
+    "typical_wrong_thought": [
+      "Multiplying both sides by the coefficient instead of dividing",
+      "Thinking that the operation is applied to the result instead of the original number",
+      "Confusing the inverse operation with the same operation"
+    ],
+    "correct_rule": [
+      "To solve an equation like 2y = 24, you should divide both sides by 2 to isolate y.",
+      "The inverse operation of multiplication is division.",
+      "Always perform the same operation on both sides of the equation to maintain equality."
+    ],
+    "fix_steps": [
+      "Identify the operation being used in the equation (in this case, multiplication).",
+      "Determine the inverse operation (in this case, division).",
+      "Apply the inverse operation to both sides of the equation to isolate the variable.",
+      "Simplify both sides of the equation to find the value of the variable.",
+      "Check your answer by substituting it back into the original equation.",
+      "Ensure that the operations are applied correctly and consistently to both sides."
+    ],
+    "quick_check": "Solve 3x = 15. What is the value of x?",
+    "tiny_example": "Equation: 2y = 24\nStep 1: Identify the operation (multiplication)\nStep 2: Use inverse operation (division)\nStep 3: Divide both sides by 2: y = 24 / 2\nStep 4: Simplify: y = 12"
+  },
+  "Certainty": {
+    "plain_definition": "Certainty refers to an event that is guaranteed to happen, with a probability of exactly 1.0.",
+    "typical_wrong_thought": [
+      "A probability close to 1 means the event is certain.",
+      "If an event has a high probability, it is always certain.",
+      "0.9 is close to 1, so it must be certain."
+    ],
+    "correct_rule": [
+      "A probability of 1.0 means the event is certain.",
+      "Probabilities between 0 and 1 indicate varying levels of likelihood, not certainty.",
+      "A probability of 0.9 means there is a 90% chance, but not a 100% chance."
+    ],
+    "fix_steps": [
+      "Understand that certainty corresponds to a probability of exactly 1.0.",
+      "Recognize that probabilities near 1.0 (like 0.9) indicate high likelihood, but not certainty.",
+      "Compare the given probability to 1.0 to determine if it is certain or not.",
+      "Use precise language: 'certain' only applies when the probability is exactly 1.0.",
+      "Avoid using 'certain' for probabilities that are close to 1.0 but not exactly 1.0.",
+      "Practice identifying certainty in different probability scenarios."
+    ],
+    "quick_check": "The probability of an event is 1.0. Which word best describes the likelihood of the event occurring?",
+    "tiny_example": "Probability = 1.0 → Certain\nProbability = 0.9 → Likely, not Certain\nProbability = 0.5 → Equally Likely\nProbability = 0 → Impossible"
+  },
+  "Incorrect_equivalent_fraction_addition": {
+    "plain_definition": "Students make this mistake: Incorrect_equivalent_fraction_addition.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  },
+  "Wrong_Operation": {
+    "plain_definition": "Students make this mistake: Wrong_Operation.",
+    "typical_wrong_thought": [
+      "They apply an incorrect rule or shortcut."
+    ],
+    "correct_rule": [
+      "Use the correct definition and check carefully."
+    ],
+    "fix_steps": [
+      "Restate the goal.",
+      "Write the correct rule.",
+      "Apply step-by-step.",
+      "Check with an easy example."
+    ],
+    "quick_check": "Can you test your rule on a simpler number?",
+    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+  }
+}

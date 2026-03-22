@@ -1,0 +1,11 @@
+1. Have to create a teacher facing UI also, to monitor (model performance analysis) and provide the ground truth
+
+2. Gonna create some questions (not present in train.csv) and try them on the model (it's like the basic)
+
+3. Misconception Hierarchy
+
+4. Hierarchical diagnosis
+
+5. Add uncertainty-aware prediction: “not confident enough; send to teacher” for hard cases
+
+6. Try out all of GPT

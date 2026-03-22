@@ -11,18 +11,10 @@ const API_BASE = config.apiBaseUrl;
 const isModal = API_BASE.includes('.modal.run');
 
 /**
- * Build the full URL for an endpoint.
- * Modal uses a different URL pattern: base-{method}.modal.run
- * Local/standard FastAPI uses: base/{endpoint}
+ * Get the URL for a Modal endpoint.
  */
-function buildUrl(endpoint, method = null) {
-  if (isModal && method) {
-    // Modal pattern: https://user--app-class-method.modal.run
-    // The API_BASE should be like: https://user--map-misconception-detector-misconceptionapi
-    return `${API_BASE}-${method}.modal.run`;
-  }
-  // Standard pattern
-  return `${API_BASE}${endpoint}`;
+function getModalUrl(endpoint) {
+  return config.modalEndpoints[endpoint] || null;
 }
 
 /**
@@ -33,7 +25,7 @@ function buildUrl(endpoint, method = null) {
 export async function fetchQuestion(questionId = null) {
   let url;
   if (isModal) {
-    url = buildUrl(null, 'question');
+    url = getModalUrl('question');
     if (questionId) {
       url += `?question_id=${questionId}`;
     }
@@ -56,7 +48,7 @@ export async function fetchQuestion(questionId = null) {
  * @returns {Promise<Object>} Feedback response
  */
 export async function submitAnswer(data) {
-  const url = isModal ? buildUrl(null, 'submit') : `${API_BASE}/api/submit`;
+  const url = isModal ? getModalUrl('submit') : `${API_BASE}/api/submit`;
 
   const response = await fetch(url, {
     method: 'POST',
@@ -78,7 +70,7 @@ export async function submitAnswer(data) {
  * @returns {Promise<Object>} Response
  */
 export async function rateFeedback(data) {
-  const url = isModal ? buildUrl(null, 'rate') : `${API_BASE}/api/rate`;
+  const url = isModal ? getModalUrl('rate') : `${API_BASE}/api/rate`;
 
   try {
     const response = await fetch(url, {
@@ -99,7 +91,7 @@ export async function rateFeedback(data) {
  * @returns {Promise<Object>} Health status
  */
 export async function checkHealth() {
-  const url = isModal ? buildUrl(null, 'health') : `${API_BASE}/health`;
+  const url = isModal ? getModalUrl('health') : `${API_BASE}/health`;
   const response = await fetch(url);
   return response.json();
 }
@@ -109,7 +101,7 @@ export async function checkHealth() {
  * @returns {Promise<Object>} Questions list
  */
 export async function listQuestions() {
-  const url = isModal ? buildUrl(null, 'questions') : `${API_BASE}/api/questions/list`;
+  const url = isModal ? getModalUrl('questions') : `${API_BASE}/api/questions/list`;
   const response = await fetch(url);
   return response.json();
 }
@@ -120,7 +112,7 @@ export async function listQuestions() {
  * @returns {Promise<Object>} Prediction result
  */
 export async function predict(data) {
-  const url = isModal ? buildUrl(null, 'predict') : `${API_BASE}/predict`;
+  const url = isModal ? getModalUrl('predict') : `${API_BASE}/predict`;
 
   const response = await fetch(url, {
     method: 'POST',
