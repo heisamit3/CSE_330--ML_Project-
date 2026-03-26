@@ -995,6 +995,23 @@ body {
     white-space: pre-wrap;
 }
 
+/* ── Student Explanation Card ── */
+.explanation-card {
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.04);
+}
+
+.explanation-content {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    padding: 16px;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent-secondary);
+    white-space: pre-wrap;
+}
+
 /* ── Misconception Card ── */
 .misconception-card {
     border: 1px solid rgba(249, 115, 22, 0.3);
@@ -1363,4 +1380,80 @@ body {
         height: 38px;
         font-size: 16px;
     }
+}
+
+/* ============================================================
+   Completed Card - All Questions Answered
+   ============================================================ */
+.completed-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.completed-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 0 30px var(--accent-glow);
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 30px var(--accent-glow);
+    }
+    50% {
+        box-shadow: 0 0 50px var(--accent-glow), 0 0 80px rgba(139, 92, 246, 0.2);
+    }
+}
+
+.completed-card h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.completed-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.completed-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.completed-actions .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.completed-actions .btn-secondary:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
+    color: var(--text-primary);
 }

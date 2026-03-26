@@ -1,24 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import QuestionCard from './components/QuestionCard';
-import AnswerForm from './components/AnswerForm';
-import FeedbackPanel from './components/FeedbackPanel';
-import Toast from './components/Toast';
-import { useScore } from './hooks/useScore';
-import { useQuestion } from './hooks/useQuestion';
-import { useSubmit } from './hooks/useSubmit';
+import ProtectedRoute from './components/ProtectedRoute';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import StudentPracticePage from './pages/StudentPracticePage';
+import TeacherDashboardPage from './pages/TeacherDashboardPage';
 import config from './config';
 
-function App() {
+function AppLayout({ children }) {
   const [theme, setTheme] = useState('dark');
-  const [started, setStarted] = useState(false);
-  const [questionNumber, setQuestionNumber] = useState(0);
-  const [toasts, setToasts] = useState([]);
-
-  const { score, addResult } = useScore();
-  const { question, loading: questionLoading, error: questionError, loadQuestion } = useQuestion();
-  const { feedback, loading: submitLoading, error: submitError, submit, clearFeedback } = useSubmit();
+  const { user, profile, signOut } = useAuth();
 
   // Theme management
   useEffect(() => {
@@ -27,85 +20,12 @@ function App() {
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
-  // Check if already started
-  useEffect(() => {
-    if (sessionStorage.getItem(config.storageKeys.started) === 'true') {
-      setStarted(true);
-      loadQuestion();
-      setQuestionNumber(1);
-    }
-  }, [loadQuestion]);
-
-  const showToast = useCallback((message, type = 'success') => {
-    const id = Date.now();
-    setToasts((prev) => [...prev, { id, message, type }]);
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((t) => t.id !== id));
-    }, 3000);
-  }, []);
-
-  // Show toast for errors
-  useEffect(() => {
-    if (questionError) {
-      showToast(questionError, 'error');
-    }
-  }, [questionError, showToast]);
-
-  useEffect(() => {
-    if (submitError) {
-      showToast(submitError, 'error');
-    }
-  }, [submitError, showToast]);
-
   const toggleTheme = useCallback(() => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     localStorage.setItem(config.storageKeys.theme, newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
   }, [theme]);
-
-  const handleStart = useCallback(() => {
-    sessionStorage.setItem(config.storageKeys.started, 'true');
-    setStarted(true);
-    setQuestionNumber(1);
-    loadQuestion();
-  }, [loadQuestion]);
-
-  const handleSubmit = useCallback(async (selectedAnswer, explanation) => {
-    if (!question) return;
-
-    if (!selectedAnswer) {
-      showToast('Choose one answer option first.', 'error');
-      return;
-    }
-
-    if (!explanation) {
-      showToast('Explain how you solved the question.', 'error');
-      return;
-    }
-
-    if (explanation.length < config.minExplanationLength) {
-      showToast('Please write a little more so the app can judge your reasoning.', 'error');
-      return;
-    }
-
-    const result = await submit(question.id, selectedAnswer, explanation);
-    if (result) {
-      addResult(result.is_correct);
-    }
-  }, [question, submit, addResult, showToast]);
-
-  const handleNext = useCallback(() => {
-    clearFeedback();
-    setQuestionNumber((n) => n + 1);
-    loadQuestion();
-  }, [clearFeedback, loadQuestion]);
-
-  const handleSkip = useCallback(() => {
-    clearFeedback();
-    setQuestionNumber((n) => n + 1);
-    loadQuestion();
-  }, [clearFeedback, loadQuestion]);
 
   return (
     <div className="app">
@@ -117,56 +37,16 @@ function App() {
         <div className="orb orb-3"></div>
       </div>
 
-      <Navbar score={score} theme={theme} onToggleTheme={toggleTheme} />
+      <Navbar
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        user={user}
+        profile={profile}
+        onSignOut={signOut}
+      />
 
       <main className="main-content">
-        {!started ? (
-          <Hero onStart={handleStart} />
-        ) : (
-          <section className="practice-section">
-            <div className="practice-container">
-              <div className="glass-card practice-guide">
-                <div className="guide-steps">
-                  <div className="guide-step">
-                    <span className="guide-step-number">1</span>
-                    <span>Choose one option</span>
-                  </div>
-                  <div className="guide-step">
-                    <span className="guide-step-number">2</span>
-                    <span>Explain your reasoning</span>
-                  </div>
-                  <div className="guide-step">
-                    <span className="guide-step-number">3</span>
-                    <span>Review the verdict and fix the misconception</span>
-                  </div>
-                </div>
-              </div>
-
-              <QuestionCard
-                question={question}
-                questionNumber={questionNumber}
-                loading={questionLoading}
-                onSkip={handleSkip}
-              />
-
-              {!feedback && (
-                <AnswerForm
-                  question={question}
-                  loading={submitLoading}
-                  onSubmit={handleSubmit}
-                />
-              )}
-
-              {feedback && (
-                <FeedbackPanel
-                  feedback={feedback}
-                  questionId={question?.id}
-                  onNext={handleNext}
-                />
-              )}
-            </div>
-          </section>
-        )}
+        {children}
       </main>
 
       <footer className="footer">
@@ -180,13 +60,88 @@ function App() {
           </div>
         </div>
       </footer>
-
-      <div className="toast-container">
-        {toasts.map((toast) => (
-          <Toast key={toast.id} message={toast.message} type={toast.type} />
-        ))}
-      </div>
     </div>
+  );
+}
+
+function HomeRedirect() {
+  const { user, profile, isTeacher, loading } = useAuth();
+
+  // Wait for auth to complete
+  if (loading) {
+    return <div className="auth-loading" />;
+  }
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  // Wait for profile to load (user exists but profile not yet fetched)
+  if (!profile) {
+    return <div className="auth-loading" />;
+  }
+
+  // Redirect based on role
+  if (isTeacher) {
+    return <Navigate to="/dashboard" replace />;
+  }
+
+  return <Navigate to="/practice" replace />;
+}
+
+function AppRoutes() {
+  const { user } = useAuth();
+
+  return (
+    <Routes>
+      {/* Public routes */}
+      <Route
+        path="/login"
+        element={user ? <Navigate to="/" replace /> : <LoginPage />}
+      />
+      <Route
+        path="/signup"
+        element={user ? <Navigate to="/" replace /> : <SignupPage />}
+      />
+
+      {/* Home - redirects based on auth/role */}
+      <Route path="/" element={<HomeRedirect />} />
+
+      {/* Student practice */}
+      <Route
+        path="/practice"
+        element={
+          <ProtectedRoute>
+            <StudentPracticePage />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Teacher dashboard */}
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute requiredRole="teacher">
+            <TeacherDashboardPage />
+          </ProtectedRoute>
+        }
+      />
+
+      {/* Fallback */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <AppLayout>
+          <AppRoutes />
+        </AppLayout>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
