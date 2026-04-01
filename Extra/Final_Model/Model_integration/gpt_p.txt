@@ -1,0 +1,142 @@
+Open this project folder and work directly on the files.
+
+I want you to convert my current notebook-based model inference pipeline into a deployable full-stack app and integrate it with my UI.
+
+GOAL
+Build a production-style deployment setup for my student misconception detection app using my existing trained model and existing notebook logic.
+
+IMPORTANT
+- Do NOT change or retrain the model.
+- Do NOT replace the model with another model.
+- Preserve the current prediction behavior as much as possible.
+- Preserve the explainable-AI behavior from the working notebook, not the bad fallback behavior.
+- Actually create/edit the necessary files in this folder. Do not just describe what to do.
+
+CURRENT CONTEXT
+- I already have a working notebook-based pipeline for prediction + explainable AI(q3-4b-exp.ipynb).
+- One notebook has much better explanation quality than the other, so use the GOOD notebook logic as the source of truth for explanation generation and post-processing.
+- The current UI(student_app) exists already, but it currently uses rule-based matching in places. I want it integrated with the real model API.
+- The final architecture should support:
+  1) GPU-backed model inference backend
+  2) React frontend that can be deployed on Vercel
+  3) Clean API contract between frontend and backend
+
+WHAT YOU SHOULD DO
+1. Inspect the repository and identify:
+   - the notebook/file with the best working inference logic
+   - the notebook/file with the bad explanation logic
+   - the current frontend app
+   - the current backend or API-related code
+   - model artifact format and where loading currently happens
+   - all Kaggle-specific / notebook-specific code that must be refactored
+
+2. Extract the real inference pipeline from the best notebook into proper backend code:
+   - model loading
+   - tokenizer loading
+   - LoRA / PEFT loading if applicable
+   - label mapping
+   - preprocessing
+   - prediction
+   - top-k probabilities if available
+   - explainable AI generation
+   - explanation cleanup / verifier / fallback logic if present
+   - any misconception KB or metadata loading
+
+3. Create a proper backend service using FastAPI:
+   - `/health`
+   - `/predict`
+   - `/labels` if useful
+   - structured JSON responses
+   - CORS enabled for frontend
+   - request/response validation with Pydantic
+   - environment-variable based config
+   - no notebook-only code
+   - no hardcoded Kaggle paths
+
+4. Make the backend deployment-ready:
+   - `requirements.txt`
+   - `.env.example`
+   - `README.md`
+   - `Dockerfile`
+   - `docker-compose.yml` if useful
+   - startup instructions
+   - clear model path configuration
+   - support for GPU inference
+   - if quantization is needed, implement it safely and make it configurable
+
+5. Integrate the frontend with the backend:
+   - If the current frontend is vanilla JS, either:
+     a) I want the ui in react so that i can deploy in vercel, But the ui features shouldn't be hampered.
+   - The frontend should call the real `/predict` API
+   - Show:
+     - predicted misconception/category
+     - confidence/top predictions if available
+     - explainable AI output
+     - loading state
+     - error state
+   - Make the UI clean and student/teacher friendly
+   - Use environment variables for backend base URL
+
+6. Deployment target:
+   - Frontend must be deployable on Vercel
+   - Backend must be deployable on a GPU-capable platform(I wanna use it for free, bcz I need this only for my uni project)
+   - Prefer one of these:
+     - Hugging Face Space with Docker
+     - RunPod
+     - Modal
+     - another realistic GPU backend if repo constraints make it better
+   - Do NOT try to host the actual large model on Vercel
+   - If Hugging Face Spaces is not practical for this model size/runtime, explain briefly and prepare the better alternative
+
+7. Match the current app’s input/output contract as closely as possible:
+   - infer what fields the UI currently sends
+   - adapt backend accordingly
+   - do not break the UI unnecessarily
+
+8. Improve reliability of explainable AI without changing the model:
+   - use the better notebook’s explanation path
+   - avoid weak fallback behavior that produces generic or ugly outputs
+   - add sanitization / cleanup / validation for explanation text
+   - if the explanation LLM call fails, use a deterministic structured fallback derived from the predicted misconception metadata
+
+DELIVERABLES I EXPECT
+Create or update all necessary files so that this repo contains:
+- a backend folder or service with FastAPI inference
+- a frontend React app ready for Vercel
+- config/env files
+- Docker-related deployment files
+- README with exact run/deploy steps
+- any helper scripts needed
+
+WORK STYLE
+- First inspect the repo and tell me the implementation plan in a short, concrete checklist.
+- Then start making the file changes directly.
+- After making changes, give me:
+  1) what files you created/edited
+  2) how to run backend locally
+  3) how to run frontend locally
+  4) how to deploy backend
+  5) how to deploy frontend
+- If you hit an error, do not give up and do not hand-wave.
+  Fix the repo step by step.
+- If a missing dependency or path issue appears, patch it in the codebase.
+- Keep everything as practical and minimal as possible.
+
+VERY IMPORTANT CONSTRAINTS
+- Do not invent fake model files.
+- Detect the actual artifact format from this repo/notebooks.
+- Do not leave notebook logic trapped in `.ipynb` if it needs to run in production.
+- Do not remove explainable AI.
+- Do not silently downgrade to a poor explanation model/path without warning.
+- Keep naming clean and production-friendly.
+
+SUCCESS CRITERIA
+I should be able to:
+1. run the backend locally,
+2. run the frontend locally,
+3. connect the frontend to the backend,
+4. get real model predictions and explainable AI outputs,
+5. deploy the frontend to Vercel,
+6. deploy the backend to a GPU-capable service.
+
+Start by inspecting the repository and identifying the best source files to extract from, then implement the solution.

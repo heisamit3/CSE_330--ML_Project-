@@ -1,0 +1,2126 @@
+misconception_id,affinity_score,confidence,reasoning_short,evidence_spans,row_id,baseline_score,kb_score,graph_neighbor_count,trigger_match_count,concept_match_count,trigger_score,concept_score,ontology_support_score,subgraph_node_count,subgraph_edge_count,subgraph_density,matched_trigger_patterns,matched_concept_terms,neighbor_relation_types,context_block,raw_response,prompt_type,scoring_backend
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1 / 3 because 6 over 9 is 2 thirds and 1 third is not shaded.'],1,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1 / 3 because 6 over 9 is 2 thirds and 1 third is not shaded.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1 / 3 because 6 over 9 is 2 thirds and 1 third is not shaded.'],1,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1 / 3 because 6 over 9 is 2 thirds and 1 third is not shaded.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1 3rd is half of 3 6th, so it is simplee to understand.']",2,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1 3rd is half of 3 6th, so it is simplee to understand.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1 3rd is half of 3 6th, so it is simplee to understand.']",2,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1 3rd is half of 3 6th, so it is simplee to understand.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1 goes into everything and 3 goes into nine'],3,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1 goes into everything and 3 goes into nine""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1 goes into everything and 3 goes into nine'],3,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1 goes into everything and 3 goes into nine""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 and 3/9 are not shaded but they are equal to 1/3.'],6,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 and 3/9 are not shaded but they are equal to 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 and 3/9 are not shaded but they are equal to 1/3.'],6,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 and 3/9 are not shaded but they are equal to 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 because 3/9 simplified divided by 3 would be 1/3'],7,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 because 3/9 simplified divided by 3 would be 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 because 3/9 simplified divided by 3 would be 1/3'],7,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 because 3/9 simplified divided by 3 would be 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1/3 because I worked out that 3/9 were not shaded and because 3 and 9 have a common factor of 3, I d']",8,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 because I worked out that 3/9 were not shaded and because 3 and 9 have a common factor of 3, I d""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1/3 because I worked out that 3/9 were not shaded and because 3 and 9 have a common factor of 3, I d']",8,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 because I worked out that 3/9 were not shaded and because 3 and 9 have a common factor of 3, I d""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is also 1/3 in its simplest form.'],13,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is also 1/3 in its simplest form.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is also 1/3 in its simplest form.'],13,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is also 1/3 in its simplest form.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is equal to 3 because if 3 are not shared in so 3/6 in its simplest form is 1/3.'],14,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is equal to 3 because if 3 are not shared in so 3/6 in its simplest form is 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is equal to 3 because if 3 are not shared in so 3/6 in its simplest form is 1/3.'],14,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is equal to 3 because if 3 are not shared in so 3/6 in its simplest form is 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is not shaded and 3/9 divided by 3 is 1/3.'],17,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is not shaded and 3/9 divided by 3 is 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is not shaded and 3/9 divided by 3 is 1/3.'],17,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is not shaded and 3/9 divided by 3 is 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is not shsded out of the other 2/3.'],20,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is not shsded out of the other 2/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is not shsded out of the other 2/3.'],20,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is not shsded out of the other 2/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the right answer because the fraction of the shape not shaded is 3/9 and in its simplest form'],21,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the right answer because the fraction of the shape not shaded is 3/9 and in its simplest form""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the right answer because the fraction of the shape not shaded is 3/9 and in its simplest form'],21,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the right answer because the fraction of the shape not shaded is 3/9 and in its simplest form""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the right answer because the fractionn of the shape not shaded is 3/9 and in its simplest for'],23,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the right answer because the fractionn of the shape not shaded is 3/9 and in its simplest for""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the right answer because the fractionn of the shape not shaded is 3/9 and in its simplest for'],23,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the right answer because the fractionn of the shape not shaded is 3/9 and in its simplest for""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the simplest form of 3/9'],29,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the simplest form of 3/9""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the simplest form of 3/9'],29,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the simplest form of 3/9""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the simplest form of this shape.'],32,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the simplest form of this shape.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is the simplest form of this shape.'],32,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is the simplest form of this shape.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is thr same as 3/9.'],37,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is thr same as 3/9.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 is thr same as 3/9.'],37,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 is thr same as 3/9.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1/3 of the 9 triangles are shaded, so 3/9=1/3.']",38,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 of the 9 triangles are shaded, so 3/9=1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1/3 of the 9 triangles are shaded, so 3/9=1/3.']",38,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 of the 9 triangles are shaded, so 3/9=1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 of the triangle is not shaded'],41,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 of the triangle is not shaded""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['1/3 of the triangle is not shaded'],41,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3 of the triangle is not shaded""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1/3.   3/9 shaded, and to find simplest from we divide the top and the bottom by 3.']",43,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3.   3/9 shaded, and to find simplest from we divide the top and the bottom by 3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['1/3.   3/9 shaded, and to find simplest from we divide the top and the bottom by 3.']",43,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""1/3.   3/9 shaded, and to find simplest from we divide the top and the bottom by 3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['2/3 is shaded so 1/3 is not'],46,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""2/3 is shaded so 1/3 is not""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['2/3 is shaded so 1/3 is not'],46,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""2/3 is shaded so 1/3 is not""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 9 are shaded and to put in its simplest form you would divide it by 3'],48,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 9 are shaded and to put in its simplest form you would divide it by 3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 9 are shaded and to put in its simplest form you would divide it by 3'],48,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 9 are shaded and to put in its simplest form you would divide it by 3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 amd 9 can be divided by 3, so it makes 1 / 3.']",50,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 amd 9 can be divided by 3, so it makes 1 / 3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 amd 9 can be divided by 3, so it makes 1 / 3.']",50,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 amd 9 can be divided by 3, so it makes 1 / 3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 and 9 can divide by 3 so it makes 1/3'],51,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 and 9 can divide by 3 so it makes 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 and 9 can divide by 3 so it makes 1/3'],51,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 and 9 can divide by 3 so it makes 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 are mot shaded, 3/9=1/3.']",52,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 are mot shaded, 3/9=1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 are mot shaded, 3/9=1/3.']",52,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 are mot shaded, 3/9=1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 are not shaded out of nine which is the same as 1 over 3'],54,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 are not shaded out of nine which is the same as 1 over 3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 are not shaded out of nine which is the same as 1 over 3'],54,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 are not shaded out of nine which is the same as 1 over 3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 aren't shaded and there are 9 altogether, so it is 3/9, but you need to do it in its simplest form""]",57,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 aren't shaded and there are 9 altogether, so it is 3/9, but you need to do it in its simplest form""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 aren't shaded and there are 9 altogether, so it is 3/9, but you need to do it in its simplest form""]",57,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 aren't shaded and there are 9 altogether, so it is 3/9, but you need to do it in its simplest form""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 aren't shaded and there are 9 triangles in total so its 3/9 and 3/9 becomes 1/3 when simplified.""]",58,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 aren't shaded and there are 9 triangles in total so its 3/9 and 3/9 becomes 1/3 when simplified.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 aren't shaded and there are 9 triangles in total so its 3/9 and 3/9 becomes 1/3 when simplified.""]",58,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 aren't shaded and there are 9 triangles in total so its 3/9 and 3/9 becomes 1/3 when simplified.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 aren't shaded in out of 9 =3/9=1/3""]",59,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 aren't shaded in out of 9 =3/9=1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 aren't shaded in out of 9 =3/9=1/3""]",59,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 aren't shaded in out of 9 =3/9=1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 from the 9 triangles are not shaded and 3/9 simplified equals 1/3'],60,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 from the 9 triangles are not shaded and 3/9 simplified equals 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 from the 9 triangles are not shaded and 3/9 simplified equals 1/3'],60,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 from the 9 triangles are not shaded and 3/9 simplified equals 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 goes into 9 three times which makes it one third'],61,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 goes into 9 three times which makes it one third""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 goes into 9 three times which makes it one third'],61,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 goes into 9 three times which makes it one third""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 is not shaded and 9 is shaded. our current answer is 9/3. 9/3 simplified is 1/3.'],63,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 is not shaded and 9 is shaded. our current answer is 9/3. 9/3 simplified is 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 is not shaded and 9 is shaded. our current answer is 9/3. 9/3 simplified is 1/3.'],63,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 is not shaded and 9 is shaded. our current answer is 9/3. 9/3 simplified is 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 not shaded, 9 in total, given its simplest form']",71,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 not shaded, 9 in total, given its simplest form""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 not shaded, 9 in total, given its simplest form']",71,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 not shaded, 9 in total, given its simplest form""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of 9 is dark and then you simplify it.'],72,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of 9 is dark and then you simplify it.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of 9 is dark and then you simplify it.'],72,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of 9 is dark and then you simplify it.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 of the 9 are not coloured in but in it's simplest form its a third""]",74,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 are not coloured in but in it's simplest form its a third""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 of the 9 are not coloured in but in it's simplest form its a third""]",74,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 are not coloured in but in it's simplest form its a third""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the 9 are shaded which is 1 / 3 when simplified.'],75,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 are shaded which is 1 / 3 when simplified.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the 9 are shaded which is 1 / 3 when simplified.'],75,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 are shaded which is 1 / 3 when simplified.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the 9 are shaded which is 1/3 when simplified'],76,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 are shaded which is 1/3 when simplified""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the 9 are shaded which is 1/3 when simplified'],76,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 are shaded which is 1/3 when simplified""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the 9 triangles are shaded simplest form is 1/3'],79,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 triangles are shaded simplest form is 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the 9 triangles are shaded simplest form is 1/3'],79,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the 9 triangles are shaded simplest form is 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the nine are shaded which is equivalent to one third'],82,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the nine are shaded which is equivalent to one third""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the nine are shaded which is equivalent to one third'],82,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the nine are shaded which is equivalent to one third""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the triangles are not shaded out of all 9 triangles so the fraction is 3/9 = 1/3.'],83,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the triangles are not shaded out of all 9 triangles so the fraction is 3/9 = 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 of the triangles are not shaded out of all 9 triangles so the fraction is 3/9 = 1/3.'],83,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 of the triangles are not shaded out of all 9 triangles so the fraction is 3/9 = 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are not shaded 3/9 simplest is 1/3'],85,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded 3/9 simplest is 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are not shaded 3/9 simplest is 1/3'],85,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded 3/9 simplest is 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are not shaded which is equal to 1 third'],86,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded which is equal to 1 third""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are not shaded which is equal to 1 third'],86,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded which is equal to 1 third""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are not shaded which is equal to 1 third.'],87,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded which is equal to 1 third.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are not shaded which is equal to 1 third.'],87,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded which is equal to 1 third.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 out of 9 are not shaded, and both are divisible by 3.']",88,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded, and both are divisible by 3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 out of 9 are not shaded, and both are divisible by 3.']",88,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are not shaded, and both are divisible by 3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are shaded and the fraction 3/9 simplified is 1/3'],90,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are shaded and the fraction 3/9 simplified is 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 are shaded and the fraction 3/9 simplified is 1/3'],90,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 are shaded and the fraction 3/9 simplified is 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 aren't shaded and that simplifies to one third""]",92,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 aren't shaded and that simplifies to one third""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 aren't shaded and that simplifies to one third""]",92,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 aren't shaded and that simplifies to one third""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 aren't shaded, if you simplify it it is 1/3.""]",93,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 aren't shaded, if you simplify it it is 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 aren't shaded, if you simplify it it is 1/3.""]",93,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 aren't shaded, if you simplify it it is 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 is shaded and when you simplify it you get a'],99,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 is shaded and when you simplify it you get a""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 is shaded and when you simplify it you get a'],99,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 is shaded and when you simplify it you get a""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 is shaded and when you simplify it you get a'],100,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 is shaded and when you simplify it you get a""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 is shaded and when you simplify it you get a'],100,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 is shaded and when you simplify it you get a""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 isn't shaded so a simple fraction would be 1/3.""]",101,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 isn't shaded so a simple fraction would be 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 isn't shaded so a simple fraction would be 1/3.""]",101,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 isn't shaded so a simple fraction would be 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 not shaded which simplifies to a third'],102,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 not shaded which simplifies to a third""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 not shaded which simplifies to a third'],102,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 not shaded which simplifies to a third""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 parts are not shaded which is 3/9 but we need to simplify this fraction which is 1/3.'],103,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 parts are not shaded which is 3/9 but we need to simplify this fraction which is 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 parts are not shaded which is 3/9 but we need to simplify this fraction which is 1/3.'],103,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 parts are not shaded which is 3/9 but we need to simplify this fraction which is 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 parts aren't shaded and in its simplest form it is 1/3""]",106,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 parts aren't shaded and in its simplest form it is 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 parts aren't shaded and in its simplest form it is 1/3""]",106,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 parts aren't shaded and in its simplest form it is 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"[""3 out of 9 parts aren't shaded.""]",107,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 parts aren't shaded.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get the simplest form 1over 3'],108,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get the simplest form 1over 3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get the simplest form 1over 3'],108,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get the simplest form 1over 3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get thee simplest form 1over 3.'],109,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get thee simplest form 1over 3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get thee simplest form 1over 3.'],109,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 shapes are not shaded. 3 and 9 can be divided by 3 to get thee simplest form 1over 3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 shapes are shaded which is simplified to 1/3'],110,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 shapes are shaded which is simplified to 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 shapes are shaded which is simplified to 1/3'],110,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 shapes are shaded which is simplified to 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 out of 9 triangles are not shaded , cancel this down to 1/3']",112,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded , cancel this down to 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,"['3 out of 9 triangles are not shaded , cancel this down to 1/3']",112,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded , cancel this down to 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded and 3/9 simplified is 1/3.'],114,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded and 3/9 simplified is 1/3.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded and 3/9 simplified is 1/3.'],114,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded and 3/9 simplified is 1/3.""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded so that is 1/3'],116,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded so that is 1/3""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded so that is 1/3'],116,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded so that is 1/3""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded which simplifies to 1 in every 3 triangles'],117,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded which simplifies to 1 in every 3 triangles""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded which simplifies to 1 in every 3 triangles'],117,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded which simplifies to 1 in every 3 triangles""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded.'],119,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded.'],119,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of 9 triangles are not shaded.'],120,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of 9 triangles are not shaded.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of nine triangles are not shaded'],123,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of nine triangles are not shaded""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of nine triangles are not shaded'],124,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of nine triangles are not shaded""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of nine triangles are not shaded'],124,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of nine triangles are not shaded""]}",knowledge_guided,mock
+nan,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of the 9 triangles are not shaded. this is 3/9 which is 1/3 in its simplest form.'],127,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""nan"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of the 9 triangles are not shaded. this is 3/9 which is 1/3 in its simplest form.""]}",knowledge_guided,mock
+True_Misconception:Incomplete,0.0,0.24,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['3 out of the 9 triangles are not shaded. this is 3/9 which is 1/3 in its simplest form.'],127,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 0.0, ""confidence"": 0.24, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""3 out of the 9 triangles are not shaded. this is 3/9 which is 1/3 in its simplest form.""]}",knowledge_guided,mock

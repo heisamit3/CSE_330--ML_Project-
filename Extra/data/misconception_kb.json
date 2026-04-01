@@ -1,0 +1,140 @@
+[
+  {
+    "misconception_id": "False_DecimalComparison:Uses whole-number magnitude to compare decimals",
+    "misconception_name": "Uses whole-number magnitude to compare decimals",
+    "family": "False_",
+    "short_description": "The student compares decimals as if they were whole numbers and ignores place value.",
+    "prerequisite_concepts": [
+      "decimal place value",
+      "comparing decimals"
+    ],
+    "trigger_patterns": [
+      "than",
+      "bigger.",
+      "larger",
+      "bigger",
+      "0.355",
+      "355",
+      "355 is bigger than 8",
+      "more digits means larger",
+      "0.355 is larger than 0.8"
+    ],
+    "formal_counterexample": "0.8 = 0.800, so 0.800 > 0.355.",
+    "remediation_hint": "Rewrite both decimals to the same number of places and compare from left to right.",
+    "aliases": [
+      "Uses whole-number magnitude to compare decimals",
+      "whole number thinking with decimals",
+      "digit-count comparison for decimals"
+    ],
+    "concept_tags": [
+      "decimal"
+    ],
+    "cognitive_roots": [
+      "whole-number transfer",
+      "place-value reasoning"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "0.355 is larger because 355 is bigger than 8.",
+      "The number with more digits is bigger."
+    ],
+    "support_count": 2,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns",
+      "seed_kb"
+    ]
+  },
+  {
+    "misconception_id": "False_FractionAddition:Adds numerators and denominators separately",
+    "misconception_name": "Adds numerators and denominators separately",
+    "family": "False_",
+    "short_description": "The student treats fraction addition like component-wise whole number addition.",
+    "prerequisite_concepts": [
+      "equivalent fractions",
+      "common denominator",
+      "fraction addition"
+    ],
+    "trigger_patterns": [
+      "bottom",
+      "becomes",
+      "bottom becomes",
+      "top",
+      "over",
+      "top bottom",
+      "1/2 + 1/3 = 2/5",
+      "add top and bottom"
+    ],
+    "formal_counterexample": "1/2 + 1/3 = 3/6 + 2/6 = 5/6, not 2/5.",
+    "remediation_hint": "Find a common denominator before adding the numerators.",
+    "aliases": [
+      "Adds numerators and denominators separately",
+      "component-wise fraction addition"
+    ],
+    "concept_tags": [
+      "fraction",
+      "ratio"
+    ],
+    "cognitive_roots": [
+      "part-whole reasoning",
+      "structure-preserving arithmetic",
+      "multiplicative reasoning"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "I add the top and bottom so it becomes 2 over 5."
+    ],
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns",
+      "seed_kb"
+    ]
+  },
+  {
+    "misconception_id": "True_Correct:NA",
+    "misconception_name": "Correct reasoning",
+    "family": "True_",
+    "short_description": "The explanation is consistent with the correct mathematical relationship.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "numerators.",
+      "denominators",
+      "added",
+      "added numerators.",
+      "made denominators",
+      "made"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "NA",
+      "correct"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "I made the denominators the same and then added the numerators.",
+      "The denominators already match so I add the numerators."
+    ],
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns",
+      "seed_kb"
+    ]
+  }
+]

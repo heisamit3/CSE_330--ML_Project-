@@ -1,0 +1,6 @@
+row_id,misconception_id,baseline_score,kb_score,confidence,ontology_support_score,trigger_score,concept_score,subgraph_density,graph_neighbor_count,trigger_match_count,concept_match_count,causal_delta,relative_delta,causal_confidence,style_preservation_score,final_score
+test_0,False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0,0.2774,0.5169,0.49,0.5555555555555556,0.4,0.0,0.0,1.0,1.0,0.04669999999999999,0.16834895457822638,0.1448998075,0.0,0.26354150988868463
+test_0,False_FractionAddition:Adds numerators and denominators separately,0.0,0.0161,0.25,0.05,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.030898000000000002
+test_1,False_FractionAddition:Adds numerators and denominators separately,0.06127346326896442,0.0843,0.2999,0.10625000000000001,0.125,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.2137275,1.0,0.10519524265379289
+test_1,False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0,0.0283,0.26,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.041894
+test_2,True_Correct:NA,0.0,0.1793,0.3633,0.2,0.3333333333333333,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.22799250000000001,1.0,0.15123118333333332

@@ -1,0 +1,6 @@
+misconception_id,misconception_name,Category,family,short_description,baseline_score,row_id,rank,baseline_source
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,Uses whole-number magnitude to compare decimals,False_Decimal,False_,,0.0,test_0,1,heuristic_tfidf
+False_FractionAddition:Adds numerators and denominators separately,Adds numerators and denominators separately,False_Fraction,False_,,0.0,test_0,2,heuristic_tfidf
+False_FractionAddition:Adds numerators and denominators separately,Adds numerators and denominators separately,False_Fraction,False_,,0.06127346326896442,test_1,1,heuristic_tfidf
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,Uses whole-number magnitude to compare decimals,False_Decimal,False_,,0.0,test_1,2,heuristic_tfidf
+True_Correct:NA,NA,True_Correct,True_,,0.0,test_2,1,heuristic_tfidf

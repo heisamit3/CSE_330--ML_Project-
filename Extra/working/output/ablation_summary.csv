@@ -1,0 +1,5 @@
+mode,mean_map3,std_map3,folds
+baseline,0.0,0.0,2
+counterfactual,0.0,0.0,2
+full,0.0,0.0,2
+kb_only,0.0,0.0,2

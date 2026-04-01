@@ -1,0 +1,9 @@
+{
+  "counterfactual_text": "The denominators already match so I add the numerators.",
+  "rewrite_confidence": 0.65,
+  "explanation": "Removed trigger-heavy statements and kept the response short.",
+  "row_id": "train_5",
+  "misconception_id": "True_Correct:NA",
+  "raw_response": "{\"counterfactual_text\": \"The denominators already match so I add the numerators.\", \"rewrite_confidence\": 0.65, \"explanation\": \"Removed trigger-heavy statements and kept the response short.\"}",
+  "context_block": "Candidate family: True_\nShort description: The explanation is consistent with the correct mathematical relationship.\nPrerequisite concepts: none\nMatched trigger patterns: none\nFormal counterexample: none\nRemediation hint: none\nRelated misconceptions:\n- none"
+}

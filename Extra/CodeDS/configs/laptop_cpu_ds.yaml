@@ -1,0 +1,97 @@
+mode: full
+experiment_name: laptop_cpu_ds
+seed: 42
+quick_run: false
+paths:
+  input_dir: .
+  working_dir: ./working/laptop_cpu_ds
+  train_file:
+    - DS/train.csv
+    - train.csv
+  test_file:
+    - DS/test.csv
+    - test.csv
+  misconception_file:
+    - DS/misconception_mapping.csv
+    - misconception_mapping.csv
+  baseline_artifacts_dir: ./working/laptop_cpu_ds/baseline_artifacts
+  kb_path: data/misconception_kb.json
+  graph_path: ./working/laptop_cpu_ds/graph/graph.gexf
+  graph_summary_path: ./working/laptop_cpu_ds/graph/graph_summary.json
+  logs_dir: ./working/laptop_cpu_ds/logs
+  cache_dir: ./working/laptop_cpu_ds/cache
+  output_dir: ./working/laptop_cpu_ds/output
+data:
+  group_column: QuestionId
+  target_column: target
+  top_k_candidates: 8
+  top_k_submit: 3
+  folds: 2
+  max_rows: 128
+baseline:
+  use_external_artifacts: false
+  artifact_glob: qwen3_8b_adapter_*_scores_long.csv
+  family_filter: true
+  heuristic_candidate_pool: 12
+llm:
+  enabled: false
+  backend: mock
+  model_name_or_path:
+  model_candidates: []
+  device: cpu
+  dtype: float32
+  load_in_4bit: false
+  attn_implementation:
+  local_files_only: true
+  max_new_tokens: 192
+  temperature: 0.0
+  batch_size: 1
+  json_repair: true
+  allow_backend_fallback: true
+graphrag:
+  enabled: true
+  top_k_context_neighbors: 3
+  max_trigger_matches: 2
+  retrieve_top_n: 5
+counterfactual:
+  enabled: true
+  top_k: 2
+  min_affinity_to_run: 0.10
+  min_absolute_delta_confirm: 0.10
+  min_relative_delta_confirm: 0.20
+ensemble:
+  use_weighted_fusion: true
+  use_xgboost: false
+  weights:
+    baseline_score: 0.20
+    kb_score: 0.18
+    confidence: 0.08
+    ontology_support_score: 0.16
+    trigger_score: 0.10
+    concept_score: 0.06
+    subgraph_density: 0.04
+    causal_delta: 0.10
+    relative_delta: 0.04
+    causal_confidence: 0.02
+    style_preservation_score: 0.02
+runtime:
+  save_every: 8
+  resume: true
+  force_rebuild_kb: false
+  force_rebuild_graph: false
+baseline_qwen:
+  enabled: true
+  input_format_style: question_yes_no
+  output_prefix: qwen3_8b_adapter
+  family_filter: true
+  batch_size: 2
+  max_length: 256
+  top_k_export: 12
+  device: cpu
+  dtype: float32
+  use_4bit: false
+  local_files_only: true
+  base_model_candidates: []
+  adapter_candidates: []
+  label_encoder_candidates: []
+  run_config_candidates: []

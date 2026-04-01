@@ -1,0 +1,22 @@
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:59:28 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 16:59:28 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:59:28 | INFO | laptop_cpu_ds_baseline | MAP@3 for fold0_train/baseline = 0.046875
+2026-03-26 16:59:28 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 16:59:28 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:59:29 | INFO | laptop_cpu_ds_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 17:00:06 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 17:00:06 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:06 | INFO | laptop_cpu_ds_baseline | MAP@3 for fold0_train/baseline = 0.046875
+2026-03-26 17:00:06 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 17:00:06 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_baseline | Fold 1/2 mode=baseline MAP@3=0.000000
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_baseline | MAP@3 for fold1_train/baseline = 0.000000
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_baseline | Running mode=baseline on 64 inference rows.
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_baseline | MAP@3 for fold1_valid/baseline = 0.000000
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_baseline | Fold 2/2 mode=baseline MAP@3=0.000000

@@ -1,0 +1,11 @@
+{
+  "counterfactual_text": "0.",
+  "rewrite_confidence": 0.65,
+  "style_preservation_score": 0.0,
+  "explanation": "Removed trigger-heavy statements while keeping most wording and length similar.",
+  "row_id": "train_0",
+  "misconception_id": "False_DecimalComparison:Uses whole-number magnitude to compare decimals",
+  "raw_response": "{\"counterfactual_text\": \"0.\", \"rewrite_confidence\": 0.65, \"style_preservation_score\": 0.0, \"explanation\": \"Removed trigger-heavy statements while keeping most wording and length similar.\"}",
+  "context_block": "Candidate family: False_\nShort description: The student compares decimals as if they were whole numbers and ignores place value.\nConcept tags: decimal\nCognitive roots: whole-number transfer, place-value reasoning\nPrerequisite concepts: decimal place value, comparing decimals\nMatched trigger patterns: than | larger\nMatched concept terms: decimal | decimal place value\nOntology support score: 0.590\nFormal counterexample: 0.8 = 0.800, so 0.800 > 0.355.\nRemediation hint: Rewrite both decimals to the same number of places and compare from left to right.\nObserved example evidence:\n- 0.355 is larger because 355 is bigger than 8.\n- The number with more digits is bigger.\nSubgraph size: 1 nodes, 0 edges, density=0.000\nSubgraph edges:\n- none\nRelated misconceptions:\n- none",
+  "counterfactual_method": "llm_rewrite"
+}

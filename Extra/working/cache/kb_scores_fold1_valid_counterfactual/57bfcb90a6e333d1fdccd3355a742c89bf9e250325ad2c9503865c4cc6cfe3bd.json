@@ -1,0 +1,16 @@
+{
+  "misconception_id": "False_DecimalComparison:Uses whole-number magnitude to compare decimals",
+  "affinity_score": 0.016,
+  "confidence": 0.312,
+  "reasoning_short": "Limited trigger evidence; score relies on lexical overlap and baseline retrieval.",
+  "evidence_spans": [
+    "The denominators already match so I add the numerators."
+  ],
+  "row_id": "train_5",
+  "baseline_score": 0.0,
+  "graph_neighbor_count": 0,
+  "trigger_match_count": 0,
+  "context_block": "Candidate family: False_\nShort description: The student compares decimals as if they were whole numbers and ignores place value.\nPrerequisite concepts: decimal place value, comparing decimals\nMatched trigger patterns: none\nFormal counterexample: 0.8 = 0.800, so 0.800 > 0.355.\nRemediation hint: Rewrite both decimals to the same number of places and compare from left to right.\nRelated misconceptions:\n- none",
+  "raw_response": "{\"misconception_id\": \"False_DecimalComparison:Uses whole-number magnitude to compare decimals\", \"affinity_score\": 0.016, \"confidence\": 0.312, \"reasoning_short\": \"Limited trigger evidence; score relies on lexical overlap and baseline retrieval.\", \"evidence_spans\": [\"The denominators already match so I add the numerators.\"]}",
+  "prompt_type": "knowledge_guided"
+}

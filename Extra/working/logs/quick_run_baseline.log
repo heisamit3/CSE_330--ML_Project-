@@ -1,0 +1,63 @@
+2026-03-26 15:37:12 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:37:12 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:37:12 | INFO | quick_run_baseline | MAP@3 for fold0_train/baseline = 1.000000
+2026-03-26 15:37:12 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:37:12 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:37:12 | INFO | quick_run_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 15:37:12 | INFO | quick_run_baseline | Fold 1/2 mode=baseline MAP@3=0.000000
+2026-03-26 15:37:13 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:37:13 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:37:13 | INFO | quick_run_baseline | MAP@3 for fold1_train/baseline = 1.000000
+2026-03-26 15:37:13 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:37:13 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:37:13 | INFO | quick_run_baseline | MAP@3 for fold1_valid/baseline = 0.000000
+2026-03-26 15:37:13 | INFO | quick_run_baseline | Fold 2/2 mode=baseline MAP@3=0.000000
+2026-03-26 15:38:25 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:38:25 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:38:25 | INFO | quick_run_baseline | MAP@3 for fold0_train/baseline = 1.000000
+2026-03-26 15:38:25 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:38:25 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:38:25 | INFO | quick_run_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 15:38:25 | INFO | quick_run_baseline | Fold 1/2 mode=baseline MAP@3=0.000000
+2026-03-26 15:38:26 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:38:26 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:38:26 | INFO | quick_run_baseline | MAP@3 for fold1_train/baseline = 1.000000
+2026-03-26 15:38:26 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 15:38:26 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:38:26 | INFO | quick_run_baseline | MAP@3 for fold1_valid/baseline = 0.000000
+2026-03-26 15:38:26 | INFO | quick_run_baseline | Fold 2/2 mode=baseline MAP@3=0.000000
+2026-03-26 16:01:28 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:01:28 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:01:28 | INFO | quick_run_baseline | MAP@3 for fold0_train/baseline = 1.000000
+2026-03-26 16:01:28 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:01:28 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:01:28 | INFO | quick_run_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 16:01:28 | INFO | quick_run_baseline | Fold 1/2 mode=baseline MAP@3=0.000000
+2026-03-26 16:03:07 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:03:07 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:03:07 | INFO | quick_run_baseline | MAP@3 for fold0_train/baseline = 1.000000
+2026-03-26 16:03:07 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:03:07 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:03:08 | INFO | quick_run_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 16:03:08 | INFO | quick_run_baseline | Fold 1/2 mode=baseline MAP@3=0.000000
+2026-03-26 16:03:12 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:03:12 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:03:13 | INFO | quick_run_baseline | MAP@3 for fold1_train/baseline = 1.000000
+2026-03-26 16:03:13 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:03:13 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:03:14 | INFO | quick_run_baseline | MAP@3 for fold1_valid/baseline = 0.000000
+2026-03-26 16:03:14 | INFO | quick_run_baseline | Fold 2/2 mode=baseline MAP@3=0.000000
+2026-03-26 16:06:23 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:06:23 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:06:23 | INFO | quick_run_baseline | MAP@3 for fold0_train/baseline = 1.000000
+2026-03-26 16:06:23 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:06:23 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:06:23 | INFO | quick_run_baseline | MAP@3 for fold0_valid/baseline = 0.000000
+2026-03-26 16:06:23 | INFO | quick_run_baseline | Fold 1/2 mode=baseline MAP@3=0.000000
+2026-03-26 16:06:30 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:06:30 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:06:30 | INFO | quick_run_baseline | MAP@3 for fold1_train/baseline = 1.000000
+2026-03-26 16:06:30 | INFO | quick_run_baseline | Running mode=baseline on 3 inference rows.
+2026-03-26 16:06:30 | INFO | quick_run_baseline | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:06:30 | INFO | quick_run_baseline | MAP@3 for fold1_valid/baseline = 0.000000
+2026-03-26 16:06:30 | INFO | quick_run_baseline | Fold 2/2 mode=baseline MAP@3=0.000000

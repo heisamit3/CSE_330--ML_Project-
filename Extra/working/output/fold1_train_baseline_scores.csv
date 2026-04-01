@@ -1,0 +1,4 @@
+row_id,misconception_id,baseline_score,kb_score,confidence,ontology_support_score,trigger_score,concept_score,subgraph_density,causal_delta,relative_delta,causal_confidence,style_preservation_score,graph_neighbor_count,trigger_match_count,concept_match_count,final_score
+train_0,False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+train_1,False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.032586085474136675,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.006517217094827336
+train_4,False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

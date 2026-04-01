@@ -1,0 +1,9 @@
+{
+  "counterfactual_text": "I add the top and bottom so it becomes 2 over 5.",
+  "rewrite_confidence": 0.65,
+  "explanation": "Removed trigger-heavy statements and kept the response short.",
+  "row_id": "train_2",
+  "misconception_id": "False_FractionAddition:Adds numerators and denominators separately",
+  "raw_response": "{\"counterfactual_text\": \"I add the top and bottom so it becomes 2 over 5.\", \"rewrite_confidence\": 0.65, \"explanation\": \"Removed trigger-heavy statements and kept the response short.\"}",
+  "context_block": "Candidate family: False_\nShort description: The student treats fraction addition like component-wise whole number addition.\nPrerequisite concepts: equivalent fractions, common denominator, fraction addition\nMatched trigger patterns: 1/2 + 1/3 = 2/5 | add top and bottom\nFormal counterexample: 1/2 + 1/3 = 3/6 + 2/6 = 5/6, not 2/5.\nRemediation hint: Find a common denominator before adding the numerators.\nRelated misconceptions:\n- none"
+}

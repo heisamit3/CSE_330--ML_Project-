@@ -1,0 +1,52 @@
+misconception_id,affinity_score,confidence,reasoning_short,evidence_spans,row_id,baseline_score,kb_score,graph_neighbor_count,trigger_match_count,concept_match_count,trigger_score,concept_score,ontology_support_score,subgraph_node_count,subgraph_edge_count,subgraph_density,matched_trigger_patterns,matched_concept_terms,neighbor_relation_types,context_block,raw_response,prompt_type,scoring_backend
+False_FractionAddition:Adds numerators and denominators separately,0.0161,0.25,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['0.355 is larger because 355 is bigger than 8.'],train_0,0.0,0.0161,0,0,0,0.0,0.0,0.05,1,0,0.0,,,,"Candidate family: False_
+Short description: The student treats fraction addition like component-wise whole number addition.
+Concept tags: fraction, ratio
+Cognitive roots: part-whole reasoning, structure-preserving arithmetic, multiplicative reasoning
+Prerequisite concepts: equivalent fractions, common denominator, fraction addition
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.050
+Formal counterexample: 1/2 + 1/3 = 3/6 + 2/6 = 5/6, not 2/5.
+Remediation hint: Find a common denominator before adding the numerators.
+Observed example evidence:
+- I add the top and bottom so it becomes 2 over 5.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_FractionAddition:Adds numerators and denominators separately"", ""affinity_score"": 0.0161, ""confidence"": 0.25, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""0.355 is larger because 355 is bigger than 8.""]}",knowledge_guided,mock
+False_FractionAddition:Adds numerators and denominators separately,0.0304,0.25,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['The number with more digits is bigger.'],train_1,0.0,0.0304,0,0,0,0.0,0.0,0.05,1,0,0.0,,,,"Candidate family: False_
+Short description: The student treats fraction addition like component-wise whole number addition.
+Concept tags: fraction, ratio
+Cognitive roots: part-whole reasoning, structure-preserving arithmetic, multiplicative reasoning
+Prerequisite concepts: equivalent fractions, common denominator, fraction addition
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.050
+Formal counterexample: 1/2 + 1/3 = 3/6 + 2/6 = 5/6, not 2/5.
+Remediation hint: Find a common denominator before adding the numerators.
+Observed example evidence:
+- I add the top and bottom so it becomes 2 over 5.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_FractionAddition:Adds numerators and denominators separately"", ""affinity_score"": 0.0304, ""confidence"": 0.25, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""The number with more digits is bigger.""]}",knowledge_guided,mock
+False_FractionAddition:Adds numerators and denominators separately,0.0161,0.25,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['405 is greater than 41 so 0.405 is bigger.'],train_4,0.0,0.0161,0,0,0,0.0,0.0,0.05,1,0,0.0,,,,"Candidate family: False_
+Short description: The student treats fraction addition like component-wise whole number addition.
+Concept tags: fraction, ratio
+Cognitive roots: part-whole reasoning, structure-preserving arithmetic, multiplicative reasoning
+Prerequisite concepts: equivalent fractions, common denominator, fraction addition
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.050
+Formal counterexample: 1/2 + 1/3 = 3/6 + 2/6 = 5/6, not 2/5.
+Remediation hint: Find a common denominator before adding the numerators.
+Observed example evidence:
+- I add the top and bottom so it becomes 2 over 5.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_FractionAddition:Adds numerators and denominators separately"", ""affinity_score"": 0.0161, ""confidence"": 0.25, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""405 is greater than 41 so 0.405 is bigger.""]}",knowledge_guided,mock

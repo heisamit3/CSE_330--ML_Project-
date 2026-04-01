@@ -1,0 +1,55 @@
+misconception_id,affinity_score,confidence,reasoning_short,evidence_spans,row_id,baseline_score,kb_score,graph_neighbor_count,trigger_match_count,concept_match_count,trigger_score,concept_score,ontology_support_score,subgraph_node_count,subgraph_edge_count,subgraph_density,matched_trigger_patterns,matched_concept_terms,neighbor_relation_types,context_block,raw_response,prompt_type,scoring_backend
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0335,0.26,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['I add the top and bottom so it becomes 2 over 5.'],train_2,0.0,0.0335,0,0,0,0.0,0.0,0.1,1,0,0.0,,,,"Candidate family: False_
+Short description: The student compares decimals as if they were whole numbers and ignores place value.
+Concept tags: decimal
+Cognitive roots: whole-number transfer, place-value reasoning
+Prerequisite concepts: decimal place value, comparing decimals
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.100
+Formal counterexample: 0.8 = 0.800, so 0.800 > 0.355.
+Remediation hint: Rewrite both decimals to the same number of places and compare from left to right.
+Observed example evidence:
+- 0.355 is larger because 355 is bigger than 8.
+- The number with more digits is bigger.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_DecimalComparison:Uses whole-number magnitude to compare decimals"", ""affinity_score"": 0.0335, ""confidence"": 0.26, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""I add the top and bottom so it becomes 2 over 5.""]}",knowledge_guided,mock
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0335,0.26,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['I made the denominators the same and then added the numerators.'],train_3,0.0,0.0335,0,0,0,0.0,0.0,0.1,1,0,0.0,,,,"Candidate family: False_
+Short description: The student compares decimals as if they were whole numbers and ignores place value.
+Concept tags: decimal
+Cognitive roots: whole-number transfer, place-value reasoning
+Prerequisite concepts: decimal place value, comparing decimals
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.100
+Formal counterexample: 0.8 = 0.800, so 0.800 > 0.355.
+Remediation hint: Rewrite both decimals to the same number of places and compare from left to right.
+Observed example evidence:
+- 0.355 is larger because 355 is bigger than 8.
+- The number with more digits is bigger.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_DecimalComparison:Uses whole-number magnitude to compare decimals"", ""affinity_score"": 0.0335, ""confidence"": 0.26, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""I made the denominators the same and then added the numerators.""]}",knowledge_guided,mock
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.0283,0.26,Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.,['The denominators already match so I add the numerators.'],train_5,0.0,0.0283,0,0,0,0.0,0.0,0.1,1,0,0.0,,,,"Candidate family: False_
+Short description: The student compares decimals as if they were whole numbers and ignores place value.
+Concept tags: decimal
+Cognitive roots: whole-number transfer, place-value reasoning
+Prerequisite concepts: decimal place value, comparing decimals
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.100
+Formal counterexample: 0.8 = 0.800, so 0.800 > 0.355.
+Remediation hint: Rewrite both decimals to the same number of places and compare from left to right.
+Observed example evidence:
+- 0.355 is larger because 355 is bigger than 8.
+- The number with more digits is bigger.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_DecimalComparison:Uses whole-number magnitude to compare decimals"", ""affinity_score"": 0.0283, ""confidence"": 0.26, ""reasoning_short"": ""Weak direct evidence; score relies on baseline retrieval and ontology profile overlap."", ""evidence_spans"": [""The denominators already match so I add the numerators.""]}",knowledge_guided,mock

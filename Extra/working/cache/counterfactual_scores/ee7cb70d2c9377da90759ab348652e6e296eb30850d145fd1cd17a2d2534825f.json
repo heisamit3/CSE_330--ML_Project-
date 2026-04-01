@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Correct:NA",
+  "affinity_score": 0.069,
+  "confidence": 0.25,
+  "reasoning_short": "Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.",
+  "evidence_spans": [
+    "Ask the student to restate the rule in words and test it on a simple counterexample."
+  ],
+  "row_id": "train_3",
+  "baseline_score": 0.0,
+  "kb_score": 0.069,
+  "graph_neighbor_count": 0,
+  "trigger_match_count": 0,
+  "concept_match_count": 0,
+  "trigger_score": 0.0,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.05,
+  "subgraph_node_count": 1,
+  "subgraph_edge_count": 0,
+  "subgraph_density": 0.0,
+  "matched_trigger_patterns": "",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "",
+  "context_block": "Candidate family: True_\nShort description: The explanation is consistent with the correct mathematical relationship.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.050\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- I made the denominators the same and then added the numerators.\n- The denominators already match so I add the numerators.\nSubgraph size: 1 nodes, 0 edges, density=0.000\nSubgraph edges:\n- none\nRelated misconceptions:\n- none",
+  "raw_response": "{\"misconception_id\": \"True_Correct:NA\", \"affinity_score\": 0.069, \"confidence\": 0.25, \"reasoning_short\": \"Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.\", \"evidence_spans\": [\"Ask the student to restate the rule in words and test it on a simple counterexample.\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

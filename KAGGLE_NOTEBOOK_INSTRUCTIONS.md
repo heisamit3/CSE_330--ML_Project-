@@ -89,6 +89,7 @@ Available presets in the notebook:
 - `hunyuan_7b_lora`
 - `qwen2_7b_qlora`
 - `qwen3_14b_qlora`
+- `qwen3_8b_qlora`
 - `qwen3_8b_full`
 - `deepseek_math_7b_full`
 
@@ -96,7 +97,8 @@ Notes:
 
 - `qwen3_4b_lora` is the best place to start on Kaggle.
 - `qwen2_7b_qlora` is the next most practical run.
-- `qwen3_14b_qlora`, `qwen3_8b_full`, and `deepseek_math_7b_full` may need significantly more VRAM than a free Kaggle GPU.
+- `qwen3_8b_qlora` is the closest preset to the standalone `Final_Model/Training/qwen3-8b.ipynb` workflow and is a good H100 option.
+- `qwen3_14b_qlora`, `qwen3_8b_qlora`, `qwen3_8b_full`, and `deepseek_math_7b_full` may need significantly more VRAM than a free Kaggle GPU.
 - The original writeup mentions a Qwen2 8B model; this notebook uses `Qwen/Qwen2-7B-Instruct` as the closest widely available public Qwen2 preset.
 
 ## 3. Run The Training Notebook
@@ -220,6 +222,14 @@ If you want a realistic first attempt without trying to train the full six-model
 6. Try `TOP_N_BY_VALIDATION = 3` and compare it against using all runs
 
 That is usually a much stronger Kaggle setup than a single run, while still being far more feasible than the full silver-medal stack.
+
+If you have an H100 and specifically want the stronger 8B route:
+
+1. Set `ACTIVE_MODEL_KEY = "qwen3_8b_qlora"`
+2. Keep `DEBUG = False`
+3. Start with `SEED = 42`
+4. After the run finishes, keep the exported folder under `/kaggle/working/map_multi_llm_runs/artifacts/`
+5. Feed that artifact folder into `map_multi_llm_submission.ipynb` or the `Extra` predict config described below
 
 ## Local Paths
 

@@ -1,0 +1,75 @@
+mode: full
+experiment_name: full
+seed: 42
+quick_run: false
+paths:
+  input_dir: /kaggle/input/map-charting-student-math-misunderstandings
+  working_dir: /kaggle/working/map_mvp
+  train_file: train.csv
+  test_file: test.csv
+  misconception_file: misconception_mapping.csv
+  baseline_artifacts_dir: /kaggle/working/baseline_artifacts
+  kb_path: data/misconception_kb.json
+  graph_path: /kaggle/working/map_mvp/graph/graph.gexf
+  graph_summary_path: /kaggle/working/map_mvp/graph/graph_summary.json
+  logs_dir: /kaggle/working/map_mvp/logs
+  cache_dir: /kaggle/working/map_mvp/cache
+  output_dir: /kaggle/working/map_mvp/output
+data:
+  group_column: QuestionId
+  target_column: target
+  top_k_candidates: 8
+  top_k_submit: 3
+  folds: 3
+  max_rows:
+baseline:
+  use_external_artifacts: true
+  artifact_glob: submission_*_prob.csv
+  family_filter: true
+  heuristic_candidate_pool: 12
+llm:
+  enabled: true
+  backend: hf
+  model_name_or_path: /kaggle/input/qwen3-8b-instruct
+  device: cuda
+  dtype: bfloat16
+  load_in_4bit: false
+  attn_implementation:
+  max_new_tokens: 256
+  temperature: 0.0
+  batch_size: 1
+  json_repair: true
+  allow_backend_fallback: true
+graphrag:
+  enabled: true
+  top_k_context_neighbors: 3
+  max_trigger_matches: 3
+  retrieve_top_n: 5
+counterfactual:
+  enabled: true
+  top_k: 3
+  min_affinity_to_run: 0.15
+  min_absolute_delta_confirm: 0.15
+  min_relative_delta_confirm: 0.30
+ensemble:
+  use_weighted_fusion: true
+  use_xgboost: true
+  weights:
+    baseline_score: 0.18
+    kb_score: 0.15
+    confidence: 0.07
+    ontology_support_score: 0.12
+    trigger_score: 0.06
+    concept_score: 0.05
+    subgraph_density: 0.04
+    causal_delta: 0.14
+    relative_delta: 0.08
+    causal_confidence: 0.07
+    style_preservation_score: 0.02
+    graph_neighbor_count: 0.01
+    trigger_match_count: 0.01
+runtime:
+  save_every: 25
+  resume: true
+  force_rebuild_kb: false
+  force_rebuild_graph: false

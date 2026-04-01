@@ -1,0 +1,10 @@
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds | Running mode=full on 3 inference rows.
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds | Baseline TF-IDF retriever fitted on 62 candidates.
+2026-03-26 16:58:57 | INFO | laptop_cpu_ds | Building ontology graph at C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\laptop_cpu_ds\graph\graph.gexf
+2026-03-26 16:59:28 | INFO | laptop_cpu_ds | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 17:00:06 | INFO | laptop_cpu_ds | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 17:00:31 | INFO | laptop_cpu_ds | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 17:00:31 | INFO | laptop_cpu_ds | Running mode=full on 3 inference rows.
+2026-03-26 17:00:31 | INFO | laptop_cpu_ds | Baseline TF-IDF retriever fitted on 62 candidates.

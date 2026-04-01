@@ -1,0 +1,14 @@
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_kb_only | Running mode=kb_only on 64 inference rows.
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_kb_only | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_kb_only | MAP@3 for fold0_train/kb_only = 0.046875
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_kb_only | Running mode=kb_only on 64 inference rows.
+2026-03-26 17:00:07 | INFO | laptop_cpu_ds_kb_only | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:08 | INFO | laptop_cpu_ds_kb_only | MAP@3 for fold0_valid/kb_only = 0.000000
+2026-03-26 17:00:08 | INFO | laptop_cpu_ds_kb_only | Fold 1/2 mode=kb_only MAP@3=0.000000
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_kb_only | Running mode=kb_only on 64 inference rows.
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_kb_only | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_kb_only | MAP@3 for fold1_train/kb_only = 0.000000
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_kb_only | Running mode=kb_only on 64 inference rows.
+2026-03-26 17:00:12 | INFO | laptop_cpu_ds_kb_only | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:13 | INFO | laptop_cpu_ds_kb_only | MAP@3 for fold1_valid/kb_only = 0.000000
+2026-03-26 17:00:13 | INFO | laptop_cpu_ds_kb_only | Fold 2/2 mode=kb_only MAP@3=0.000000

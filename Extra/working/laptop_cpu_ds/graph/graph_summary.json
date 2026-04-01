@@ -1,0 +1,20 @@
+{
+  "num_nodes": 3,
+  "num_edges": 0,
+  "relations": {},
+  "avg_degree": 0.0,
+  "top_degree_nodes": [
+    [
+      "False_DecimalComparison:Uses whole-number magnitude to compare decimals",
+      0
+    ],
+    [
+      "False_FractionAddition:Adds numerators and denominators separately",
+      0
+    ],
+    [
+      "True_Correct:NA",
+      0
+    ]
+  ]
+}

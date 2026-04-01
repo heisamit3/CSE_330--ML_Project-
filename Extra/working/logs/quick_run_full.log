@@ -1,0 +1,56 @@
+2026-03-26 15:37:12 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:37:12 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:37:13 | INFO | quick_run_full | MAP@3 for fold0_train/full = 1.000000
+2026-03-26 15:37:13 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:37:13 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:37:13 | INFO | quick_run_full | MAP@3 for fold0_valid/full = 0.000000
+2026-03-26 15:37:13 | INFO | quick_run_full | Fold 1/2 mode=full MAP@3=0.000000
+2026-03-26 15:37:14 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:37:14 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:37:14 | INFO | quick_run_full | MAP@3 for fold1_train/full = 1.000000
+2026-03-26 15:37:14 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:37:14 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:37:14 | INFO | quick_run_full | MAP@3 for fold1_valid/full = 0.000000
+2026-03-26 15:37:14 | INFO | quick_run_full | Fold 2/2 mode=full MAP@3=0.000000
+2026-03-26 15:38:26 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:38:26 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:38:26 | INFO | quick_run_full | MAP@3 for fold0_train/full = 1.000000
+2026-03-26 15:38:26 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:38:26 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 15:38:26 | INFO | quick_run_full | MAP@3 for fold0_valid/full = 0.000000
+2026-03-26 15:38:26 | INFO | quick_run_full | Fold 1/2 mode=full MAP@3=0.000000
+2026-03-26 15:38:27 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:38:27 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:38:27 | INFO | quick_run_full | MAP@3 for fold1_train/full = 1.000000
+2026-03-26 15:38:27 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 15:38:27 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 15:38:28 | INFO | quick_run_full | MAP@3 for fold1_valid/full = 0.000000
+2026-03-26 15:38:28 | INFO | quick_run_full | Fold 2/2 mode=full MAP@3=0.000000
+2026-03-26 16:03:10 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:03:10 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:03:10 | INFO | quick_run_full | MAP@3 for fold0_train/full = 1.000000
+2026-03-26 16:03:10 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:03:10 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:03:12 | INFO | quick_run_full | MAP@3 for fold0_valid/full = 0.000000
+2026-03-26 16:03:12 | INFO | quick_run_full | Fold 1/2 mode=full MAP@3=0.000000
+2026-03-26 16:03:15 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:03:15 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:03:15 | INFO | quick_run_full | MAP@3 for fold1_train/full = 1.000000
+2026-03-26 16:03:15 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:03:15 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:03:15 | INFO | quick_run_full | MAP@3 for fold1_valid/full = 0.000000
+2026-03-26 16:03:15 | INFO | quick_run_full | Fold 2/2 mode=full MAP@3=0.000000
+2026-03-26 16:06:24 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:06:24 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:06:25 | INFO | quick_run_full | MAP@3 for fold0_train/full = 1.000000
+2026-03-26 16:06:25 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:06:26 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 16:06:30 | INFO | quick_run_full | MAP@3 for fold0_valid/full = 0.000000
+2026-03-26 16:06:30 | INFO | quick_run_full | Fold 1/2 mode=full MAP@3=0.000000
+2026-03-26 16:06:31 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:06:31 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:06:32 | INFO | quick_run_full | MAP@3 for fold1_train/full = 1.000000
+2026-03-26 16:06:32 | INFO | quick_run_full | Running mode=full on 3 inference rows.
+2026-03-26 16:06:32 | INFO | quick_run_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 16:06:32 | INFO | quick_run_full | MAP@3 for fold1_valid/full = 0.000000
+2026-03-26 16:06:32 | INFO | quick_run_full | Fold 2/2 mode=full MAP@3=0.000000

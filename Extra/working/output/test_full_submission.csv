@@ -1,0 +1,4 @@
+row_id,prediction
+test_0,False_DecimalComparison:Uses whole-number magnitude to compare decimals False_FractionAddition:Adds numerators and denominators separately
+test_1,False_FractionAddition:Adds numerators and denominators separately False_DecimalComparison:Uses whole-number magnitude to compare decimals
+test_2,True_Correct:NA

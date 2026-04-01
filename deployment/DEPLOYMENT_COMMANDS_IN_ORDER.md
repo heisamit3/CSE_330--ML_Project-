@@ -355,7 +355,7 @@ Copy-Item .env.example .env.local
 
 ### Step 19
 
-**Work needed before executing this command**
+**Work needed before executing this command(for smoke test)**
 
 - Open `deployment/frontend/.env.local` in your editor.
 - For local backend testing, set:

@@ -1,0 +1,4 @@
+misconception_id,misconception_name,Category,family,short_description,baseline_score,row_id,rank,baseline_source
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,Uses whole-number magnitude to compare decimals,False_Decimal,False_,,0.0,train_2,1,heuristic_tfidf
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,Uses whole-number magnitude to compare decimals,False_Decimal,False_,,0.0,train_3,1,heuristic_tfidf
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,Uses whole-number magnitude to compare decimals,False_Decimal,False_,,0.0,train_5,1,heuristic_tfidf

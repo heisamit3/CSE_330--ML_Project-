@@ -1,0 +1,4 @@
+row_id,misconception_id,baseline_score,kb_score,confidence,ontology_support_score,trigger_score,concept_score,subgraph_density,graph_neighbor_count,trigger_match_count,concept_match_count,causal_delta,relative_delta,causal_confidence,style_preservation_score,final_score
+train_0,False_FractionAddition:Adds numerators and denominators separately,0.0,0.0161,0.25,0.05,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.030898000000000002
+train_1,False_FractionAddition:Adds numerators and denominators separately,0.0,0.0304,0.25,0.05,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.033472
+train_4,False_FractionAddition:Adds numerators and denominators separately,0.0,0.0161,0.25,0.05,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.030898000000000002

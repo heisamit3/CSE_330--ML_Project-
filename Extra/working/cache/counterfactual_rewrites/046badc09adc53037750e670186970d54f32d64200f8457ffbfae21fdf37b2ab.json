@@ -1,0 +1,11 @@
+{
+  "counterfactual_text": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+  "rewrite_confidence": 0.65,
+  "style_preservation_score": 0.2222,
+  "explanation": "Removed trigger-heavy statements while keeping most wording and length similar.",
+  "row_id": "train_3",
+  "misconception_id": "True_Correct:NA",
+  "raw_response": "{\"counterfactual_text\": \"Ask the student to restate the rule in words and test it on a simple counterexample.\", \"rewrite_confidence\": 0.65, \"style_preservation_score\": 0.2222, \"explanation\": \"Removed trigger-heavy statements while keeping most wording and length similar.\"}",
+  "context_block": "Candidate family: True_\nShort description: The explanation is consistent with the correct mathematical relationship.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: numerators. | denominators\nMatched concept terms: none\nOntology support score: 0.500\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- I made the denominators the same and then added the numerators.\n- The denominators already match so I add the numerators.\nSubgraph size: 1 nodes, 0 edges, density=0.000\nSubgraph edges:\n- none\nRelated misconceptions:\n- none",
+  "counterfactual_method": "llm_rewrite"
+}

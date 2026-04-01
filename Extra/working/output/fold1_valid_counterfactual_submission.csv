@@ -1,0 +1,4 @@
+row_id,prediction
+train_2,False_DecimalComparison:Uses whole-number magnitude to compare decimals
+train_3,False_DecimalComparison:Uses whole-number magnitude to compare decimals
+train_5,False_DecimalComparison:Uses whole-number magnitude to compare decimals

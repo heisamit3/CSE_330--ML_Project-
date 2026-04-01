@@ -1,0 +1,149 @@
+mode: full
+experiment_name: kaggle_h100_qwen_full
+seed: 42
+quick_run: false
+paths:
+  input_dir: /kaggle/input
+  working_dir: /kaggle/working/map_mvp
+  train_file:
+  - /kaggle/input/map_ds/DS/train.csv
+  - /kaggle/input/datasets/mkhanshovon43/map_ds/DS/train.csv
+  - /kaggle/working/codeds_extracted/DS/train.csv
+  - /kaggle/input/codeds/DS/train.csv
+  - /kaggle/input/codeds/CodeDs/DS/train.csv
+  - /kaggle/input/datasets/mkhanshovon43/map-ds/DS/train.csv
+  - /kaggle/input/map-ds/DS/train.csv
+  - /kaggle/input/map-charting-student-math-misunderstandings/train.csv
+  - train.csv
+  test_file:
+  - /kaggle/input/map_ds/DS/test.csv
+  - /kaggle/input/datasets/mkhanshovon43/map_ds/DS/test.csv
+  - /kaggle/working/codeds_extracted/DS/test.csv
+  - /kaggle/input/codeds/DS/test.csv
+  - /kaggle/input/codeds/CodeDs/DS/test.csv
+  - /kaggle/input/datasets/mkhanshovon43/map-ds/DS/test.csv
+  - /kaggle/input/map-ds/DS/test.csv
+  - /kaggle/input/map-charting-student-math-misunderstandings/test.csv
+  - test.csv
+  misconception_file:
+  - /kaggle/input/map_ds/DS/misconception_mapping.csv
+  - /kaggle/input/datasets/mkhanshovon43/map_ds/DS/misconception_mapping.csv
+  - /kaggle/working/codeds_extracted/DS/misconception_mapping.csv
+  - /kaggle/input/codeds/DS/misconception_mapping.csv
+  - /kaggle/input/codeds/CodeDs/DS/misconception_mapping.csv
+  - /kaggle/input/datasets/mkhanshovon43/map-ds/DS/misconception_mapping.csv
+  - /kaggle/input/map-ds/DS/misconception_mapping.csv
+  - /kaggle/input/map-charting-student-math-misunderstandings/misconception_mapping.csv
+  - misconception_mapping.csv
+  baseline_artifacts_dir: /kaggle/working/map_mvp/baseline_artifacts
+  kb_path: /kaggle/working/map_mvp/data/misconception_kb.json
+  graph_path: /kaggle/working/map_mvp/graph/graph.gexf
+  graph_summary_path: /kaggle/working/map_mvp/graph/graph_summary.json
+  logs_dir: /kaggle/working/map_mvp/logs
+  cache_dir: /kaggle/working/map_mvp/cache
+  output_dir: /kaggle/working/map_mvp/output
+data:
+  group_column: QuestionId
+  target_column: target
+  top_k_candidates: 12
+  top_k_submit: 3
+  folds: 3
+  max_rows: null
+baseline:
+  use_external_artifacts: true
+  artifact_glob: qwen3_8b_adapter_*_scores_long.csv
+  family_filter: true
+  heuristic_candidate_pool: 16
+llm:
+  enabled: true
+  backend: hf
+  model_name_or_path: null
+  model_candidates:
+  - Qwen/Qwen2.5-7B-Instruct
+  - /kaggle/input/loaded-models/loaded_models/Qwen3-8B
+  - /kaggle/input/loaded_models/loaded_models/Qwen3-8B
+  - /kaggle/input/qwen3-8b
+  - /kaggle/input/qwen3-8b-instruct
+  device: cuda
+  dtype: bfloat16
+  load_in_4bit: false
+  attn_implementation: flash_attention_2
+  local_files_only: true
+  max_new_tokens: 256
+  temperature: 0.0
+  batch_size: 1
+  json_repair: true
+  allow_backend_fallback: true
+graphrag:
+  enabled: true
+  top_k_context_neighbors: 3
+  max_trigger_matches: 3
+  retrieve_top_n: 8
+counterfactual:
+  enabled: true
+  top_k: 3
+  min_affinity_to_run: 0.15
+  min_absolute_delta_confirm: 0.15
+  min_relative_delta_confirm: 0.3
+ensemble:
+  use_weighted_fusion: true
+  use_xgboost: true
+  weights:
+    baseline_score: 0.18
+    kb_score: 0.15
+    confidence: 0.07
+    ontology_support_score: 0.12
+    trigger_score: 0.06
+    concept_score: 0.05
+    subgraph_density: 0.04
+    causal_delta: 0.14
+    relative_delta: 0.08
+    causal_confidence: 0.07
+    style_preservation_score: 0.02
+    graph_neighbor_count: 0.01
+    trigger_match_count: 0.01
+runtime:
+  save_every: 25
+  resume: true
+  force_rebuild_kb: false
+  force_rebuild_graph: false
+baseline_qwen:
+  enabled: true
+  input_format_style: question_yes_no
+  output_prefix: qwen3_8b_adapter
+  family_filter: true
+  batch_size: 8
+  max_length: 256
+  top_k_export: 12
+  device: cuda
+  dtype: float16
+  use_4bit: false
+  local_files_only: true
+  base_model_candidates:
+  - /kaggle/input/loaded-models/loaded_models/Qwen3-8B
+  - /kaggle/input/loaded_models/loaded_models/Qwen3-8B
+  - /kaggle/input/qwen3-8b
+  - /kaggle/input/qwen3-8b-base
+  - /kaggle/input/qwen-qwen3-8b
+  - /kaggle/input/qwen3-8b/Qwen3-8B
+  adapter_candidates:
+  - /kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/adapter
+  - /kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/adapter
+  - /kaggle/input/qwen3-8b-qlora/adapter
+  - /kaggle/input/qwen-3-8b-qlora/adapter
+  - /kaggle/input/map-qwen3-8b-qlora/adapter
+  - /kaggle/working/qwen3-8b-qlora/adapter
+  label_encoder_candidates:
+  - /kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib
+  - /kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/label_encoder.joblib
+  - /kaggle/input/qwen3-8b-qlora/label_encoder.joblib
+  - /kaggle/input/qwen-3-8b-qlora/label_encoder.joblib
+  - /kaggle/input/map-qwen3-8b-qlora/label_encoder.joblib
+  - /kaggle/working/qwen3-8b-qlora/label_encoder.joblib
+  run_config_candidates:
+  - /kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/run_config.json
+  - /kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/run_config.json
+  - /kaggle/input/qwen3-8b-qlora/run_config.json
+  - /kaggle/input/qwen-3-8b-qlora/run_config.json
+  - /kaggle/input/map-qwen3-8b-qlora/run_config.json
+  - /kaggle/working/qwen3-8b-qlora/run_config.json

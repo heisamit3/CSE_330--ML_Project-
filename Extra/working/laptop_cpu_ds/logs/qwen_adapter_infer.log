@@ -1,0 +1,10 @@
+2026-03-26 16:58:36 | INFO | qwen_adapter_infer | Starting qwen_adapter_infer with config=configs/laptop_cpu_ds.yaml
+2026-03-26 16:58:36 | INFO | qwen_adapter_infer | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 16:58:36 | INFO | qwen_adapter_infer | Prepared 16 rows for train. Preview saved to C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\laptop_cpu_ds\output\qwen_adapter_train_prepared_preview.csv
+2026-03-26 16:58:36 | INFO | qwen_adapter_infer | Prepared 3 rows for test. Preview saved to C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\laptop_cpu_ds\output\qwen_adapter_test_prepared_preview.csv
+2026-03-26 16:58:36 | INFO | qwen_adapter_infer | Prepare-only mode finished without model loading.
+2026-03-26 19:56:18 | INFO | qwen_adapter_infer | Starting qwen_adapter_infer with config=configs/laptop_cpu_ds.yaml
+2026-03-26 19:56:20 | INFO | qwen_adapter_infer | Loaded train=128 rows, test=3 rows, candidates=62
+2026-03-26 19:56:20 | INFO | qwen_adapter_infer | Prepared 2 rows for train. Preview saved to C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\laptop_cpu_ds\output\qwen_adapter_train_prepared_preview.csv
+2026-03-26 19:56:20 | INFO | qwen_adapter_infer | Prepared 2 rows for test. Preview saved to C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\laptop_cpu_ds\output\qwen_adapter_test_prepared_preview.csv
+2026-03-26 19:56:20 | INFO | qwen_adapter_infer | Prepare-only mode finished without model loading.

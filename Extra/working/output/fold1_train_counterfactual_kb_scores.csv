@@ -1,0 +1,55 @@
+misconception_id,affinity_score,confidence,reasoning_short,evidence_spans,row_id,baseline_score,kb_score,graph_neighbor_count,trigger_match_count,concept_match_count,trigger_score,concept_score,ontology_support_score,subgraph_node_count,subgraph_edge_count,subgraph_density,matched_trigger_patterns,matched_concept_terms,neighbor_relation_types,context_block,raw_response,prompt_type,scoring_backend
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.351,0.5924,Student wording matches ontology trigger patterns.,"['than', 'larger']",train_0,0.0,0.351,0,2,2,0.7777777777777778,0.4,0.59,1,0,0.0,than | larger,decimal | decimal place value,,"Candidate family: False_
+Short description: The student compares decimals as if they were whole numbers and ignores place value.
+Concept tags: decimal
+Cognitive roots: whole-number transfer, place-value reasoning
+Prerequisite concepts: decimal place value, comparing decimals
+Matched trigger patterns: than | larger
+Matched concept terms: decimal | decimal place value
+Ontology support score: 0.590
+Formal counterexample: 0.8 = 0.800, so 0.800 > 0.355.
+Remediation hint: Rewrite both decimals to the same number of places and compare from left to right.
+Observed example evidence:
+- 0.355 is larger because 355 is bigger than 8.
+- The number with more digits is bigger.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_DecimalComparison:Uses whole-number magnitude to compare decimals"", ""affinity_score"": 0.351, ""confidence"": 0.5924, ""reasoning_short"": ""Student wording matches ontology trigger patterns."", ""evidence_spans"": [""than"", ""larger""]}",knowledge_guided,mock
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.3034,0.5208,Student wording matches ontology trigger patterns.,"['bigger.', 'larger']",train_1,0.032586085474136675,0.3034,0,2,2,0.5555555555555556,0.4,0.49,1,0,0.0,bigger. | larger,decimal | decimal place value,,"Candidate family: False_
+Short description: The student compares decimals as if they were whole numbers and ignores place value.
+Concept tags: decimal
+Cognitive roots: whole-number transfer, place-value reasoning
+Prerequisite concepts: decimal place value, comparing decimals
+Matched trigger patterns: bigger. | larger
+Matched concept terms: decimal | decimal place value
+Ontology support score: 0.490
+Formal counterexample: 0.8 = 0.800, so 0.800 > 0.355.
+Remediation hint: Rewrite both decimals to the same number of places and compare from left to right.
+Observed example evidence:
+- 0.355 is larger because 355 is bigger than 8.
+- The number with more digits is bigger.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_DecimalComparison:Uses whole-number magnitude to compare decimals"", ""affinity_score"": 0.3034, ""confidence"": 0.5208, ""reasoning_short"": ""Student wording matches ontology trigger patterns."", ""evidence_spans"": [""bigger."", ""larger""]}",knowledge_guided,mock
+False_DecimalComparison:Uses whole-number magnitude to compare decimals,0.2774,0.5169,Student wording matches ontology trigger patterns.,"['than', 'bigger.']",train_4,0.0,0.2774,0,2,2,0.5555555555555556,0.4,0.49,1,0,0.0,than | bigger.,decimal | decimal place value,,"Candidate family: False_
+Short description: The student compares decimals as if they were whole numbers and ignores place value.
+Concept tags: decimal
+Cognitive roots: whole-number transfer, place-value reasoning
+Prerequisite concepts: decimal place value, comparing decimals
+Matched trigger patterns: than | bigger.
+Matched concept terms: decimal | decimal place value
+Ontology support score: 0.490
+Formal counterexample: 0.8 = 0.800, so 0.800 > 0.355.
+Remediation hint: Rewrite both decimals to the same number of places and compare from left to right.
+Observed example evidence:
+- 0.355 is larger because 355 is bigger than 8.
+- The number with more digits is bigger.
+Subgraph size: 1 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_DecimalComparison:Uses whole-number magnitude to compare decimals"", ""affinity_score"": 0.2774, ""confidence"": 0.5169, ""reasoning_short"": ""Student wording matches ontology trigger patterns."", ""evidence_spans"": [""than"", ""bigger.""]}",knowledge_guided,mock

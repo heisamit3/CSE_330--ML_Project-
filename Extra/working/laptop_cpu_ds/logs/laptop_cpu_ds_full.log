@@ -1,0 +1,14 @@
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_full | Running mode=full on 64 inference rows.
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_full | MAP@3 for fold0_train/full = 0.046875
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_full | Running mode=full on 64 inference rows.
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_full | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_full | MAP@3 for fold0_valid/full = 0.000000
+2026-03-26 17:00:11 | INFO | laptop_cpu_ds_full | Fold 1/2 mode=full MAP@3=0.000000
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_full | Running mode=full on 64 inference rows.
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:15 | INFO | laptop_cpu_ds_full | MAP@3 for fold1_train/full = 0.000000
+2026-03-26 17:00:15 | INFO | laptop_cpu_ds_full | Running mode=full on 64 inference rows.
+2026-03-26 17:00:15 | INFO | laptop_cpu_ds_full | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:15 | INFO | laptop_cpu_ds_full | MAP@3 for fold1_valid/full = 0.000000
+2026-03-26 17:00:15 | INFO | laptop_cpu_ds_full | Fold 2/2 mode=full MAP@3=0.000000

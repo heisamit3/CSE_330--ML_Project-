@@ -1,0 +1,11 @@
+{
+  "counterfactual_text": "Find a common denominator before adding the numerators.",
+  "rewrite_confidence": 0.65,
+  "style_preservation_score": 0.0833,
+  "explanation": "Removed trigger-heavy statements while keeping most wording and length similar.",
+  "row_id": "train_2",
+  "misconception_id": "False_FractionAddition:Adds numerators and denominators separately",
+  "raw_response": "{\"counterfactual_text\": \"Find a common denominator before adding the numerators.\", \"rewrite_confidence\": 0.65, \"style_preservation_score\": 0.0833, \"explanation\": \"Removed trigger-heavy statements while keeping most wording and length similar.\"}",
+  "context_block": "Candidate family: False_\nShort description: The student treats fraction addition like component-wise whole number addition.\nConcept tags: fraction, ratio\nCognitive roots: part-whole reasoning, structure-preserving arithmetic, multiplicative reasoning\nPrerequisite concepts: equivalent fractions, common denominator, fraction addition\nMatched trigger patterns: bottom | becomes\nMatched concept terms: none\nOntology support score: 0.500\nFormal counterexample: 1/2 + 1/3 = 3/6 + 2/6 = 5/6, not 2/5.\nRemediation hint: Find a common denominator before adding the numerators.\nObserved example evidence:\n- I add the top and bottom so it becomes 2 over 5.\nSubgraph size: 1 nodes, 0 edges, density=0.000\nSubgraph edges:\n- none\nRelated misconceptions:\n- none",
+  "counterfactual_method": "llm_rewrite"
+}

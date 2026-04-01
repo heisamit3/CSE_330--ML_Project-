@@ -1,0 +1,4 @@
+misconception_id,misconception_name,Category,family,short_description,baseline_score,row_id,rank,baseline_source
+False_FractionAddition:Adds numerators and denominators separately,Adds numerators and denominators separately,False_Fraction,False_,,0.02990519874015674,train_2,1,heuristic_tfidf
+True_Correct:NA,NA,True_Correct,True_,,0.0,train_3,1,heuristic_tfidf
+True_Correct:NA,NA,True_Correct,True_,,0.0,train_5,1,heuristic_tfidf

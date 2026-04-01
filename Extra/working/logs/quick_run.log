@@ -1,0 +1,22 @@
+2026-03-26 15:36:08 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 15:36:08 | INFO | quick_run | Running mode=full on 3 inference rows.
+2026-03-26 15:36:08 | INFO | quick_run | Baseline TF-IDF retriever fitted on 3 candidates.
+2026-03-26 15:36:08 | INFO | quick_run | Building ontology graph at C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\graph\graph.gexf
+2026-03-26 15:37:02 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 15:37:02 | INFO | quick_run | Running mode=full on 3 inference rows.
+2026-03-26 15:37:02 | INFO | quick_run | Baseline TF-IDF retriever fitted on 3 candidates.
+2026-03-26 15:37:02 | INFO | quick_run | Building ontology graph at C:\D drive\L3-T2\CSE330 Machine Learning Sessional\Project\Extra\working\graph\graph.gexf
+2026-03-26 15:37:12 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 15:38:25 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 16:01:28 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 16:01:28 | INFO | quick_run | Running mode=full on 3 inference rows.
+2026-03-26 16:01:28 | INFO | quick_run | Baseline TF-IDF retriever fitted on 3 candidates.
+2026-03-26 16:01:28 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 16:03:07 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 16:03:07 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 16:03:07 | INFO | quick_run | Running mode=full on 3 inference rows.
+2026-03-26 16:03:07 | INFO | quick_run | Baseline TF-IDF retriever fitted on 3 candidates.
+2026-03-26 16:05:41 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.
+2026-03-26 16:05:41 | INFO | quick_run | Running mode=full on 3 inference rows.
+2026-03-26 16:05:41 | INFO | quick_run | Baseline TF-IDF retriever fitted on 3 candidates.
+2026-03-26 16:06:23 | INFO | quick_run | No competition CSVs found. Using built-in toy data because quick_run=true.

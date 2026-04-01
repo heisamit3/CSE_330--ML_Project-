@@ -1,0 +1,16 @@
+{
+  "misconception_id": "True_Correct:NA",
+  "affinity_score": 0.0889,
+  "confidence": 0.3667,
+  "reasoning_short": "Limited trigger evidence; score relies on lexical overlap and baseline retrieval.",
+  "evidence_spans": [
+    "I made the denominators the same and then added the numerators."
+  ],
+  "row_id": "train_3",
+  "baseline_score": 0.0,
+  "graph_neighbor_count": 0,
+  "trigger_match_count": 0,
+  "context_block": "Candidate family: True_\nShort description: The explanation is consistent with the correct mathematical relationship.\nPrerequisite concepts: none\nMatched trigger patterns: none\nFormal counterexample: none\nRemediation hint: none\nRelated misconceptions:\n- none",
+  "raw_response": "{\"misconception_id\": \"True_Correct:NA\", \"affinity_score\": 0.0889, \"confidence\": 0.3667, \"reasoning_short\": \"Limited trigger evidence; score relies on lexical overlap and baseline retrieval.\", \"evidence_spans\": [\"I made the denominators the same and then added the numerators.\"]}",
+  "prompt_type": "knowledge_guided"
+}

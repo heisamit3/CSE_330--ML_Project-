@@ -1,0 +1,14 @@
+2026-03-26 17:00:08 | INFO | laptop_cpu_ds_counterfactual | Running mode=counterfactual on 64 inference rows.
+2026-03-26 17:00:08 | INFO | laptop_cpu_ds_counterfactual | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:09 | INFO | laptop_cpu_ds_counterfactual | MAP@3 for fold0_train/counterfactual = 0.046875
+2026-03-26 17:00:09 | INFO | laptop_cpu_ds_counterfactual | Running mode=counterfactual on 64 inference rows.
+2026-03-26 17:00:09 | INFO | laptop_cpu_ds_counterfactual | Baseline TF-IDF retriever fitted on 2 candidates.
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_counterfactual | MAP@3 for fold0_valid/counterfactual = 0.000000
+2026-03-26 17:00:10 | INFO | laptop_cpu_ds_counterfactual | Fold 1/2 mode=counterfactual MAP@3=0.000000
+2026-03-26 17:00:13 | INFO | laptop_cpu_ds_counterfactual | Running mode=counterfactual on 64 inference rows.
+2026-03-26 17:00:13 | INFO | laptop_cpu_ds_counterfactual | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_counterfactual | MAP@3 for fold1_train/counterfactual = 0.000000
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_counterfactual | Running mode=counterfactual on 64 inference rows.
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_counterfactual | Baseline TF-IDF retriever fitted on 1 candidates.
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_counterfactual | MAP@3 for fold1_valid/counterfactual = 0.000000
+2026-03-26 17:00:14 | INFO | laptop_cpu_ds_counterfactual | Fold 2/2 mode=counterfactual MAP@3=0.000000

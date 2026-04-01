@@ -1,0 +1,28 @@
+{
+  "misconception_id": "nan",
+  "affinity_score": 0.0,
+  "confidence": 0.24,
+  "reasoning_short": "Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.",
+  "evidence_spans": [
+    "3 out of 9 are shaded. 3 out of 9=3/9. 3/9 in it simplest form =1/3"
+  ],
+  "row_id": 91,
+  "baseline_score": 0.0,
+  "kb_score": 0.0,
+  "graph_neighbor_count": 0,
+  "trigger_match_count": 0,
+  "concept_match_count": 0,
+  "trigger_score": 0.0,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.0,
+  "subgraph_node_count": 0,
+  "subgraph_edge_count": 0,
+  "subgraph_density": 0.0,
+  "matched_trigger_patterns": "",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "",
+  "context_block": "Candidate family: unknown\nShort description: none\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.000\nFormal counterexample: none\nRemediation hint: none\nObserved example evidence:\n- none\nSubgraph size: 0 nodes, 0 edges, density=0.000\nSubgraph edges:\n- none\nRelated misconceptions:\n- none",
+  "raw_response": "{\"misconception_id\": \"nan\", \"affinity_score\": 0.0, \"confidence\": 0.24, \"reasoning_short\": \"Weak direct evidence; score relies on baseline retrieval and ontology profile overlap.\", \"evidence_spans\": [\"3 out of 9 are shaded. 3 out of 9=3/9. 3/9 in it simplest form =1/3\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}
