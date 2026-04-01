@@ -229,23 +229,37 @@ async def list_questions():
 async def submit_answer(req: SubmitRequest):
     """
     Submit answer endpoint (legacy compatibility with existing UI).
+    Supports both original (train.csv) and teacher-created questions.
     """
-    if req.question_id not in QUESTIONS_DB:
-        raise HTTPException(status_code=404, detail="Question not found")
+    # Check if question is in QUESTIONS_DB (original questions)
+    question = QUESTIONS_DB.get(req.question_id)
 
-    question = QUESTIONS_DB[req.question_id]
+    if question:
+        # Original question from train.csv
+        question_text = question["text"]
+        options = question["options"]
+        correct_answer = question.get("correct_answer")
+    elif req.question_text:
+        # Teacher-created question (not in QUESTIONS_DB)
+        question_text = req.question_text
+        options = req.options or []
+        correct_answer = None  # Will be inferred from is_correct if provided
+    else:
+        raise HTTPException(status_code=404, detail="Question not found and no question_text provided")
+
     selected_answer = normalize_space(req.selected_answer or req.student_answer or "")
     explanation = normalize_space(req.student_explanation)
 
     if not selected_answer:
         raise HTTPException(status_code=400, detail="Please choose one answer option")
 
-    # Validate answer
-    valid_answers = {normalize_answer(opt): opt for opt in question["options"]}
-    if normalize_answer(selected_answer) not in valid_answers:
-        # Try to match
-        matched = valid_answers.get(normalize_answer(selected_answer), selected_answer)
-        selected_answer = matched
+    # Validate answer for original questions
+    if question:
+        valid_answers = {normalize_answer(opt): opt for opt in options}
+        if normalize_answer(selected_answer) not in valid_answers:
+            # Try to match
+            matched = valid_answers.get(normalize_answer(selected_answer), selected_answer)
+            selected_answer = matched
 
     service = get_prediction_service()
     if not service.is_loaded:
@@ -254,10 +268,11 @@ async def submit_answer(req: SubmitRequest):
     try:
         feedback = service.get_legacy_feedback(
             question_id=req.question_id,
-            question_text=question["text"],
+            question_text=question_text,
             selected_answer=selected_answer,
             student_explanation=explanation,
-            options=question["options"],
+            options=options,
+            is_correct=req.is_correct,  # Pass through for teacher questions
         )
         return SubmitResponse(success=True, feedback=feedback)
     except Exception as e:

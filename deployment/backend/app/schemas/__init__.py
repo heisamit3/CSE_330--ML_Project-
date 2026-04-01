@@ -75,6 +75,10 @@ class SubmitRequest(BaseModel):
     selected_answer: Optional[str] = None
     student_answer: Optional[str] = None
     student_explanation: str
+    # Optional fields for teacher-created questions
+    question_text: Optional[str] = None
+    is_correct: Optional[bool] = None
+    options: Optional[List[str]] = None
 
 
 class LegacyFeedback(BaseModel):

@@ -74,6 +74,18 @@ function FeedbackPanel({ feedback, questionId, onNext }) {
         </div>
       </div>
 
+      {/* Your Explanation */}
+      {feedback.student_explanation && (
+        <div className="glass-card explanation-card">
+          <h3 className="card-title">
+            <i className="fas fa-pen"></i> Your Explanation
+          </h3>
+          <div className="explanation-content">
+            {feedback.student_explanation}
+          </div>
+        </div>
+      )}
+
       {/* Top Predictions (NEW - from real model) */}
       {feedback.top_predictions && feedback.top_predictions.length > 0 && (
         <div className="glass-card predictions-card">
