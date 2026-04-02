@@ -1,0 +1,49 @@
+CELL 7 (code):
+
+# ============================================================================
+# CELL 7: Load Qwen3-8B Classification Model (if no pre-computed scores)
+# ============================================================================
+
+if not HAS_FULL_SCORES and not HAS_BASELINE_ONLY:
+    log("Loading Qwen3-8B + LoRA for classification inference...")
+
+    base_model_root = resolve_path(BASE_MODEL_CANDIDATES, "Qwen3-8B base model")
+    adapter_root    = resolve_path(ADAPTER_CANDIDATES, "LoRA adapter")
+
+    base_model_path = find_model_path(base_model_root)
+    adapter_path    = find_adapter_path(adapter_root)
+    log(f"  Base model dir : {base_model_path}")
+    log(f"  Adapter dir    : {adapter_path}")
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        base_model_path, trust_remote_code=True, local_files_only=True
+    )
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    classification_model = AutoModelForSequenceClassification.from_pretrained(
+        base_model_path,
+        num_labels=n_classes,
+        trust_remote_code=True,
+        torch_dtype=torch.float16,
+        device_map="auto",
+        local_files_only=True,
+    )
+    classification_model.resize_token_embeddings(len(tokenizer))
+    classification_model = PeftModel.from_pretrained(
+        classification_model, adapter_path, local_files_only=True
+    )
+    classification_model.config.pad_token_id = tokenizer.pad_token_id
+    classification_model.eval()
+    log(f"Model loaded. Parameters: {sum(p.numel() for p in classification_model.parameters()):,}")
+else:
+    log("Skipping model load — using pre-computed scores.")
+    # Still load tokenizer for explainability phase later
+    base_model_root = resolve_path(BASE_MODEL_CANDIDATES, "Qwen3-8B base model")
+    base_model_path = find_model_path(base_model_root)
+    tokenizer = AutoTokenizer.from_pretrained(
+        base_model_path, trust_remote_code=True, local_files_only=True
+    )
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    classification_model = None

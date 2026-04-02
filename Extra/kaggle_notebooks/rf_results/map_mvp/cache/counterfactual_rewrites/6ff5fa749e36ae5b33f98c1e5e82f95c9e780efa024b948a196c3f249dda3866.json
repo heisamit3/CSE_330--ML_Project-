@@ -1,0 +1,11 @@
+{
+  "counterfactual_text": "I think that 1/3 is the answer, as it's the simplest form of 3/9.",
+  "rewrite_confidence": 0.65,
+  "style_preservation_score": 1.0,
+  "explanation": "Removed misconception-heavy language while preserving most wording.",
+  "row_id": 36696,
+  "misconception_id": "True_Misconception:Incomplete",
+  "raw_response": "{\"counterfactual_text\": \"I think that 1/3 is the answer, as it's the simplest form of 3/9.\", \"rewrite_confidence\": 0.65, \"style_preservation_score\": 1.0, \"explanation\": \"Removed misconception-heavy language while preserving most wording.\"}",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Incomplete'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: shaded | shaded. | triangles not\nMatched concept terms: none\nOntology support score: 0.500\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- 3 out of 9 parts aren't shaded.\n- 3 out of 9 triangles are not shaded.\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\n- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\n- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\nRelated misconceptions:\n- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)\n- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)\n- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d)",
+  "counterfactual_method": "llm_rewrite"
+}

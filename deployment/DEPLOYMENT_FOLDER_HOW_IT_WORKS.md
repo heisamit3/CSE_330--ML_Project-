@@ -124,7 +124,7 @@ When a prediction request comes in, this service:
 
 #### `deployment/backend/app/models/classifier.py`
 
-This loads the Qwen3-4B sequence classification model.
+This loads the Qwen3-8B sequence classification model.
 
 Its job is to predict labels like:
 

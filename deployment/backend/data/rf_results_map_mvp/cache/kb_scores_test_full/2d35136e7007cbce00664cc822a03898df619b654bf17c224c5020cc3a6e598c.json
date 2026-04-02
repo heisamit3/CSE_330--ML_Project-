@@ -1,0 +1,28 @@
+{
+  "misconception_id": "False_Misconception:Wrong_fraction",
+  "affinity_score": 1.0,
+  "confidence": 1.0,
+  "reasoning_short": "Evidence aligns with Wrong_fraction.",
+  "evidence_spans": [
+    "think"
+  ],
+  "row_id": 36697,
+  "baseline_score": 4.015232207166264e-06,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 39,
+  "trigger_match_count": 1,
+  "concept_match_count": 1,
+  "trigger_score": 0.16666666666666666,
+  "concept_score": 0.3333333333333333,
+  "ontology_support_score": 0.39166666666666666,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "think",
+  "matched_concept_terms": "fraction",
+  "neighbor_relation_types": "  | _ | a | b | c | d | e | f | g | h | i | l | n | o | p | r | s | t | u | v | w | |",
+  "context_block": "Candidate family: False_\nShort description: Student reasoning appears consistent with the misconception 'Wrong_fraction' in the fraction concept area.\nConcept tags: fraction\nCognitive roots: part-whole reasoning, structure-preserving arithmetic\nPrerequisite concepts: none\nMatched trigger patterns: think\nMatched concept terms: fraction\nOntology support score: 0.392\nFormal counterexample: Convert to equivalent fractions with a common denominator before combining them.\nRemediation hint: Focus on unit size and denominator meaning before adding or comparing fractions.\nObserved example evidence:\n- This is a good explanation of why the answer choices do not match, because it states that both B and C are incorrect. Also, youu cannot use 3x8 to get 24; only\n- 1 / 8 = 3 so i dud 3 x 3 to get 9.\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- False_Misconception:Wrong_Fraction <-> True_Misconception:Wrong_fraction via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h (d, i, v)\n- False_Misconception:Wrong_Fraction <-> False_Misconception:Wrong_fraction via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h (d, i, v)\n- False_Misconception:Wrong_Fraction <-> False_Misconception:Incorrect_equivalent_fraction_addition via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h (f, r, a)\nRelated misconceptions:\n- Wrong_Fraction (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h; d, i, v, i, d, e, d,  , |,  , f, r, a, c, t, i, o, n,  , |,  , p, a, r, t, -, w, h, o, l, e,  , r, e, a, s, o, n, i, n, g,  , |,  , s, t, r, u, c, t, u, r, e, -, p, r, e, s, e, r, v, i, n, g,  , a, r, i, t, h, m, e, t, i, c,  , |,  , t, i, m, e, s,  , |,  , w, h, i, c, h)\n- Incorrect_equivalent_fraction_addition (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h; f, r, a, c, t, i, o, n,  , |,  , p, a, r, t, -, w, h, o, l, e,  , r, e, a, s, o, n, i, n, g,  , |,  , s, t, r, u, c, t, u, r, e, -, p, r, e, s, e, r, v, i, n, g,  , a, r, i, t, h, m, e, t, i, c,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)\n- Wrong_fraction (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h; 3, /, 8,  , |,  , d, i, v, i, d, e, d,  , |,  , p, a, r, t, -, w, h, o, l, e,  , r, e, a, s, o, n, i, n, g,  , |,  , s, t, r, u, c, t, u, r, e, -, p, r, e, s, e, r, v, i, n, g,  , a, r, i, t, h, m, e, t, i, c,  , |,  , t, i, m, e, s)",
+  "raw_response": "{\"misconception_id\": \"False_Misconception:Wrong_fraction\", \"affinity_score\": 1.0, \"confidence\": 1.0, \"reasoning_short\": \"Evidence aligns with Wrong_fraction.\", \"evidence_spans\": [\"think\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

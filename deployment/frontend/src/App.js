@@ -8,6 +8,7 @@ import SignupPage from './pages/SignupPage';
 import StudentPracticePage from './pages/StudentPracticePage';
 import TeacherDashboardPage from './pages/TeacherDashboardPage';
 import config from './config';
+import BrandMark from './components/BrandMark';
 
 function AppLayout({ children }) {
   const [theme, setTheme] = useState('dark');
@@ -52,7 +53,7 @@ function AppLayout({ children }) {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">
-            <i className="fas fa-graduation-cap"></i>
+            <BrandMark className="footer-brand-mark" />
             <span>MAP Student Practice</span>
           </div>
           <div className="footer-info">

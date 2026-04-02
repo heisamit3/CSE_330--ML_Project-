@@ -1,0 +1,13 @@
+CELL 13 (code):
+
+# ============================================================================
+# CELL 12: Save Explanations
+# ============================================================================
+with open("explanations.json", "w", encoding="utf-8") as f:
+    json.dump(explanations, f, ensure_ascii=False, indent=2)
+log("Explanations saved to explanations.json")
+
+# Free explainer model
+del explainer_model
+clear_gpu_memory()
+log("Explainer model freed.")

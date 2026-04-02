@@ -1,0 +1,28 @@
+{
+  "misconception_id": "False_Misconception:Firstterm",
+  "affinity_score": 1.0,
+  "confidence": 0.73,
+  "reasoning_short": "Evidence aligns with Firstterm.",
+  "evidence_spans": [
+    "TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog"
+  ],
+  "row_id": 36697,
+  "baseline_score": 1.1525229638209566e-05,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 30,
+  "trigger_match_count": 0,
+  "concept_match_count": 0,
+  "trigger_score": 0.0,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.2,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: False_\nShort description: Student reasoning appears consistent with the misconception 'Firstterm'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.200\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- each time there is added 6 meaning from pattern 4 plus 6 there are 20.\n- Becausee it goes up by 6.\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Misconception:Firstterm <-> False_Misconception:Denominator-only_change via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\n- True_Misconception:Firstterm <-> False_Misconception:Wrong_term via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\n- True_Misconception:Firstterm <-> False_Misconception:Firstterm via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\nRelated misconceptions:\n- Firstterm (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , p, a, t, t, e, r, n,  , |,  , t, i, m, e, s)\n- Wrong_term (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , p, a, t, t, e, r, n)\n- Denominator-only_change (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , t, i, m, e, s)",
+  "raw_response": "{\"misconception_id\": \"False_Misconception:Firstterm\", \"affinity_score\": 1.0, \"confidence\": 0.73, \"reasoning_short\": \"Evidence aligns with Firstterm.\", \"evidence_spans\": [\"TASK=score_candidate\\nYou are a careful math misconception rater.\\nUse the ontolog\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

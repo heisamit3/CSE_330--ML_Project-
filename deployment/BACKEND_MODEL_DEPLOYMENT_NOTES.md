@@ -24,7 +24,7 @@ The project is set up for:
 - Frontend on Vercel
 - Backend and model on Modal
 - FastAPI for the API
-- Qwen3-4B based classifier and explainer
+- Qwen3-8B based classifier and explainer
 
 ### 2. Backend data artifacts must be prepared first
 
@@ -134,7 +134,7 @@ Invoke-RestMethod http://localhost:8000/health
 If local model loading is too heavy, you can temporarily set:
 
 ```text
-USE_LLM_EXPLAINER=false
+USE_LLM_EXPLAINER=true
 ```
 
 ### 5. Deploy backend to Modal

@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Misconception:Incomplete",
+  "affinity_score": 1.0,
+  "confidence": 0.73,
+  "reasoning_short": "Evidence aligns with Incomplete.",
+  "evidence_spans": [
+    "TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog"
+  ],
+  "row_id": 36698,
+  "baseline_score": 0.000212482875213,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 9,
+  "trigger_match_count": 0,
+  "concept_match_count": 0,
+  "trigger_score": 0.0,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.2,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Incomplete'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.200\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- 3 out of 9 parts aren't shaded.\n- 3 out of 9 triangles are not shaded.\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\n- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\n- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\nRelated misconceptions:\n- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)\n- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)\n- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d)",
+  "raw_response": "{\"misconception_id\": \"True_Misconception:Incomplete\", \"affinity_score\": 1.0, \"confidence\": 0.73, \"reasoning_short\": \"Evidence aligns with Incomplete.\", \"evidence_spans\": [\"TASK=score_candidate\\nYou are a careful math misconception rater.\\nUse the ontolog\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

@@ -9,7 +9,7 @@ from typing import Dict, Any
 
 def format_input(question_text: str, mc_answer: str, student_explanation: str, is_correct: bool) -> str:
     """
-    Format input text for Qwen3-4B model.
+    Format input text for the Qwen3-8B classifier model.
 
     Args:
         question_text: The question text

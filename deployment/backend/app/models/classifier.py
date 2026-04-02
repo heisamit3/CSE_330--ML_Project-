@@ -1,6 +1,5 @@
 """
-Qwen3-4B Classification model with LoRA adapter.
-Extracted from q3-4b-exp.ipynb notebook.
+Notebook-compatible sequence classification model with LoRA adapter support.
 """
 
 import os
@@ -21,6 +20,7 @@ from ..config import (
     TORCH_DTYPE,
     MAX_LEN,
     LABEL_ENCODER_PATH,
+    TRAIN_DATA_PATH,
     HF_TOKEN,
     get_device,
 )
@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 
 class MisconceptionClassifier:
     """
-    Qwen3-4B based misconception classifier with LoRA adapter.
+    Sequence-classification misconception classifier with LoRA adapter.
     """
 
     def __init__(self):
@@ -52,7 +52,7 @@ class MisconceptionClassifier:
             return True
 
         try:
-            logger.info("Loading Qwen3-4B classifier...")
+            logger.info("Loading misconception classifier...")
 
             # Import here to avoid issues if torch not installed
             from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -130,24 +130,75 @@ class MisconceptionClassifier:
         """Load or create the label encoder."""
         import joblib
 
-        encoder_path = Path(LABEL_ENCODER_PATH)
-        if encoder_path.exists():
-            logger.info(f"Loading label encoder from {encoder_path}")
+        encoder_candidates = self._label_encoder_candidates()
+
+        for encoder_path in encoder_candidates:
+            if not encoder_path.exists():
+                continue
+            logger.info("Loading label encoder from %s", encoder_path)
             self.label_encoder = joblib.load(encoder_path)
             self.n_classes = len(self.label_encoder.classes_)
-        else:
-            logger.warning("Label encoder not found, creating default...")
-            # Create default label encoder from known labels
-            from sklearn.preprocessing import LabelEncoder
-            self.label_encoder = LabelEncoder()
-            # Default classes (should be replaced with actual trained labels)
-            default_classes = self._get_default_classes()
-            self.label_encoder.fit(default_classes)
-            self.n_classes = len(self.label_encoder.classes_)
+            return
 
-            # Save for future use
-            encoder_path.parent.mkdir(parents=True, exist_ok=True)
-            joblib.dump(self.label_encoder, encoder_path)
+        # Rebuild from train.csv before falling back to hardcoded labels.
+        rebuilt_encoder = self._build_label_encoder_from_train()
+        if rebuilt_encoder is not None:
+            self.label_encoder = rebuilt_encoder
+            self.n_classes = len(self.label_encoder.classes_)
+            primary_path = encoder_candidates[0]
+            primary_path.parent.mkdir(parents=True, exist_ok=True)
+            joblib.dump(self.label_encoder, primary_path)
+            return
+
+        logger.warning("Label encoder not found, creating default...")
+        from sklearn.preprocessing import LabelEncoder
+
+        self.label_encoder = LabelEncoder()
+        default_classes = self._get_default_classes()
+        self.label_encoder.fit(default_classes)
+        self.n_classes = len(self.label_encoder.classes_)
+
+        primary_path = encoder_candidates[0]
+        primary_path.parent.mkdir(parents=True, exist_ok=True)
+        joblib.dump(self.label_encoder, primary_path)
+
+    def _label_encoder_candidates(self) -> List[Path]:
+        """Return notebook-friendly label-encoder path candidates."""
+        primary = Path(LABEL_ENCODER_PATH)
+        candidates: List[Path] = [primary]
+
+        alt_names = [
+            primary.with_suffix(".joblib"),
+            primary.with_suffix(".pkl"),
+            primary.with_name("label_encoder.joblib"),
+            primary.with_name("label_encoder.pkl"),
+        ]
+        for candidate in alt_names:
+            if candidate not in candidates:
+                candidates.append(candidate)
+
+        return candidates
+
+    def _build_label_encoder_from_train(self):
+        """Rebuild a label encoder from train.csv when notebook assets are missing."""
+        train_path = Path(TRAIN_DATA_PATH)
+        if not train_path.exists():
+            return None
+
+        try:
+            import pandas as pd
+            from sklearn.preprocessing import LabelEncoder
+
+            train_df = pd.read_csv(train_path)
+            train_df["target"] = train_df["Category"].astype(str) + ":" + train_df["Misconception"].fillna("NA").astype(str)
+
+            encoder = LabelEncoder()
+            encoder.fit(train_df["target"].astype(str))
+            logger.info("Rebuilt label encoder from %s with %s classes", train_path, len(encoder.classes_))
+            return encoder
+        except Exception as exc:
+            logger.warning("Could not rebuild label encoder from %s: %s", train_path, exc)
+            return None
 
     def _get_default_classes(self) -> List[str]:
         """Get default class labels. Replace with actual from training."""

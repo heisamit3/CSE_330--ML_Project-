@@ -1,0 +1,20 @@
+CELL 13:
+
+# ============================================================================
+# CELL 13: Save Explanations to JSON
+# ============================================================================
+
+# Save explanations
+explanations_path = "explanations.json"
+with open(explanations_path, "w", encoding="utf-8") as f:
+    json.dump(explanations, f, ensure_ascii=False, indent=2)
+
+log(f"\nExplanations saved to: {explanations_path}")
+
+# Summary statistics
+error_types = [e.get('error_type', 'unknown') for e in explanations if 'error_type' in e]
+if error_types:
+    log("\nError Type Distribution:")
+    from collections import Counter
+    for etype, count in Counter(error_types).items():
+        log(f"  {etype}: {count}")

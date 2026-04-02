@@ -1,0 +1,11 @@
+{
+  "counterfactual_text": "I think that 1/3 is the answer, as it's the simplest form of 3/9.",
+  "rewrite_confidence": 0.65,
+  "style_preservation_score": 1.0,
+  "explanation": "Removed misconception-heavy language while preserving most wording.",
+  "row_id": 36696,
+  "misconception_id": "True_Neither:NA",
+  "raw_response": "{\"counterfactual_text\": \"I think that 1/3 is the answer, as it's the simplest form of 3/9.\", \"rewrite_confidence\": 0.65, \"style_preservation_score\": 1.0, \"explanation\": \"Removed misconception-heavy language while preserving most wording.\"}",
+  "context_block": "Candidate family: unknown\nShort description: none\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.000\nFormal counterexample: none\nRemediation hint: none\nObserved example evidence:\n- none\nSubgraph size: 0 nodes, 0 edges, density=0.000\nSubgraph edges:\n- none\nRelated misconceptions:\n- none",
+  "counterfactual_method": "llm_rewrite"
+}

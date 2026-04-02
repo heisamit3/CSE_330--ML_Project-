@@ -231,6 +231,12 @@ body {
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
+.brand-mark {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
 .brand-text {
     display: flex;
     flex-direction: column;
@@ -1235,6 +1241,13 @@ body {
 
 .footer-brand i {
     color: var(--accent-primary);
+}
+
+.footer-brand-mark {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-primary);
+    flex-shrink: 0;
 }
 
 .footer-info {

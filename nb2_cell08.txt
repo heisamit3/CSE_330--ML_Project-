@@ -1,0 +1,46 @@
+CELL 8 (code):
+
+# ============================================================================
+# CELL 8: Run Classification Inference (if needed)
+# ============================================================================
+
+if classification_model is not None:
+    log("Running classification inference on test set...")
+
+    def tokenize(batch):
+        return tokenizer(batch["text"], truncation=True, max_length=MAX_LEN)
+
+    ds = Dataset.from_pandas(test_df[["text"]])
+    ds = ds.map(tokenize, batched=True, remove_columns=["text"])
+    ds.set_format("torch")
+
+    collator = DataCollatorWithPadding(tokenizer)
+    dataloader = DataLoader(ds, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collator)
+
+    all_logits = []
+    with torch.no_grad():
+        for batch in tqdm(dataloader, desc="Inference"):
+            batch = {k: v.to(classification_model.device) for k, v in batch.items()}
+            outputs = classification_model(**batch)
+            all_logits.append(outputs.logits.float().cpu().numpy())
+
+    logits = np.concatenate(all_logits, axis=0)
+    probs  = softmax(logits, axis=1)
+
+    # Get top-K predictions
+    top_indices = np.argsort(-probs, axis=1)
+    all_labels  = le.inverse_transform(top_indices[:, :TOP_K].ravel()).reshape(-1, TOP_K)
+    all_probs   = np.take_along_axis(probs, top_indices[:, :TOP_K], axis=1)
+
+    test_df["pred_label"]  = all_labels[:, 0]
+    test_df["pred_top12"]  = [list(row) for row in all_labels]
+    test_df["pred_probs"]  = [list(row) for row in all_probs]
+
+    log(f"Inference complete. Logits shape: {logits.shape}")
+
+    # Free GPU memory
+    del classification_model
+    clear_gpu_memory()
+    log("Classification model freed from GPU.")
+else:
+    log("Using pre-computed scores — no live inference needed.")

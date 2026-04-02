@@ -1,0 +1,848 @@
+NOTEBOOK: rf_inf_expAi.ipynb
+====================================================================================================
+Total cells: 15
+
+--- CELL 0 (markdown) ---
+# RF Full Pipeline — Inference + Explainable AI
+
+This notebook loads pre-computed pipeline outputs from the **`rf.ipynb`** Kaggle run and generates the final competition submission with explainable AI analysis.
+
+### Required Kaggle Datasets (attach before running):
+| Slug | Contents |
+|------|----------|
+| `map_ds` (or competition data) | `DS/train.csv`, `DS/test.csv` (`misconception_mapping.csv` optional) |
+| `Base_models` (Qwen3-8B) | `Qwen3-8B/` base model weights |
+| `MAP_qwen3_8b_trained` | `qwen3-8b-qlora/adapter/`, `label_encoder.joblib`, `run_config.json` |
+| **rf.ipynb output** (save as dataset) | `map_mvp/` — baseline_artifacts, data, graph, output |
+
+### Pipeline Phases:
+- **Phase 1 (Cells 1-9):** Load pre-computed scores → ensemble fusion → family filtering → `submission.csv`
+- **Phase 2 (Cells 10-14):** Load Qwen3-8B as CausalLM → generate explanations → `explanations.json`
+
+--- CELL 1 (code) ---
+# ============================================================================
+# CELL 1: Optional Dependencies
+# ============================================================================
+import importlib.util
+import os, sys, subprocess
+
+def ensure_optional_bitsandbytes():
+    if importlib.util.find_spec("bitsandbytes") is not None:
+        print("bitsandbytes already available")
+        return
+
+    bnb_paths = [
+        "/kaggle/input/datasets/mdmarufhasanrubab/bnb-wheel/bitsandbytes-0.49.2-py3-none-manylinux_2_24_x86_64.whl",
+        "/kaggle/input/bitsandbytes-whl/bitsandbytes-0.45.3-py3-none-manylinux_2_24_x86_64.whl",
+        "/kaggle/input/bnb-whl/bitsandbytes-0.45.3-py3-none-manylinux_2_24_x86_64.whl",
+    ]
+
+    for p in bnb_paths:
+        if not os.path.exists(p):
+            continue
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", p])
+            print(f"Installed bitsandbytes from {p}")
+            return
+        except subprocess.CalledProcessError as exc:
+            print(f"Local bitsandbytes install failed from {p}: {exc}")
+
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "bitsandbytes>=0.46.1"])
+        print("Installed bitsandbytes from PyPI")
+    except subprocess.CalledProcessError as exc:
+        print("bitsandbytes could not be installed.", exc)
+
+ensure_optional_bitsandbytes()
+
+
+--- CELL 2 (code) ---
+# ============================================================================
+# CELL 2: Imports
+# ============================================================================
+import gc, json, re, time, warnings, glob
+from pathlib import Path
+from collections import Counter
+
+import torch
+import numpy as np
+import pandas as pd
+from scipy.special import softmax
+from sklearn.preprocessing import LabelEncoder
+from tqdm.auto import tqdm
+
+from datasets import Dataset
+from torch.utils.data import DataLoader
+from transformers import (
+    AutoModelForSequenceClassification,
+    AutoModelForCausalLM,
+    AutoTokenizer,
+    DataCollatorWithPadding,
+)
+from peft import PeftModel
+import joblib
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+warnings.filterwarnings("ignore")
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Device: {DEVICE}")
+if DEVICE == "cuda":
+    props = torch.cuda.get_device_properties(0)
+    vram_bytes = getattr(props, "total_memory", getattr(props, "total_mem", None))
+    print(f"GPU: {torch.cuda.get_device_name(0)}")
+    if vram_bytes is not None:
+        print(f"VRAM: {vram_bytes / 1e9:.1f} GB")
+
+
+--- CELL 3 (code) ---
+# ============================================================================
+# CELL 3: Configuration
+# ============================================================================
+
+# ----- Paths to competition data -----
+DATA_CANDIDATES = [
+    "/kaggle/input/competitions/map-charting-student-math-misunderstandings",
+    "/kaggle/input/map-ds/DS",
+    "/kaggle/input/map-charting-student-math-misunderstandings",
+]
+
+# ----- Paths to Qwen3-8B base model -----
+BASE_MODEL_CANDIDATES = [
+    "/kaggle/input/loaded-models/loaded_models/Qwen3-8B",
+    "/kaggle/input/loaded_models/loaded_models/Qwen3-8B",
+    "/kaggle/input/datasets/mkhanshovon43/base-modelsh7bq2-5-7b3-8b/loaded_models/Qwen3-8B",
+    "/kaggle/input/qwen3-8b/Qwen3-8B",
+    "/kaggle/input/qwen-qwen3-8b",
+]
+
+# ----- Paths to trained LoRA adapter -----
+ADAPTER_CANDIDATES = [
+    "/kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/adapter",
+    "/kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/adapter",
+    "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/adapter",
+    "/kaggle/input/map-qwen3-8b-qlora/adapter",
+]
+
+# ----- Paths to label encoder -----
+LABEL_ENC_CANDIDATES = [
+    "/kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib",
+    "/kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/label_encoder.joblib",
+    "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib",
+    "/kaggle/input/map-qwen3-8b-qlora/label_encoder.joblib",
+]
+
+# ----- Paths to rf.ipynb output (pre-computed pipeline artifacts) -----
+RF_OUTPUT_CANDIDATES = [
+    "/kaggle/input/datasets/mkhanshovon43/map-mvp/map_mvp",
+    "/kaggle/input/rf-pipeline-output/map_mvp",
+    "/kaggle/input/rf-notebook-output/map_mvp",
+    "/kaggle/input/kaggle-run-full/map_mvp",
+    "/kaggle/working/map_mvp",
+]
+
+# ----- Hyperparameters -----
+MAX_LEN      = 256
+BATCH_SIZE   = 4
+TOP_K        = 12
+TOP_K_SUBMIT = 3
+
+# ----- Ensemble weights (from rf.ipynb config) -----
+ENSEMBLE_WEIGHTS = {
+    "baseline_score":           0.18,
+    "kb_score":                 0.15,
+    "confidence":               0.07,
+    "ontology_support_score":   0.12,
+    "trigger_score":            0.06,
+    "concept_score":            0.05,
+    "subgraph_density":         0.04,
+    "causal_delta":             0.14,
+    "relative_delta":           0.08,
+    "causal_confidence":        0.07,
+    "style_preservation_score": 0.02,
+    "graph_neighbor_count":     0.01,
+    "trigger_match_count":      0.01,
+}
+XGB_BLEND = 0.3   # final = (1-XGB_BLEND)*weighted + XGB_BLEND*xgb
+
+EXPLAIN_SAMPLES  = 5
+MAX_NEW_TOKENS   = 250
+
+print("Configuration loaded.")
+
+--- CELL 4 (code) ---
+# ============================================================================
+# CELL 4: Helper Functions
+# ============================================================================
+
+def log(msg):
+    print(msg, flush=True)
+
+
+def resolve_path(candidates, label="path", must_exist=True):
+    """Return the first existing path from a list of candidates."""
+    for p in candidates:
+        if os.path.exists(p):
+            log(f"  Found {label}: {p}")
+            return p
+    if must_exist:
+        raise FileNotFoundError(
+            f"Could not find {label}. Tried: {candidates}"
+        )
+    return None
+
+
+def find_model_path(base_path):
+    """Recursively find directory containing config.json + model weights."""
+    for depth in range(6):
+        pattern = os.path.join(base_path, *["*"] * depth, "config.json")
+        for cfg in glob.glob(pattern):
+            d = os.path.dirname(cfg)
+            weights = glob.glob(os.path.join(d, "model*.safetensors")) + \
+                      glob.glob(os.path.join(d, "pytorch_model*.bin"))
+            if weights:
+                return d
+    return base_path
+
+
+def find_adapter_path(base_path):
+    """Recursively find directory containing adapter_config.json."""
+    for depth in range(6):
+        pattern = os.path.join(base_path, *["*"] * depth, "adapter_config.json")
+        hits = glob.glob(pattern)
+        preferred = [h for h in hits if "adapter" in h or "full_train" in h]
+        if preferred:
+            return os.path.dirname(preferred[0])
+        if hits:
+            return os.path.dirname(hits[0])
+    return base_path
+
+
+def clear_gpu_memory():
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+
+
+def format_input(row):
+    """Format a data row into the model's expected input text."""
+    x = "This answer is correct." if row["is_correct"] else "This answer is incorrect."
+    return (
+        f"Question: {row['QuestionText']}\n"
+        f"Answer: {row['MC_Answer']}\n"
+        f"{x}\n"
+        f"Student Explanation: {row['StudentExplanation']}"
+    )
+
+
+log("Helpers loaded.")
+
+--- CELL 5 (code) ---
+# ============================================================================
+# CELL 5: Load & Prepare Data
+# ============================================================================
+log("Resolving dataset paths...")
+data_dir = resolve_path(DATA_CANDIDATES, "competition data")
+
+train_path = os.path.join(data_dir, "train.csv")
+test_path  = os.path.join(data_dir, "test.csv")
+misc_path  = os.path.join(data_dir, "misconception_mapping.csv")
+
+train_df = pd.read_csv(train_path)
+test_df  = pd.read_csv(test_path)
+if os.path.exists(misc_path):
+    misc_df = pd.read_csv(misc_path)
+    log(f"Loaded misconception mapping: {misc_df.shape}")
+else:
+    misc_df = None
+    log("misconception_mapping.csv not found; continuing without it.")
+
+log(f"Train: {train_df.shape}, Test: {test_df.shape}")
+
+# --- Build target labels (Category:Misconception) ---
+train_df["Misconception"] = train_df["Misconception"].fillna("NA")
+train_df["target"] = train_df["Category"] + ":" + train_df["Misconception"]
+
+# --- Fit label encoder ---
+le_path = resolve_path(LABEL_ENC_CANDIDATES, "label_encoder.joblib", must_exist=False)
+if le_path:
+    le = joblib.load(le_path)
+    log(f"Loaded label encoder: {len(le.classes_)} classes")
+else:
+    le = LabelEncoder()
+    le.fit(train_df["target"])
+    log(f"Fitted label encoder: {len(le.classes_)} classes")
+
+n_classes = len(le.classes_)
+
+# --- Determine correct answers per question ---
+correct_rows = train_df[train_df["Category"].str.startswith("True")]
+correct_by_q = (
+    correct_rows.groupby(["QuestionId", "MC_Answer"])
+    .size()
+    .reset_index(name="cnt")
+    .sort_values("cnt", ascending=False)
+    .drop_duplicates("QuestionId")
+    .set_index("QuestionId")["MC_Answer"]
+    .to_dict()
+)
+
+# --- Add is_correct flag to test_df ---
+test_df["is_correct"] = test_df.apply(
+    lambda r: int(correct_by_q.get(r["QuestionId"], "") == r["MC_Answer"]), axis=1
+)
+
+# --- Build family map (True_ or False_ prefix per row) ---
+fam_map = {
+    rid: ("True_" if ic else "False_")
+    for rid, ic in zip(test_df["row_id"], test_df["is_correct"])
+}
+
+# --- Format input text ---
+test_df["text"] = test_df.apply(format_input, axis=1)
+
+log(f"Data prepared. Family distribution: {Counter(fam_map.values())}")
+test_df[["row_id", "QuestionText", "MC_Answer", "is_correct", "text"]].head(2)
+
+
+--- CELL 6 (code) ---
+# ============================================================================
+# CELL 6: Check for Pre-computed Scores from rf.ipynb Output
+# ============================================================================
+rf_output_dir = resolve_path(RF_OUTPUT_CANDIDATES, "rf.ipynb output", must_exist=False)
+
+HAS_FULL_SCORES    = False
+HAS_BASELINE_ONLY  = False
+full_scores_df     = None
+baseline_scores_df = None
+
+if rf_output_dir:
+    # Try loading full fused scores
+    full_path = os.path.join(rf_output_dir, "output", "test_full_scores.csv")
+    if os.path.exists(full_path):
+        full_scores_df = pd.read_csv(full_path)
+        HAS_FULL_SCORES = True
+        log(f"Loaded FULL scores: {full_scores_df.shape} from {full_path}")
+        log(f"  Columns: {list(full_scores_df.columns)}")
+
+    # Try loading baseline scores
+    bl_path = os.path.join(rf_output_dir, "baseline_artifacts",
+                           "qwen3_8b_adapter_test_scores_long.csv")
+    if os.path.exists(bl_path):
+        baseline_scores_df = pd.read_csv(bl_path)
+        HAS_BASELINE_ONLY = True
+        log(f"Loaded BASELINE scores: {baseline_scores_df.shape} from {bl_path}")
+
+    # Load KB and graph info
+    kb_path = os.path.join(rf_output_dir, "data", "misconception_kb.json")
+    if os.path.exists(kb_path):
+        with open(kb_path, "r") as f:
+            kb_data = json.load(f)
+        log(f"Loaded Knowledge Base: {len(kb_data)} entries")
+    else:
+        kb_data = None
+        log("Knowledge Base not found.")
+
+    graph_summary_path = os.path.join(rf_output_dir, "graph", "graph_summary.json")
+    if os.path.exists(graph_summary_path):
+        with open(graph_summary_path, "r") as f:
+            graph_summary = json.load(f)
+        log(f"Graph summary: {graph_summary}")
+
+if HAS_FULL_SCORES:
+    log("\n>>> FULL pre-computed scores available — will use ensemble fusion.")
+elif HAS_BASELINE_ONLY:
+    log("\n>>> Only BASELINE scores available — will use baseline ranking.")
+else:
+    log("\n>>> No pre-computed scores found — will run inference from scratch.")
+
+--- CELL 7 (code) ---
+# ============================================================================
+# CELL 7: Load Qwen3-8B Classification Model (if no pre-computed scores)
+# ============================================================================
+
+if not HAS_FULL_SCORES and not HAS_BASELINE_ONLY:
+    log("Loading Qwen3-8B + LoRA for classification inference...")
+
+    base_model_root = resolve_path(BASE_MODEL_CANDIDATES, "Qwen3-8B base model")
+    adapter_root    = resolve_path(ADAPTER_CANDIDATES, "LoRA adapter")
+
+    base_model_path = find_model_path(base_model_root)
+    adapter_path    = find_adapter_path(adapter_root)
+    log(f"  Base model dir : {base_model_path}")
+    log(f"  Adapter dir    : {adapter_path}")
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        base_model_path, trust_remote_code=True, local_files_only=True
+    )
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    classification_model = AutoModelForSequenceClassification.from_pretrained(
+        base_model_path,
+        num_labels=n_classes,
+        trust_remote_code=True,
+        torch_dtype=torch.float16,
+        device_map="auto",
+        local_files_only=True,
+    )
+    classification_model.resize_token_embeddings(len(tokenizer))
+    classification_model = PeftModel.from_pretrained(
+        classification_model, adapter_path, local_files_only=True
+    )
+    classification_model.config.pad_token_id = tokenizer.pad_token_id
+    classification_model.eval()
+    log(f"Model loaded. Parameters: {sum(p.numel() for p in classification_model.parameters()):,}")
+else:
+    log("Skipping model load — using pre-computed scores.")
+    # Still load tokenizer for explainability phase later
+    base_model_root = resolve_path(BASE_MODEL_CANDIDATES, "Qwen3-8B base model")
+    base_model_path = find_model_path(base_model_root)
+    tokenizer = AutoTokenizer.from_pretrained(
+        base_model_path, trust_remote_code=True, local_files_only=True
+    )
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    classification_model = None
+
+--- CELL 8 (code) ---
+# ============================================================================
+# CELL 8: Run Classification Inference (if needed)
+# ============================================================================
+
+if classification_model is not None:
+    log("Running classification inference on test set...")
+
+    def tokenize(batch):
+        return tokenizer(batch["text"], truncation=True, max_length=MAX_LEN)
+
+    ds = Dataset.from_pandas(test_df[["text"]])
+    ds = ds.map(tokenize, batched=True, remove_columns=["text"])
+    ds.set_format("torch")
+
+    collator = DataCollatorWithPadding(tokenizer)
+    dataloader = DataLoader(ds, batch_size=BATCH_SIZE, shuffle=False, collate_fn=collator)
+
+    all_logits = []
+    with torch.no_grad():
+        for batch in tqdm(dataloader, desc="Inference"):
+            batch = {k: v.to(classification_model.device) for k, v in batch.items()}
+            outputs = classification_model(**batch)
+            all_logits.append(outputs.logits.float().cpu().numpy())
+
+    logits = np.concatenate(all_logits, axis=0)
+    probs  = softmax(logits, axis=1)
+
+    # Get top-K predictions
+    top_indices = np.argsort(-probs, axis=1)
+    all_labels  = le.inverse_transform(top_indices[:, :TOP_K].ravel()).reshape(-1, TOP_K)
+    all_probs   = np.take_along_axis(probs, top_indices[:, :TOP_K], axis=1)
+
+    test_df["pred_label"]  = all_labels[:, 0]
+    test_df["pred_top12"]  = [list(row) for row in all_labels]
+    test_df["pred_probs"]  = [list(row) for row in all_probs]
+
+    log(f"Inference complete. Logits shape: {logits.shape}")
+
+    # Free GPU memory
+    del classification_model
+    clear_gpu_memory()
+    log("Classification model freed from GPU.")
+else:
+    log("Using pre-computed scores — no live inference needed.")
+
+--- CELL 9 (code) ---
+# ============================================================================
+# CELL 9: Create submission.csv with Family Filtering
+# ============================================================================
+
+def decode_prediction_labels(id_series):
+    raw_values = id_series.astype(str).str.strip()
+    numeric_ids = pd.to_numeric(id_series, errors="coerce")
+    labels = np.full(len(id_series), "", dtype=object)
+
+    numeric_mask = numeric_ids.notna() & (numeric_ids >= 0) & (numeric_ids < n_classes)
+    if numeric_mask.any():
+        labels[numeric_mask.to_numpy()] = le.inverse_transform(
+            numeric_ids[numeric_mask].astype(int).to_numpy()
+        )
+
+    direct_label_mask = (~numeric_mask) & raw_values.isin(le.classes_)
+    if direct_label_mask.any():
+        labels[direct_label_mask.to_numpy()] = raw_values[direct_label_mask].to_numpy()
+
+    return labels
+
+if HAS_FULL_SCORES:
+    # ---- PATH A: Use full pre-computed fused scores ----
+    log("Creating submission from FULL pre-computed scores...")
+
+    # Determine score column (final_score from ensemble)
+    score_col = "final_score"
+    if score_col not in full_scores_df.columns:
+        # Fallback: compute weighted sum from available feature columns
+        log("  'final_score' not found -> computing weighted fusion...")
+        score_col = "weighted_score"
+        full_scores_df[score_col] = 0.0
+        for feat, w in ENSEMBLE_WEIGHTS.items():
+            if feat in full_scores_df.columns:
+                full_scores_df[score_col] += full_scores_df[feat].fillna(0) * w
+
+    # Map misconception_id back to label string
+    if "misconception_id" in full_scores_df.columns:
+        full_scores_df["label"] = decode_prediction_labels(full_scores_df["misconception_id"])
+
+    # Group by row_id, sort by score, apply family filter, take top 3
+    final_predictions = []
+    for rid in test_df["row_id"].values:
+        fam = fam_map.get(rid, "False_")
+        subset = full_scores_df[full_scores_df["row_id"] == rid].copy()
+        subset = subset.sort_values(score_col, ascending=False)
+
+        # Family filter
+        if "label" in subset.columns:
+            filtered = subset[subset["label"].str.startswith(fam, na=False)]
+        else:
+            filtered = subset  # no label column -> use as-is
+
+        top3 = filtered["label"].head(TOP_K_SUBMIT).tolist() if "label" in filtered.columns else []
+
+        # Fallback padding
+        while len(top3) < TOP_K_SUBMIT:
+            fallback = f"{fam}Neither:NA" if fam == "False_" else f"{fam}Correct:NA"
+            top3.append(fallback)
+
+        final_predictions.append(" ".join(top3[:TOP_K_SUBMIT]))
+
+elif HAS_BASELINE_ONLY:
+    # ---- PATH B: Use baseline scores only ----
+    log("Creating submission from BASELINE scores...")
+
+    final_predictions = []
+    for rid in test_df["row_id"].values:
+        fam = fam_map.get(rid, "False_")
+        subset = baseline_scores_df[baseline_scores_df["row_id"] == rid].copy()
+        subset = subset.sort_values("baseline_score", ascending=False)
+
+        # Decode misconception_id -> label
+        labels = decode_prediction_labels(subset["misconception_id"]).tolist()
+
+        # Family filter
+        filtered = [l for l in labels if l.startswith(fam)]
+        top3 = filtered[:TOP_K_SUBMIT]
+
+        while len(top3) < TOP_K_SUBMIT:
+            fallback = f"{fam}Neither:NA" if fam == "False_" else f"{fam}Correct:NA"
+            top3.append(fallback)
+
+        final_predictions.append(" ".join(top3[:TOP_K_SUBMIT]))
+
+else:
+    # ---- PATH C: Use live inference results ----
+    log("Creating submission from LIVE inference...")
+
+    final_predictions = []
+    for idx, row in test_df.iterrows():
+        fam = fam_map.get(row["row_id"], "False_")
+        preds = row["pred_top12"]
+
+        # Family filter
+        filtered = [p for p in preds if p.startswith(fam)]
+        top3 = filtered[:TOP_K_SUBMIT]
+
+        while len(top3) < TOP_K_SUBMIT:
+            fallback = f"{fam}Neither:NA" if fam == "False_" else f"{fam}Correct:NA"
+            top3.append(fallback)
+
+        final_predictions.append(" ".join(top3[:TOP_K_SUBMIT]))
+
+# ---- Build submission DataFrame ----
+submission = pd.DataFrame({
+    "row_id": test_df["row_id"].values,
+    "Category:Misconception": final_predictions,
+})
+submission.to_csv("submission.csv", index=False)
+log(f"Submission saved: submission.csv ({len(submission)} rows)")
+submission.head(10)
+
+
+--- CELL 10 (markdown) ---
+---
+## Phase 2: Explainable AI
+
+Free GPU memory from classification, reload Qwen3-8B as a **CausalLM** (text generator), and produce natural-language explanations for a sample of predictions.
+
+--- CELL 11 (code) ---
+# ============================================================================
+# CELL 10: Free GPU & Load Qwen3-8B as CausalLM for Explanations
+# ============================================================================
+if "classification_model" in dir() and classification_model is not None:
+    del classification_model
+clear_gpu_memory()
+log("Loading Qwen3-8B as CausalLM for explanation generation...")
+
+# Model was saved in 4-bit NF4 format; bitsandbytes handles dequantization on load.
+explainer_model = AutoModelForCausalLM.from_pretrained(
+    base_model_path,
+    trust_remote_code=True,
+    torch_dtype=torch.float16,
+    device_map="auto",
+    local_files_only=True,
+)
+explainer_model.eval()
+log(f"Explainer model loaded: {sum(p.numel() for p in explainer_model.parameters()):,} params")
+
+
+--- CELL 12 (code) ---
+# ============================================================================
+# CELL 11: Generate Explanations for Sample Predictions
+# ============================================================================
+
+# Ensure optional context vars exist even if rf.ipynb output was unavailable
+kb_data       = globals().get('kb_data', None)
+graph_summary = globals().get('graph_summary', None)
+
+
+# --- LLM generation helper (chat template + greedy decode) ---
+def llm_generate(prompt: str, max_new_tokens: int = 250) -> str:
+    """Generate text using Qwen3-8B with chat template."""
+    messages = [{"role": "user", "content": prompt}]
+    try:
+        chat_prompt = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False
+        )
+    except TypeError:
+        chat_prompt = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+    inputs = tokenizer(chat_prompt, return_tensors="pt", truncation=True, max_length=1024)
+    inputs = {k: v.to(explainer_model.device) for k, v in inputs.items()}
+    with torch.no_grad():
+        out = explainer_model.generate(
+            **inputs, max_new_tokens=max_new_tokens, do_sample=False,
+            num_beams=1, pad_token_id=tokenizer.eos_token_id
+        )
+    full_text  = tokenizer.decode(out[0], skip_special_tokens=True)
+    input_text = tokenizer.decode(inputs["input_ids"][0], skip_special_tokens=True)
+    return full_text[len(input_text):].strip() if full_text.startswith(input_text) else full_text.strip()
+
+
+# --- Helper: look up KB description for a misconception label ---
+def get_kb_description(label, kb_data):
+    if not kb_data:
+        return None
+    if isinstance(kb_data, list):
+        for entry in kb_data:
+            if isinstance(entry, dict):
+                name = entry.get("name", entry.get("MisconceptionName", ""))
+                if name and name in label:
+                    return entry.get("description", entry.get("Definition", None))
+    elif isinstance(kb_data, dict):
+        for key, entry in kb_data.items():
+            if isinstance(entry, dict):
+                name = entry.get("name", entry.get("MisconceptionName", key))
+                if name and name in label:
+                    return entry.get("description", entry.get("Definition", None))
+    return None
+
+
+def get_score_breakdown(row_id, label, full_scores_df, ensemble_weights):
+    if full_scores_df is None:
+        return None
+    subset = full_scores_df[full_scores_df["row_id"] == row_id]
+    if "label" in subset.columns:
+        match = subset[subset["label"] == label]
+    elif "misconception_id" in subset.columns:
+        match = subset.head(1)
+    else:
+        return None
+    if match.empty:
+        return None
+    row_data = match.iloc[0]
+    breakdown = {}
+    for feat in ensemble_weights:
+        if feat in row_data.index and pd.notna(row_data[feat]):
+            breakdown[feat] = round(float(row_data[feat]), 4)
+    return breakdown if breakdown else None
+
+
+# --- Sample diverse training examples (mix correct + incorrect) ---
+incorrect_pool    = train_df[~train_df["Category"].str.startswith("True")]
+correct_pool      = train_df[train_df["Category"].str.startswith("True")]
+incorrect_samples = incorrect_pool.sample(n=min(4, len(incorrect_pool)), random_state=42)
+correct_samples   = correct_pool.sample(n=min(1, len(correct_pool)),   random_state=42)
+explain_df = pd.concat([incorrect_samples, correct_samples]).head(EXPLAIN_SAMPLES).copy()
+explain_df["is_correct"] = explain_df["Category"].str.startswith("True").astype(int)
+explain_df["text"]       = explain_df.apply(format_input, axis=1)
+
+log("\n" + "="*80)
+log("EXPLAINABLE AI — DEMO ON TRAINING SAMPLES")
+log("="*80)
+log(f"Generating explanations for {len(explain_df)} training samples...")
+
+explanations = []
+
+for sample_idx, (_, row) in enumerate(explain_df.iterrows()):
+    log(f"\n{chr(9472)*80}")
+    log(f"SAMPLE {sample_idx + 1} / {len(explain_df)}")
+    log(f"{chr(9472)*80}")
+
+    q_text      = str(row["QuestionText"])[:400]
+    answer      = str(row["MC_Answer"])[:100]
+    expl        = str(row["StudentExplanation"])[:400]
+    target      = str(row.get("target", "N/A"))
+    correct     = "Yes" if row["is_correct"] else "No"
+    correct_ans = str(correct_by_q.get(row.get("QuestionId", ""), ""))
+
+    log(f"Question       : {q_text[:150]}")
+    log(f"Student Answer : {answer}")
+    log(f"Is Correct     : {correct}")
+    log(f"Student Expl.  : {expl[:150]}")
+    log(f"True Label     : {target}")
+
+    # --- Gather pipeline context ---
+    kb_desc = get_kb_description(target, kb_data) if kb_data else None
+    score_breakdown = None
+    if HAS_FULL_SCORES and "row_id" in row.index:
+        score_breakdown = get_score_breakdown(
+            row["row_id"], target, full_scores_df, ENSEMBLE_WEIGHTS
+        )
+
+    if kb_desc:
+        log(f"KB Definition  : {kb_desc[:120]}...")
+    if score_breakdown:
+        top3_scores = dict(sorted(score_breakdown.items(), key=lambda x: -x[1])[:3])
+        log(f"Top Scores     : {top3_scores}")
+
+    # --- Build enriched structured prompt ---
+    prompt_text = (
+        f"You are a kind math teacher analyzing a student's work.\n\n"
+        f"QUESTION: {q_text}\n"
+        f"STUDENT'S ANSWER: {answer}\n"
+        f"CORRECT ANSWER: {correct_ans if correct_ans else '(derive from question)'}\n"
+        f"IS CORRECT: {correct}\n"
+        f"STUDENT'S EXPLANATION: \"{expl}\"\n"
+        f"LABELED MISCONCEPTION: {target}\n\n"
+    )
+
+    if kb_desc:
+        prompt_text += f"KNOWLEDGE BASE DEFINITION:\n  \"{kb_desc}\"\n\n"
+
+    if score_breakdown:
+        top_features = sorted(score_breakdown.items(), key=lambda x: -x[1])[:5]
+        feat_lines   = ", ".join(f"{k}={v}" for k, v in top_features)
+        prompt_text += f"PIPELINE EVIDENCE (top ensemble features):\n  {feat_lines}\n\n"
+
+    if graph_summary:
+        prompt_text += (
+            f"MISCONCEPTION GRAPH: {graph_summary.get('num_nodes','?')} nodes, "
+            f"{graph_summary.get('num_edges','?')} edges in the ontology.\n\n"
+        )
+
+    prompt_text += (
+        "TASK: Analyze and provide feedback in this format:\n\n"
+        "1. SOLVE: Show the correct solution briefly (2-3 lines)\n"
+        "2. DIAGNOSIS:\n"
+        "   - What error type? (CALCULATION/CONCEPTUAL/INCOMPLETE/CORRECT)\n"
+        "   - Quote the specific mistake from student's explanation\n"
+        "   - What should it actually be?\n"
+        "3. FEEDBACK: Write 4-6 lines of encouraging teacher feedback that:\n"
+        "   - Acknowledges what the student did right (if anything)\n"
+        "   - Explains exactly where they went wrong\n"
+        "   - Shows the correct approach\n"
+        "   - References the misconception definition if provided\n\n"
+        "Be concise and specific."
+    )
+
+    try:
+        result = llm_generate(prompt_text, MAX_NEW_TOKENS)
+        log("\n--- MODEL FEEDBACK ---")
+        log(result)
+        entry = {
+            "question":                q_text,
+            "student_answer":          answer,
+            "is_correct":              bool(row["is_correct"]),
+            "student_explanation":     expl,
+            "predicted_misconception": target,
+            "correct_answer":          correct_ans,
+            "kb_definition":           kb_desc,
+            "ensemble_scores":         score_breakdown,
+            "model_explanation":       result,
+        }
+    except Exception as e:
+        log(f"ERROR: {e}")
+        entry = {"error": str(e), "predicted_misconception": target}
+
+    explanations.append(entry)
+
+log(f"\n\nGenerated {len(explanations)} explanations.")
+
+
+--- CELL 13 (code) ---
+# ============================================================================
+# CELL 12: Save Explanations
+# ============================================================================
+with open("explanations.json", "w", encoding="utf-8") as f:
+    json.dump(explanations, f, ensure_ascii=False, indent=2)
+log("Explanations saved to explanations.json")
+
+# Free explainer model
+del explainer_model
+clear_gpu_memory()
+log("Explainer model freed.")
+
+--- CELL 14 (code) ---
+# ============================================================================
+# CELL 13: Pipeline Summary & Score Analysis
+# ============================================================================
+
+log("=" * 60)
+log("PIPELINE SUMMARY")
+log("=" * 60)
+
+# Submission stats
+log(f"\nSubmission rows : {len(submission)}")
+log(f"Output files    : submission.csv, explanations.json")
+
+# Prediction distribution
+all_preds = []
+for p in submission["Category:Misconception"]:
+    all_preds.extend(p.split())
+
+categories = [p.split(":")[0] if ":" in p else p for p in all_preds]
+cat_dist = Counter(categories)
+log(f"\nTop-3 prediction category distribution:")
+for cat, cnt in cat_dist.most_common(10):
+    log(f"  {cat}: {cnt}")
+
+# Family distribution in submission
+fam_dist = Counter()
+for p in all_preds:
+    if p.startswith("True_"):
+        fam_dist["True_"] += 1
+    elif p.startswith("False_"):
+        fam_dist["False_"] += 1
+    else:
+        fam_dist["Other"] += 1
+log(f"\nFamily distribution in predictions: {dict(fam_dist)}")
+
+# Score source
+if HAS_FULL_SCORES:
+    log(f"\nScore source: Full ensemble (14 features, weighted fusion + XGBoost)")
+    log(f"Ensemble weights: {ENSEMBLE_WEIGHTS}")
+elif HAS_BASELINE_ONLY:
+    log(f"\nScore source: Baseline Qwen3-8B classifier only")
+else:
+    log(f"\nScore source: Live Qwen3-8B + LoRA inference")
+
+# KB stats
+if kb_data:
+    log(f"\nKnowledge Base: {len(kb_data)} misconception entries")
+    sample_kb = kb_data[0] if isinstance(kb_data, list) else list(kb_data.values())[0]
+    log(f"  KB entry fields: {list(sample_kb.keys()) if isinstance(sample_kb, dict) else 'N/A'}")
+
+log(f"\nExplanations: {len(explanations)} samples explained")
+log("=" * 60)
+log("Done.")
+

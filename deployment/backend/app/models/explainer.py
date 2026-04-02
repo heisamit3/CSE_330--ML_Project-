@@ -1,6 +1,9 @@
 """
-Qwen3-4B CausalLM Explainer for generating teacher feedback.
-Extracted from q3-4b-exp.ipynb notebook.
+Notebook-aligned explainer for generating teacher feedback.
+
+Supports both:
+- the original deployment KB format keyed by misconception name
+- the richer list-based KB exported from `Extra/kaggle_notebooks/rf_results`
 """
 
 import gc
@@ -8,7 +11,7 @@ import json
 import logging
 import re
 from pathlib import Path
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 
 import torch
 
@@ -27,7 +30,7 @@ logger = logging.getLogger(__name__)
 
 class MisconceptionExplainer:
     """
-    Qwen3-4B based explainer for generating teacher feedback.
+    Qwen3-8B based explainer for generating teacher feedback.
     Uses the same base model as classifier but loaded as CausalLM.
     """
 
@@ -35,6 +38,8 @@ class MisconceptionExplainer:
         self.model = None
         self.tokenizer = None
         self.kb: Dict[str, Any] = {}
+        self.kb_entries: List[Dict[str, Any]] = []
+        self._kb_entry_count = 0
         self.device = get_device()
         self._loaded = False
 
@@ -57,7 +62,7 @@ class MisconceptionExplainer:
             return True
 
         try:
-            logger.info("Loading Qwen3-4B explainer (CausalLM)...")
+            logger.info("Loading Qwen3-8B explainer (CausalLM)...")
 
             from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -140,18 +145,194 @@ class MisconceptionExplainer:
         kb_path = Path(KB_PATH)
         if kb_path.exists():
             try:
-                self.kb = json.loads(kb_path.read_text(encoding="utf-8"))
-                logger.info(f"Loaded KB with {len(self.kb)} entries")
+                raw_kb = json.loads(kb_path.read_text(encoding="utf-8"))
+                self.kb_entries = self._normalize_kb_payload(raw_kb)
+                self.kb = self._build_kb_index(self.kb_entries)
+                self._kb_entry_count = len(self.kb_entries)
+                logger.info(
+                    "Loaded KB with %s canonical entries and %s lookup keys",
+                    self._kb_entry_count,
+                    len(self.kb),
+                )
             except Exception as e:
                 logger.error(f"Failed to load KB: {e}")
                 self.kb = {}
+                self.kb_entries = []
+                self._kb_entry_count = 0
         else:
             logger.warning(f"KB not found at {kb_path}")
             self.kb = {}
+            self.kb_entries = []
+            self._kb_entry_count = 0
+
+    def _normalize_kb_payload(self, payload: Any) -> List[Dict[str, Any]]:
+        """Normalize either dict-based or list-based KB payloads into a common schema."""
+        if isinstance(payload, dict):
+            raw_entries = []
+            for key, value in payload.items():
+                if isinstance(value, dict):
+                    entry = dict(value)
+                else:
+                    entry = {"plain_definition": str(value)}
+                entry.setdefault("misconception_name", key)
+                entry.setdefault("misconception_id", key)
+                raw_entries.append(entry)
+        elif isinstance(payload, list):
+            raw_entries = [entry for entry in payload if isinstance(entry, dict)]
+        else:
+            raw_entries = []
+
+        return [self._normalize_kb_entry(entry) for entry in raw_entries]
+
+    def _normalize_kb_entry(self, entry: Dict[str, Any]) -> Dict[str, Any]:
+        """Normalize one KB entry so downstream code can use a stable shape."""
+        normalized = dict(entry)
+
+        raw_id = str(
+            entry.get("misconception_id")
+            or entry.get("misconception_name")
+            or ""
+        ).strip()
+        raw_name = str(
+            entry.get("misconception_name")
+            or (raw_id.split(":", 1)[1] if ":" in raw_id else raw_id)
+            or ""
+        ).strip()
+
+        misconception_id = self._clean_misconception_value(raw_id, keep_na=True)
+        misconception_name = self._clean_misconception_value(raw_name, keep_na=True)
+
+        typical_wrong_thought = entry.get("typical_wrong_thought")
+        if typical_wrong_thought is None:
+            typical_wrong_thought = entry.get("evidence_examples", [])
+        if isinstance(typical_wrong_thought, str):
+            typical_wrong_thought = [typical_wrong_thought]
+        elif not isinstance(typical_wrong_thought, list):
+            typical_wrong_thought = []
+
+        fix_steps = entry.get("fix_steps")
+        if isinstance(fix_steps, str):
+            fix_steps = [fix_steps]
+        elif not isinstance(fix_steps, list):
+            fix_steps = []
+        if not fix_steps:
+            fix_steps = self._build_fix_steps(entry)
+
+        quick_check = (
+            entry.get("quick_check")
+            or entry.get("formal_counterexample")
+            or "Does your method still work if you test it on a simpler example?"
+        )
+
+        plain_definition = (
+            entry.get("plain_definition")
+            or entry.get("short_description")
+            or f"The student shows a pattern consistent with '{misconception_name}' reasoning."
+        )
+
+        normalized.update({
+            "misconception_id": misconception_id,
+            "misconception_name": misconception_name,
+            "plain_definition": plain_definition,
+            "typical_wrong_thought": [str(item) for item in typical_wrong_thought if str(item).strip()],
+            "fix_steps": [str(item) for item in fix_steps if str(item).strip()],
+            "quick_check": str(quick_check).strip(),
+        })
+
+        aliases = entry.get("aliases", [])
+        if isinstance(aliases, str):
+            aliases = [aliases]
+        elif not isinstance(aliases, list):
+            aliases = []
+        normalized["aliases"] = [str(item).strip() for item in aliases if str(item).strip()]
+
+        return normalized
+
+    def _build_fix_steps(self, entry: Dict[str, Any]) -> List[str]:
+        """Create practical feedback steps for the richer rf_results KB schema."""
+        steps: List[str] = []
+
+        remediation_hint = str(entry.get("remediation_hint") or "").strip()
+        if remediation_hint:
+            steps.append(remediation_hint)
+
+        prerequisite_concepts = entry.get("prerequisite_concepts", [])
+        if isinstance(prerequisite_concepts, list) and prerequisite_concepts:
+            concepts = ", ".join(str(item).strip() for item in prerequisite_concepts[:3] if str(item).strip())
+            if concepts:
+                steps.append(f"Review these ideas first: {concepts}.")
+
+        trigger_patterns = entry.get("trigger_patterns", [])
+        if isinstance(trigger_patterns, list) and trigger_patterns:
+            patterns = ", ".join(str(item).strip() for item in trigger_patterns[:3] if str(item).strip())
+            if patterns:
+                steps.append(f"Check whether your explanation is relying on cues like: {patterns}.")
+
+        formal_counterexample = str(entry.get("formal_counterexample") or "").strip()
+        if formal_counterexample:
+            steps.append("Test your method against a simple counterexample before finalizing your answer.")
+
+        if not steps:
+            steps = [
+                "Re-read what the question is asking.",
+                "Write down the correct mathematical rule.",
+                "Apply it step by step to this problem.",
+                "Check your answer with a simpler example.",
+            ]
+
+        return steps[:4]
+
+    def _build_kb_index(self, entries: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
+        """Build a flexible lookup index for misconception name/id/alias access."""
+        index: Dict[str, Dict[str, Any]] = {}
+
+        for entry in entries:
+            for raw_key in self._kb_lookup_values(entry):
+                lookup_key = self._normalize_lookup_key(raw_key)
+                if not lookup_key:
+                    continue
+                # Skip notebook placeholder NA entries; the app handles NA generically.
+                if lookup_key == "na":
+                    continue
+                index.setdefault(lookup_key, entry)
+
+        return index
+
+    def _kb_lookup_values(self, entry: Dict[str, Any]) -> List[str]:
+        """Return candidate lookup strings for one KB entry."""
+        values: List[str] = []
+
+        for key in ("misconception_name", "misconception_id"):
+            value = str(entry.get(key) or "").strip()
+            if value:
+                values.append(value)
+                if ":" in value:
+                    values.append(value.split(":", 1)[1].strip())
+
+        for alias in entry.get("aliases", []):
+            alias_text = str(alias).strip()
+            if alias_text:
+                values.append(alias_text)
+
+        return values
+
+    def _clean_misconception_value(self, value: str, keep_na: bool = False) -> str:
+        """Normalize display values coming from different KB formats."""
+        text = str(value or "").strip()
+        if ":" in text:
+            text = text.split(":", 1)[1].strip()
+        if text.lower() in {"", "nan", "none", "null"}:
+            return "NA" if keep_na else ""
+        return text
+
+    def _normalize_lookup_key(self, value: str) -> str:
+        """Normalize lookup keys for case-insensitive KB access."""
+        cleaned = self._clean_misconception_value(value, keep_na=False)
+        return cleaned.lower()
 
     def _llm_generate(self, prompt: str, max_new_tokens: int = MAX_NEW_TOKENS) -> str:
         """
-        Generate text using the Qwen3-4B model.
+        Generate text using the Qwen3-8B model.
 
         Args:
             prompt: Input prompt
@@ -210,7 +391,7 @@ class MisconceptionExplainer:
 
     def get_kb_card(self, misconception: str) -> Optional[Dict[str, Any]]:
         """Get the knowledge base card for a misconception."""
-        return self.kb.get(misconception)
+        return self.kb.get(self._normalize_lookup_key(misconception))
 
     def generate_feedback(
         self,
@@ -241,7 +422,7 @@ class MisconceptionExplainer:
         misconception = predicted_label.split(":", 1)[1] if ":" in predicted_label else predicted_label
 
         # Get KB card
-        card = self.kb.get(misconception, {})
+        card = self.get_kb_card(misconception) or {}
 
         ic_str = "Yes" if is_correct else "No"
 
@@ -348,7 +529,7 @@ Self-check: Does your rule still work if the numbers change slightly?
 
     @property
     def kb_count(self) -> int:
-        return len(self.kb)
+        return self._kb_entry_count
 
 
 # Singleton instance

@@ -1,0 +1,160 @@
+CELL 12 (code):
+
+# ============================================================================
+# CELL 11: Generate Explanations for Sample Predictions
+# ============================================================================
+
+# --- Helper: look up KB description for a misconception label ---
+def get_kb_description(label, kb_data):
+    """Retrieve knowledge base description for a misconception label."""
+    if not kb_data:
+        return None
+    # kb_data may be a list of dicts or a dict keyed by id/name
+    if isinstance(kb_data, list):
+        for entry in kb_data:
+            if isinstance(entry, dict):
+                name = entry.get("name", entry.get("MisconceptionName", ""))
+                if name and name in label:
+                    return entry.get("description", entry.get("Definition", None))
+    elif isinstance(kb_data, dict):
+        for key, entry in kb_data.items():
+            if isinstance(entry, dict):
+                name = entry.get("name", entry.get("MisconceptionName", key))
+                if name and name in label:
+                    return entry.get("description", entry.get("Definition", None))
+    return None
+
+
+def get_score_breakdown(row_id, label, full_scores_df, ensemble_weights):
+    """Get the ensemble feature scores for a specific (row_id, label) pair."""
+    if full_scores_df is None:
+        return None
+    subset = full_scores_df[full_scores_df["row_id"] == row_id]
+    if "label" in subset.columns:
+        match = subset[subset["label"] == label]
+    elif "misconception_id" in subset.columns:
+        match = subset.head(1)  # fallback
+    else:
+        return None
+    if match.empty:
+        return None
+    row_data = match.iloc[0]
+    breakdown = {}
+    for feat in ensemble_weights:
+        if feat in row_data.index and pd.notna(row_data[feat]):
+            breakdown[feat] = round(float(row_data[feat]), 4)
+    return breakdown if breakdown else None
+
+
+# Use train data so we can compare with ground truth
+explain_df = train_df.sample(n=min(EXPLAIN_SAMPLES, len(train_df)), random_state=42).copy()
+explain_df["is_correct"] = explain_df["Category"].str.startswith("True").astype(int)
+explain_df["text"] = explain_df.apply(format_input, axis=1)
+
+explanations = []
+
+for idx, row in tqdm(explain_df.iterrows(), total=len(explain_df), desc="Explaining"):
+    q_text   = str(row["QuestionText"])[:400]
+    answer   = str(row["MC_Answer"])[:100]
+    expl     = str(row["StudentExplanation"])[:400]
+    target   = str(row.get("target", "N/A"))
+    correct  = "Yes" if row["is_correct"] else "No"
+
+    # --- Gather rf.ipynb pipeline context ---
+    # 1) Knowledge base description
+    kb_desc = get_kb_description(target, kb_data) if kb_data else None
+
+    # 2) Ensemble score breakdown (use row_id if available, else skip)
+    score_breakdown = None
+    if HAS_FULL_SCORES and "row_id" in row.index:
+        score_breakdown = get_score_breakdown(
+            row["row_id"], target, full_scores_df, ENSEMBLE_WEIGHTS
+        )
+
+    # --- Build enriched prompt ---
+    prompt_text = (
+        f"You are an expert math education analyst. A student answered a math question.\n\n"
+        f"Question: {q_text}\n"
+        f"Student's Answer: {answer}\n"
+        f"Is Correct: {correct}\n"
+        f"Student's Explanation: {expl}\n\n"
+        f"The predicted misconception category is: {target}\n\n"
+    )
+
+    # Add KB context if available
+    if kb_desc:
+        prompt_text += (
+            f"Knowledge Base Definition of this misconception:\n"
+            f"  \"{kb_desc}\"\n\n"
+        )
+
+    # Add ensemble score breakdown if available
+    if score_breakdown:
+        top_features = sorted(score_breakdown.items(), key=lambda x: -x[1])[:5]
+        feat_lines = ", ".join(f"{k}={v}" for k, v in top_features)
+        prompt_text += (
+            f"Pipeline evidence (top scoring features from the ensemble model):\n"
+            f"  {feat_lines}\n\n"
+        )
+
+    # Add graph context if available
+    if graph_summary:
+        prompt_text += (
+            f"Misconception graph stats: {graph_summary.get('num_nodes', '?')} nodes, "
+            f"{graph_summary.get('num_edges', '?')} edges in the ontology.\n\n"
+        )
+
+    prompt_text += (
+        f"Using ALL the above evidence, explain in 2-3 sentences WHY this misconception was identified. "
+        f"Reference the knowledge base definition and pipeline scores where relevant. "
+        f"What specific error in the student's reasoning reveals this misconception?"
+    )
+
+    messages = [{"role": "user", "content": prompt_text}]
+
+    try:
+        input_text = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False
+        )
+    except TypeError:
+        input_text = tokenizer.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+
+    inputs = tokenizer(input_text, return_tensors="pt", truncation=True, max_length=1024)
+    inputs = {k: v.to(explainer_model.device) for k, v in inputs.items()}
+
+    with torch.no_grad():
+        gen_ids = explainer_model.generate(
+            **inputs,
+            max_new_tokens=MAX_NEW_TOKENS,
+            do_sample=False,
+            num_beams=1,
+            pad_token_id=tokenizer.eos_token_id,
+        )
+
+    full_output = tokenizer.decode(gen_ids[0], skip_special_tokens=True)
+    explanation = full_output[len(tokenizer.decode(inputs["input_ids"][0], skip_special_tokens=True)):].strip()
+
+    entry = {
+        "question": q_text,
+        "student_answer": answer,
+        "is_correct": bool(row["is_correct"]),
+        "student_explanation": expl,
+        "predicted_misconception": target,
+        "kb_definition": kb_desc,
+        "ensemble_scores": score_breakdown,
+        "model_explanation": explanation,
+    }
+    explanations.append(entry)
+
+    log(f"\n--- Sample {len(explanations)} ---")
+    log(f"  Q: {q_text[:80]}...")
+    log(f"  Predicted: {target}")
+    if kb_desc:
+        log(f"  KB Def: {kb_desc[:120]}...")
+    if score_breakdown:
+        log(f"  Top scores: {dict(sorted(score_breakdown.items(), key=lambda x: -x[1])[:3])}")
+    log(f"  Explanation: {explanation[:200]}")
+
+log(f"\nGenerated {len(explanations)} explanations.")

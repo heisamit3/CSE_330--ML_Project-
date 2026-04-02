@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Misconception:Tacking",
+  "affinity_score": 1.0,
+  "confidence": 0.73,
+  "reasoning_short": "Evidence aligns with Tacking.",
+  "evidence_spans": [
+    "TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog"
+  ],
+  "row_id": 36698,
+  "baseline_score": 0.0003985239891335,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 13,
+  "trigger_match_count": 0,
+  "concept_match_count": 0,
+  "trigger_score": 0.0,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.2,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 5,
+  "subgraph_density": 0.8333333333333334,
+  "matched_trigger_patterns": "",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Tacking'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.200\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- -3 because 8-5 is 3 and if you make it a negative number you get -3\n- -3 is the amswer as 8-5=3.\nSubgraph size: 4 nodes, 5 edges, density=0.833\nSubgraph edges:\n- False_Misconception:Wrong_Operation <-> False_Misconception:Tacking via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\n- False_Misconception:Wrong_Operation <-> True_Misconception:Tacking via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\n- True_Misconception:Tacking <-> False_Misconception:Positive via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, e, g)\nRelated misconceptions:\n- Tacking (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , b, u, t,  , |,  , m, i, n, u, s,  , |,  , n, e, g, a, t, i, v, e)\n- Wrong_Operation (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , j, u, s, t)\n- Positive (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, e, g, a, t, i, v, e)",
+  "raw_response": "{\"misconception_id\": \"True_Misconception:Tacking\", \"affinity_score\": 1.0, \"confidence\": 0.73, \"reasoning_short\": \"Evidence aligns with Tacking.\", \"evidence_spans\": [\"TASK=score_candidate\\nYou are a careful math misconception rater.\\nUse the ontolog\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

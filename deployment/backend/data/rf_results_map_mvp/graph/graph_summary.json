@@ -1,0 +1,32 @@
+{
+  "num_nodes": 65,
+  "num_edges": 763,
+  "relations": {
+    "related_trigger": 753,
+    "shares_cognitive_root_with": 17,
+    "possible_confusion_with": 7
+  },
+  "avg_degree": 23.476923076923075,
+  "top_degree_nodes": [
+    [
+      "False_Neither:nan",
+      45
+    ],
+    [
+      "True_Neither:nan",
+      44
+    ],
+    [
+      "True_Correct:nan",
+      41
+    ],
+    [
+      "False_Correct:nan",
+      41
+    ],
+    [
+      "False_Misconception:Denominator-only_change",
+      41
+    ]
+  ]
+}

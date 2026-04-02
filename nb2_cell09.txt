@@ -1,0 +1,114 @@
+CELL 9 (code):
+
+# ============================================================================
+# CELL 9: Create submission.csv with Family Filtering
+# ============================================================================
+
+def decode_prediction_labels(id_series):
+    raw_values = id_series.astype(str).str.strip()
+    numeric_ids = pd.to_numeric(id_series, errors="coerce")
+    labels = np.full(len(id_series), "", dtype=object)
+
+    numeric_mask = numeric_ids.notna() & (numeric_ids >= 0) & (numeric_ids < n_classes)
+    if numeric_mask.any():
+        labels[numeric_mask.to_numpy()] = le.inverse_transform(
+            numeric_ids[numeric_mask].astype(int).to_numpy()
+        )
+
+    direct_label_mask = (~numeric_mask) & raw_values.isin(le.classes_)
+    if direct_label_mask.any():
+        labels[direct_label_mask.to_numpy()] = raw_values[direct_label_mask].to_numpy()
+
+    return labels
+
+if HAS_FULL_SCORES:
+    # ---- PATH A: Use full pre-computed fused scores ----
+    log("Creating submission from FULL pre-computed scores...")
+
+    # Determine score column (final_score from ensemble)
+    score_col = "final_score"
+    if score_col not in full_scores_df.columns:
+        # Fallback: compute weighted sum from available feature columns
+        log("  'final_score' not found -> computing weighted fusion...")
+        score_col = "weighted_score"
+        full_scores_df[score_col] = 0.0
+        for feat, w in ENSEMBLE_WEIGHTS.items():
+            if feat in full_scores_df.columns:
+                full_scores_df[score_col] += full_scores_df[feat].fillna(0) * w
+
+    # Map misconception_id back to label string
+    if "misconception_id" in full_scores_df.columns:
+        full_scores_df["label"] = decode_prediction_labels(full_scores_df["misconception_id"])
+
+    # Group by row_id, sort by score, apply family filter, take top 3
+    final_predictions = []
+    for rid in test_df["row_id"].values:
+        fam = fam_map.get(rid, "False_")
+        subset = full_scores_df[full_scores_df["row_id"] == rid].copy()
+        subset = subset.sort_values(score_col, ascending=False)
+
+        # Family filter
+        if "label" in subset.columns:
+            filtered = subset[subset["label"].str.startswith(fam, na=False)]
+        else:
+            filtered = subset  # no label column -> use as-is
+
+        top3 = filtered["label"].head(TOP_K_SUBMIT).tolist() if "label" in filtered.columns else []
+
+        # Fallback padding
+        while len(top3) < TOP_K_SUBMIT:
+            fallback = f"{fam}Neither:NA" if fam == "False_" else f"{fam}Correct:NA"
+            top3.append(fallback)
+
+        final_predictions.append(" ".join(top3[:TOP_K_SUBMIT]))
+
+elif HAS_BASELINE_ONLY:
+    # ---- PATH B: Use baseline scores only ----
+    log("Creating submission from BASELINE scores...")
+
+    final_predictions = []
+    for rid in test_df["row_id"].values:
+        fam = fam_map.get(rid, "False_")
+        subset = baseline_scores_df[baseline_scores_df["row_id"] == rid].copy()
+        subset = subset.sort_values("baseline_score", ascending=False)
+
+        # Decode misconception_id -> label
+        labels = decode_prediction_labels(subset["misconception_id"]).tolist()
+
+        # Family filter
+        filtered = [l for l in labels if l.startswith(fam)]
+        top3 = filtered[:TOP_K_SUBMIT]
+
+        while len(top3) < TOP_K_SUBMIT:
+            fallback = f"{fam}Neither:NA" if fam == "False_" else f"{fam}Correct:NA"
+            top3.append(fallback)
+
+        final_predictions.append(" ".join(top3[:TOP_K_SUBMIT]))
+
+else:
+    # ---- PATH C: Use live inference results ----
+    log("Creating submission from LIVE inference...")
+
+    final_predictions = []
+    for idx, row in test_df.iterrows():
+        fam = fam_map.get(row["row_id"], "False_")
+        preds = row["pred_top12"]
+
+        # Family filter
+        filtered = [p for p in preds if p.startswith(fam)]
+        top3 = filtered[:TOP_K_SUBMIT]
+
+        while len(top3) < TOP_K_SUBMIT:
+            fallback = f"{fam}Neither:NA" if fam == "False_" else f"{fam}Correct:NA"
+            top3.append(fallback)
+
+        final_predictions.append(" ".join(top3[:TOP_K_SUBMIT]))
+
+# ---- Build submission DataFrame ----
+submission = pd.DataFrame({
+    "row_id": test_df["row_id"].values,
+    "Category:Misconception": final_predictions,
+})
+submission.to_csv("submission.csv", index=False)
+log(f"Submission saved: submission.csv ({len(submission)} rows)")
+submission.head(10)

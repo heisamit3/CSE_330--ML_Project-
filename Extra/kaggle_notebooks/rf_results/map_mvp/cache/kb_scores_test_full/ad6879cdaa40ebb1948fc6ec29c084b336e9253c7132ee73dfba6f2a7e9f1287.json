@@ -1,0 +1,28 @@
+{
+  "misconception_id": "False_Misconception:Ignores_zeroes",
+  "affinity_score": 1.0,
+  "confidence": 0.9912,
+  "reasoning_short": "Evidence aligns with Ignores_zeroes.",
+  "evidence_spans": [
+    "think"
+  ],
+  "row_id": 36697,
+  "baseline_score": 4.281503606762271e-06,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 32,
+  "trigger_match_count": 1,
+  "concept_match_count": 0,
+  "trigger_score": 0.16666666666666666,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.275,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "think",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: False_\nShort description: Student reasoning appears consistent with the misconception 'Ignores_zeroes'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: think\nMatched concept terms: none\nOntology support score: 0.275\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- because it doesn't matter how many zeros there is\n- 6.0001 is the same as 6.1 because the zero doesn't mean anything.\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- False_Misconception:Longer_is_bigger <-> False_Misconception:Whole_numbers_larger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (t, h, i)\n- False_Misconception:Longer_is_bigger <-> False_Misconception:Ignores_zeroes via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (b, i, g)\n- False_Misconception:Longer_is_bigger <-> True_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (b, i, g)\nRelated misconceptions:\n- Shorter_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , n, u, m, b, e, r, s)\n- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r, s,  , |,  , t, h, i, n, k)\n- Longer_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , t, h, i, n, k)",
+  "raw_response": "{\"misconception_id\": \"False_Misconception:Ignores_zeroes\", \"affinity_score\": 1.0, \"confidence\": 0.9912, \"reasoning_short\": \"Evidence aligns with Ignores_zeroes.\", \"evidence_spans\": [\"think\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

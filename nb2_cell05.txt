@@ -1,0 +1,67 @@
+CELL 5 (code):
+
+# ============================================================================
+# CELL 5: Load & Prepare Data
+# ============================================================================
+log("Resolving dataset paths...")
+data_dir = resolve_path(DATA_CANDIDATES, "competition data")
+
+train_path = os.path.join(data_dir, "train.csv")
+test_path  = os.path.join(data_dir, "test.csv")
+misc_path  = os.path.join(data_dir, "misconception_mapping.csv")
+
+train_df = pd.read_csv(train_path)
+test_df  = pd.read_csv(test_path)
+if os.path.exists(misc_path):
+    misc_df = pd.read_csv(misc_path)
+    log(f"Loaded misconception mapping: {misc_df.shape}")
+else:
+    misc_df = None
+    log("misconception_mapping.csv not found; continuing without it.")
+
+log(f"Train: {train_df.shape}, Test: {test_df.shape}")
+
+# --- Build target labels (Category:Misconception) ---
+train_df["Misconception"] = train_df["Misconception"].fillna("NA")
+train_df["target"] = train_df["Category"] + ":" + train_df["Misconception"]
+
+# --- Fit label encoder ---
+le_path = resolve_path(LABEL_ENC_CANDIDATES, "label_encoder.joblib", must_exist=False)
+if le_path:
+    le = joblib.load(le_path)
+    log(f"Loaded label encoder: {len(le.classes_)} classes")
+else:
+    le = LabelEncoder()
+    le.fit(train_df["target"])
+    log(f"Fitted label encoder: {len(le.classes_)} classes")
+
+n_classes = len(le.classes_)
+
+# --- Determine correct answers per question ---
+correct_rows = train_df[train_df["Category"].str.startswith("True")]
+correct_by_q = (
+    correct_rows.groupby(["QuestionId", "MC_Answer"])
+    .size()
+    .reset_index(name="cnt")
+    .sort_values("cnt", ascending=False)
+    .drop_duplicates("QuestionId")
+    .set_index("QuestionId")["MC_Answer"]
+    .to_dict()
+)
+
+# --- Add is_correct flag to test_df ---
+test_df["is_correct"] = test_df.apply(
+    lambda r: int(correct_by_q.get(r["QuestionId"], "") == r["MC_Answer"]), axis=1
+)
+
+# --- Build family map (True_ or False_ prefix per row) ---
+fam_map = {
+    rid: ("True_" if ic else "False_")
+    for rid, ic in zip(test_df["row_id"], test_df["is_correct"])
+}
+
+# --- Format input text ---
+test_df["text"] = test_df.apply(format_input, axis=1)
+
+log(f"Data prepared. Family distribution: {Counter(fam_map.values())}")
+test_df[["row_id", "QuestionText", "MC_Answer", "is_correct", "text"]].head(2)

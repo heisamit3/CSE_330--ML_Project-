@@ -1,0 +1,14 @@
+2026-03-26 15:28:06 | INFO | qwen_adapter_infer | Starting qwen_adapter_infer with config=/kaggle/working/runtime_kaggle_h100_qwen_full.yaml
+2026-03-26 15:28:07 | INFO | qwen_adapter_infer | Loaded train=36696 rows, test=3 rows, candidates=65
+2026-03-26 15:28:07 | INFO | qwen_adapter_infer | Prepared 36696 rows for train. Preview saved to /kaggle/working/map_mvp/output/qwen_adapter_train_prepared_preview.csv
+2026-03-26 15:28:07 | INFO | qwen_adapter_infer | Prepared 3 rows for test. Preview saved to /kaggle/working/map_mvp/output/qwen_adapter_test_prepared_preview.csv
+2026-03-26 15:28:22 | INFO | qwen_adapter_infer | Resolved baseline_qwen assets: {"adapter_path": "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/adapter", "label_encoder_path": "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib", "run_config_path": "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/run_config.json", "base_model_reference": "/kaggle/input/datasets/mkhanshovon43/base-modelsh7bq2-5-7b3-8b/loaded_models/Qwen3-8B", "max_length": 256}
+2026-03-26 15:28:22 | INFO | qwen_adapter_infer | Loaded 65 labels from /kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib
+2026-03-26 15:28:23 | INFO | qwen_adapter_infer | Loading base sequence classifier from /kaggle/input/datasets/mkhanshovon43/base-modelsh7bq2-5-7b3-8b/loaded_models/Qwen3-8B
+2026-03-26 15:28:52 | INFO | qwen_adapter_infer | Loading LoRA adapter from /kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/adapter
+2026-03-26 15:29:00 | INFO | qwen_adapter_infer | Running sequence-classification inference on 36696 rows with batch_size=8
+2026-03-26 15:37:27 | INFO | qwen_adapter_infer | Collected logits with shape=(36696, 65) for 65 labels
+2026-03-26 15:37:32 | INFO | qwen_adapter_infer | Saved baseline artifacts for train to /kaggle/working/map_mvp/baseline_artifacts/qwen3_8b_adapter_train_scores_long.csv
+2026-03-26 15:37:32 | INFO | qwen_adapter_infer | Running sequence-classification inference on 3 rows with batch_size=8
+2026-03-26 15:37:33 | INFO | qwen_adapter_infer | Collected logits with shape=(3, 65) for 65 labels
+2026-03-26 15:37:33 | INFO | qwen_adapter_infer | Saved baseline artifacts for test to /kaggle/working/map_mvp/baseline_artifacts/qwen3_8b_adapter_test_scores_long.csv

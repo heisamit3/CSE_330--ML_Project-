@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Misconception:Shorter_is_bigger",
+  "affinity_score": 1.0,
+  "confidence": 0.9912,
+  "reasoning_short": "Evidence aligns with Shorter_is_bigger.",
+  "evidence_spans": [
+    "smaller"
+  ],
+  "row_id": 36696,
+  "baseline_score": 9.06165223568678e-06,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 13,
+  "trigger_match_count": 1,
+  "concept_match_count": 0,
+  "trigger_score": 0.16666666666666666,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.275,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "smaller",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Shorter_is_bigger'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: smaller\nMatched concept terms: none\nOntology support score: 0.275\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- 6.2 is greater because 6 is just a whole number and all the others have zero in the numbers\n- beacause the closed the digit is to a whole number the bigger it gets\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Misconception:Whole_numbers_larger <-> False_Misconception:Whole_numbers_larger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)\n- True_Misconception:Whole_numbers_larger <-> False_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)\n- True_Misconception:Whole_numbers_larger <-> True_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)\nRelated misconceptions:\n- Shorter_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r,  , |,  , s, m, a, l, l, e, r)\n- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r,  , |,  , n, u, m, b, e, r, s)\n- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r, s)",
+  "raw_response": "{\"misconception_id\": \"True_Misconception:Shorter_is_bigger\", \"affinity_score\": 1.0, \"confidence\": 0.9912, \"reasoning_short\": \"Evidence aligns with Shorter_is_bigger.\", \"evidence_spans\": [\"smaller\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

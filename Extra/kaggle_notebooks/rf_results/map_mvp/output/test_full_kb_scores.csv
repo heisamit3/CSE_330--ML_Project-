@@ -1,0 +1,498 @@
+misconception_id,affinity_score,confidence,reasoning_short,evidence_spans,row_id,baseline_score,kb_score,graph_neighbor_count,trigger_match_count,concept_match_count,trigger_score,concept_score,ontology_support_score,subgraph_node_count,subgraph_edge_count,subgraph_density,matched_trigger_patterns,matched_concept_terms,neighbor_relation_types,context_block,raw_response,prompt_type,scoring_backend
+True_Correct:NA,1.0,0.7,Evidence aligns with True_Correct:NA.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36696,0.9942702651023864,1.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Correct:NA"", ""affinity_score"": 1.0, ""confidence"": 0.7, ""reasoning_short"": ""Evidence aligns with True_Correct:NA."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Neither:NA,1.0,0.7,Evidence aligns with True_Neither:NA.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36696,0.0052789524197578,1.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Neither:NA"", ""affinity_score"": 1.0, ""confidence"": 0.7, ""reasoning_short"": ""Evidence aligns with True_Neither:NA."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Incomplete,1.0,1.0,Evidence aligns with Incomplete.,"['shaded', 'shaded.']",36696,0.0003072719264309,1.0,9,3,0,0.6666666666666666,0.0,0.5,4,6,1.0,shaded | shaded. | triangles not,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Incomplete'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: shaded | shaded. | triangles not
+Matched concept terms: none
+Ontology support score: 0.500
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 3 out of 9 parts aren't shaded.
+- 3 out of 9 triangles are not shaded.
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+Related misconceptions:
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)
+- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d)","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 1.0, ""confidence"": 1.0, ""reasoning_short"": ""Evidence aligns with Incomplete."", ""evidence_spans"": [""shaded"", ""shaded.""]}",knowledge_guided,mock
+True_Misconception:Duplication,1.0,0.9912,Evidence aligns with Duplication.,['its 2x5'],36696,4.474480010685511e-05,1.0,27,1,0,0.16666666666666666,0.0,0.275,4,6,1.0,its 2x5,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Duplication'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: its 2x5
+Matched concept terms: none
+Ontology support score: 0.275
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- as you just multiply across and 5 times 2 is 10 and 5 times 3 is 15
+- because u have to times the numerator by the whole number and that would have given you 10/15 and you can make it a mixed number
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Neither:nan <-> False_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+- True_Neither:nan <-> True_Misconception:Duplication via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, u, m)
+- True_Neither:nan <-> False_Misconception:Wrong_Operation via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, u, m)
+Related misconceptions:
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r,  , |,  , t, i, m, e, s)
+- Wrong_Operation (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r,  , |,  , t, i, m, e, s)","{""misconception_id"": ""True_Misconception:Duplication"", ""affinity_score"": 1.0, ""confidence"": 0.9912, ""reasoning_short"": ""Evidence aligns with Duplication."", ""evidence_spans"": [""its 2x5""]}",knowledge_guided,mock
+True_Misconception:Inversion,1.0,0.73,Evidence aligns with Inversion.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36696,1.613443237147294e-05,1.0,2,0,0,0.0,0.0,0.2,3,3,1.0,,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Inversion'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- Then you multiply the denominator by 5 and keep the numerator the same.
+- first you have to turn 5 into a fraction, so it turns into 1/5. then multiply like normal and then convert to mixed number.
+Subgraph size: 3 nodes, 3 edges, density=1.000
+Subgraph edges:
+- False_Misconception:Inversion <-> True_Misconception:Inversion via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, n)
+- False_Misconception:Inversion <-> False_Misconception:Denominator-only_change via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, n)
+- False_Misconception:Denominator-only_change <-> True_Misconception:Inversion via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, n)
+Related misconceptions:
+- Inversion (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, n, o, m, i, n, a, t, o, r)
+- Denominator-only_change (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, n, o, m, i, n, a, t, o, r)","{""misconception_id"": ""True_Misconception:Inversion"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Inversion."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Irrelevant,1.0,0.9912,Evidence aligns with Irrelevant.,['think'],36696,1.1834501492558047e-05,1.0,36,1,0,0.16666666666666666,0.0,0.275,4,6,1.0,think,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Irrelevant'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: think
+Matched concept terms: none
+Ontology support score: 0.275
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 10 and 15 are both in 5 times table
+5 times 3 is 15 so i divided 9 by 3 then times 2
+- 10 is in the 5 x tables. 5x2=10 5x3=15    9 is in the 3 x tables.  3x3=9 3x2=6
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Neither:nan <-> False_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+- True_Neither:nan <-> True_Misconception:Irrelevant via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (t, h, i)
+- True_Neither:nan <-> False_Misconception:Wrong_fraction via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (t, h, i)
+Related misconceptions:
+- Wrong_fraction (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; t, h, i, n, k,  , |,  , t, h, r, e, e,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; t, h, i, n, k,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; t, h, i, n, k,  , |,  , t, i, m, e, s)","{""misconception_id"": ""True_Misconception:Irrelevant"", ""affinity_score"": 1.0, ""confidence"": 0.9912, ""reasoning_short"": ""Evidence aligns with Irrelevant."", ""evidence_spans"": [""think""]}",knowledge_guided,mock
+True_Misconception:SwapDividend,1.0,0.9912,Evidence aligns with SwapDividend.,['into'],36696,1.1122916475869715e-05,1.0,28,1,0,0.16666666666666666,0.0,0.275,4,6,1.0,into,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'SwapDividend'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: into
+Matched concept terms: none
+Ontology support score: 0.275
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 1/2 goes into 6, 12 times so I put 1/12 but I'm not that sure
+- 1/2÷6 is impossible so I did 6÷1/2 equals 12 so it’s 1/12
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- False_Misconception:Irrelevant <-> True_Correct:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+- False_Misconception:Irrelevant <-> False_Correct:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+- False_Misconception:Irrelevant <-> True_Misconception:SwapDividend via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, i, v)
+Related misconceptions:
+- Irrelevant (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, i, v, i, d, e, d,  , |,  , i, n, t, o,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, i, v, i, d, e, d,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, i, v, i, d, e, d,  , |,  , t, i, m, e, s)","{""misconception_id"": ""True_Misconception:SwapDividend"", ""affinity_score"": 1.0, ""confidence"": 0.9912, ""reasoning_short"": ""Evidence aligns with SwapDividend."", ""evidence_spans"": [""into""]}",knowledge_guided,mock
+True_Misconception:Shorter_is_bigger,1.0,0.9912,Evidence aligns with Shorter_is_bigger.,['smaller'],36696,9.06165223568678e-06,1.0,13,1,0,0.16666666666666666,0.0,0.275,4,6,1.0,smaller,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Shorter_is_bigger'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: smaller
+Matched concept terms: none
+Ontology support score: 0.275
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 6.2 is greater because 6 is just a whole number and all the others have zero in the numbers
+- beacause the closed the digit is to a whole number the bigger it gets
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Whole_numbers_larger <-> False_Misconception:Whole_numbers_larger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)
+- True_Misconception:Whole_numbers_larger <-> False_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)
+- True_Misconception:Whole_numbers_larger <-> True_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)
+Related misconceptions:
+- Shorter_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r,  , |,  , s, m, a, l, l, e, r)
+- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r,  , |,  , n, u, m, b, e, r, s)
+- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r, s)","{""misconception_id"": ""True_Misconception:Shorter_is_bigger"", ""affinity_score"": 1.0, ""confidence"": 0.9912, ""reasoning_short"": ""Evidence aligns with Shorter_is_bigger."", ""evidence_spans"": [""smaller""]}",knowledge_guided,mock
+False_Misconception:WNB,1.0,1.0,Evidence aligns with WNB.,"['shaded', 'not']",36697,0.9991455674171448,1.0,33,3,0,0.8333333333333334,0.0,0.575,4,6,1.0,shaded | not | not shaded,,_ | a | d | e | g | i | l | r | t,"Candidate family: False_
+Short description: Student reasoning appears consistent with the misconception 'WNB'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: shaded | not | not shaded
+Matched concept terms: none
+Ontology support score: 0.575
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 3 IS SHADED AND 6  IS NOT
+- 3 OUT OF 6 SPOTS ARE NOT SHADED SO THE FRACTION IS 3/6
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+Related misconceptions:
+- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , n, o, t,  , s, h, a, d, e, d,  , |,  , s, h, a, d, e, d,  , |,  , t, h, e, r, e,  , |,  , t, r, i, a, n, g, l, e, s)
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , n, o, t,  , s, h, a, d, e, d,  , |,  , s, h, a, d, e, d,  , |,  , t, h, e, r, e)
+- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)","{""misconception_id"": ""False_Misconception:WNB"", ""affinity_score"": 1.0, ""confidence"": 1.0, ""reasoning_short"": ""Evidence aligns with WNB."", ""evidence_spans"": [""shaded"", ""not""]}",knowledge_guided,mock
+False_Neither:NA,1.0,0.7,Evidence aligns with False_Neither:NA.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36697,0.0005293696885928,1.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_Neither:NA"", ""affinity_score"": 1.0, ""confidence"": 0.7, ""reasoning_short"": ""Evidence aligns with False_Neither:NA."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+False_Misconception:Incomplete,1.0,1.0,Evidence aligns with Incomplete.,"['shaded', 'not']",36697,0.0002735626767389,1.0,8,3,0,0.8333333333333334,0.0,0.575,4,6,1.0,shaded | not | triangles,,_ | a | d | e | g | i | l | r | t,"Candidate family: False_
+Short description: Student reasoning appears consistent with the misconception 'Incomplete'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: shaded | not | triangles
+Matched concept terms: none
+Ontology support score: 0.575
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 9 triangles in total and 3 are not shaded and 6 are.
+- Because there are 3 triangles not shaded in.
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+Related misconceptions:
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , n, o, t,  , s, h, a, d, e, d,  , |,  , s, h, a, d, e, d,  , |,  , t, h, e, r, e,  , |,  , t, r, i, a, n, g, l, e, s)
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , n, o, t,  , s, h, a, d, e, d,  , |,  , s, h, a, d, e, d,  , |,  , t, h, e, r, e)
+- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)","{""misconception_id"": ""False_Misconception:Incomplete"", ""affinity_score"": 1.0, ""confidence"": 1.0, ""reasoning_short"": ""Evidence aligns with Incomplete."", ""evidence_spans"": [""shaded"", ""not""]}",knowledge_guided,mock
+False_Misconception:Firstterm,1.0,0.73,Evidence aligns with Firstterm.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36697,1.1525229638209566e-05,1.0,30,0,0,0.0,0.0,0.2,4,6,1.0,,,_ | a | d | e | g | i | l | r | t,"Candidate family: False_
+Short description: Student reasoning appears consistent with the misconception 'Firstterm'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- each time there is added 6 meaning from pattern 4 plus 6 there are 20.
+- Becausee it goes up by 6.
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Firstterm <-> False_Misconception:Denominator-only_change via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- True_Misconception:Firstterm <-> False_Misconception:Wrong_term via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- True_Misconception:Firstterm <-> False_Misconception:Firstterm via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+Related misconceptions:
+- Firstterm (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , p, a, t, t, e, r, n,  , |,  , t, i, m, e, s)
+- Wrong_term (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , p, a, t, t, e, r, n)
+- Denominator-only_change (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , t, i, m, e, s)","{""misconception_id"": ""False_Misconception:Firstterm"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Firstterm."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+False_Misconception:Irrelevant,1.0,1.0,Evidence aligns with Irrelevant.,"['think', 'answer']",36697,9.96452035906259e-06,1.0,37,3,0,0.5,0.0,0.42500000000000004,4,6,1.0,think | answer | into,,_ | a | d | e | g | i | l | r | t,"Candidate family: False_
+Short description: Student reasoning appears consistent with the misconception 'Irrelevant'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: think | answer | into
+Matched concept terms: none
+Ontology support score: 0.425
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 120 is in the times table
+- I used the 5 times table and got 24
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- False_Misconception:Irrelevant <-> True_Correct:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+- False_Misconception:Irrelevant <-> True_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+- False_Misconception:Irrelevant <-> False_Correct:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)
+Related misconceptions:
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, n, s, w, e, r,  , |,  , d, i, v, i, d, e, d,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, n, s, w, e, r,  , |,  , d, i, v, i, d, e, d,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, n, s, w, e, r,  , |,  , g, e, t,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)","{""misconception_id"": ""False_Misconception:Irrelevant"", ""affinity_score"": 1.0, ""confidence"": 1.0, ""reasoning_short"": ""Evidence aligns with Irrelevant."", ""evidence_spans"": [""think"", ""answer""]}",knowledge_guided,mock
+False_Correct:NA,1.0,0.7,Evidence aligns with False_Correct:NA.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36697,5.961719125480158e-06,1.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""False_Correct:NA"", ""affinity_score"": 1.0, ""confidence"": 0.7, ""reasoning_short"": ""Evidence aligns with False_Correct:NA."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+False_Misconception:Ignores_zeroes,1.0,0.9912,Evidence aligns with Ignores_zeroes.,['think'],36697,4.281503606762271e-06,1.0,32,1,0,0.16666666666666666,0.0,0.275,4,6,1.0,think,,_ | a | d | e | g | i | l | r | t,"Candidate family: False_
+Short description: Student reasoning appears consistent with the misconception 'Ignores_zeroes'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: think
+Matched concept terms: none
+Ontology support score: 0.275
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- because it doesn't matter how many zeros there is
+- 6.0001 is the same as 6.1 because the zero doesn't mean anything.
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- False_Misconception:Longer_is_bigger <-> False_Misconception:Whole_numbers_larger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (t, h, i)
+- False_Misconception:Longer_is_bigger <-> False_Misconception:Ignores_zeroes via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (b, i, g)
+- False_Misconception:Longer_is_bigger <-> True_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (b, i, g)
+Related misconceptions:
+- Shorter_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , n, u, m, b, e, r, s)
+- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r, s,  , |,  , t, h, i, n, k)
+- Longer_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , t, h, i, n, k)","{""misconception_id"": ""False_Misconception:Ignores_zeroes"", ""affinity_score"": 1.0, ""confidence"": 0.9912, ""reasoning_short"": ""Evidence aligns with Ignores_zeroes."", ""evidence_spans"": [""think""]}",knowledge_guided,mock
+False_Misconception:Wrong_fraction,1.0,1.0,Evidence aligns with Wrong_fraction.,['think'],36697,4.015232207166264e-06,1.0,39,1,1,0.16666666666666666,0.3333333333333333,0.39166666666666666,4,6,1.0,think,fraction,  | _ | a | b | c | d | e | f | g | h | i | l | n | o | p | r | s | t | u | v | w | |,"Candidate family: False_
+Short description: Student reasoning appears consistent with the misconception 'Wrong_fraction' in the fraction concept area.
+Concept tags: fraction
+Cognitive roots: part-whole reasoning, structure-preserving arithmetic
+Prerequisite concepts: none
+Matched trigger patterns: think
+Matched concept terms: fraction
+Ontology support score: 0.392
+Formal counterexample: Convert to equivalent fractions with a common denominator before combining them.
+Remediation hint: Focus on unit size and denominator meaning before adding or comparing fractions.
+Observed example evidence:
+- This is a good explanation of why the answer choices do not match, because it states that both B and C are incorrect. Also, youu cannot use 3x8 to get 24; only
+- 1 / 8 = 3 so i dud 3 x 3 to get 9.
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- False_Misconception:Wrong_Fraction <-> True_Misconception:Wrong_fraction via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h (d, i, v)
+- False_Misconception:Wrong_Fraction <-> False_Misconception:Wrong_fraction via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h (d, i, v)
+- False_Misconception:Wrong_Fraction <-> False_Misconception:Incorrect_equivalent_fraction_addition via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h (f, r, a)
+Related misconceptions:
+- Wrong_Fraction (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h; d, i, v, i, d, e, d,  , |,  , f, r, a, c, t, i, o, n,  , |,  , p, a, r, t, -, w, h, o, l, e,  , r, e, a, s, o, n, i, n, g,  , |,  , s, t, r, u, c, t, u, r, e, -, p, r, e, s, e, r, v, i, n, g,  , a, r, i, t, h, m, e, t, i, c,  , |,  , t, i, m, e, s,  , |,  , w, h, i, c, h)
+- Incorrect_equivalent_fraction_addition (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h,  , |,  , p, o, s, s, i, b, l, e, _, c, o, n, f, u, s, i, o, n, _, w, i, t, h; f, r, a, c, t, i, o, n,  , |,  , p, a, r, t, -, w, h, o, l, e,  , r, e, a, s, o, n, i, n, g,  , |,  , s, t, r, u, c, t, u, r, e, -, p, r, e, s, e, r, v, i, n, g,  , a, r, i, t, h, m, e, t, i, c,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)
+- Wrong_fraction (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r,  , |,  , s, h, a, r, e, s, _, c, o, g, n, i, t, i, v, e, _, r, o, o, t, _, w, i, t, h; 3, /, 8,  , |,  , d, i, v, i, d, e, d,  , |,  , p, a, r, t, -, w, h, o, l, e,  , r, e, a, s, o, n, i, n, g,  , |,  , s, t, r, u, c, t, u, r, e, -, p, r, e, s, e, r, v, i, n, g,  , a, r, i, t, h, m, e, t, i, c,  , |,  , t, i, m, e, s)","{""misconception_id"": ""False_Misconception:Wrong_fraction"", ""affinity_score"": 1.0, ""confidence"": 1.0, ""reasoning_short"": ""Evidence aligns with Wrong_fraction."", ""evidence_spans"": [""think""]}",knowledge_guided,mock
+True_Neither:NA,1.0,0.7,Evidence aligns with True_Neither:NA.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.6069107055664062,1.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Neither:NA"", ""affinity_score"": 1.0, ""confidence"": 0.7, ""reasoning_short"": ""Evidence aligns with True_Neither:NA."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Correct:NA,1.0,0.7,Evidence aligns with True_Correct:NA.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.384271889925003,1.0,0,0,0,0.0,0.0,0.0,0,0,0.0,,,,"Candidate family: unknown
+Short description: none
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.000
+Formal counterexample: none
+Remediation hint: none
+Observed example evidence:
+- none
+Subgraph size: 0 nodes, 0 edges, density=0.000
+Subgraph edges:
+- none
+Related misconceptions:
+- none","{""misconception_id"": ""True_Correct:NA"", ""affinity_score"": 1.0, ""confidence"": 0.7, ""reasoning_short"": ""Evidence aligns with True_Correct:NA."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Shorter_is_bigger,1.0,1.0,Evidence aligns with Shorter_is_bigger.,"['number', '6.2']",36698,0.0058921207673847,1.0,13,2,0,0.3333333333333333,0.0,0.35,4,6,1.0,number | 6.2,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Shorter_is_bigger'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: number | 6.2
+Matched concept terms: none
+Ontology support score: 0.350
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 6.2 is greater because 6 is just a whole number and all the others have zero in the numbers
+- beacause the closed the digit is to a whole number the bigger it gets
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Whole_numbers_larger <-> False_Misconception:Whole_numbers_larger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)
+- True_Misconception:Whole_numbers_larger <-> False_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)
+- True_Misconception:Whole_numbers_larger <-> True_Misconception:Shorter_is_bigger via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, c)
+Related misconceptions:
+- Shorter_is_bigger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; b, i, g, g, e, r,  , |,  , d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r,  , |,  , s, m, a, l, l, e, r)
+- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r,  , |,  , n, u, m, b, e, r, s)
+- Whole_numbers_larger (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, c, i, m, a, l,  , |,  , n, u, m, b, e, r, s)","{""misconception_id"": ""True_Misconception:Shorter_is_bigger"", ""affinity_score"": 1.0, ""confidence"": 1.0, ""reasoning_short"": ""Evidence aligns with Shorter_is_bigger."", ""evidence_spans"": [""number"", ""6.2""]}",knowledge_guided,mock
+True_Misconception:Tacking,1.0,0.73,Evidence aligns with Tacking.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.0003985239891335,1.0,13,0,0,0.0,0.0,0.2,4,5,0.8333333333333334,,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Tacking'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- -3 because 8-5 is 3 and if you make it a negative number you get -3
+- -3 is the amswer as 8-5=3.
+Subgraph size: 4 nodes, 5 edges, density=0.833
+Subgraph edges:
+- False_Misconception:Wrong_Operation <-> False_Misconception:Tacking via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- False_Misconception:Wrong_Operation <-> True_Misconception:Tacking via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- True_Misconception:Tacking <-> False_Misconception:Positive via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, e, g)
+Related misconceptions:
+- Tacking (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , b, u, t,  , |,  , m, i, n, u, s,  , |,  , n, e, g, a, t, i, v, e)
+- Wrong_Operation (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , j, u, s, t)
+- Positive (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, e, g, a, t, i, v, e)","{""misconception_id"": ""True_Misconception:Tacking"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Tacking."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Wrong_term,1.0,0.73,Evidence aligns with Wrong_term.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.0003203794185537,1.0,3,0,0,0.0,0.0,0.2,4,6,1.0,,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Wrong_term'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 2+6=8 and because every pattern adds 3 on so pattern6 is 26
+- all your doing is adding five dots more for each one
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Firstterm <-> False_Misconception:Wrong_term via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- True_Misconception:Firstterm <-> False_Misconception:Firstterm via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- True_Misconception:Firstterm <-> True_Misconception:Wrong_term via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (e, a, c)
+Related misconceptions:
+- Wrong_term (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; e, a, c, h,  , |,  , e, v, e, r, y,  , |,  , p, a, t, t, e, r, n,  , |,  , t, i, m, e)
+- Firstterm (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; e, a, c, h,  , |,  , p, a, t, t, e, r, n,  , |,  , t, i, m, e)
+- Firstterm (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; p, a, t, t, e, r, n)","{""misconception_id"": ""True_Misconception:Wrong_term"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Wrong_term."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Inversion,1.0,0.73,Evidence aligns with Inversion.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.0002441635879222,1.0,2,0,0,0.0,0.0,0.2,3,3,1.0,,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Inversion'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- Then you multiply the denominator by 5 and keep the numerator the same.
+- first you have to turn 5 into a fraction, so it turns into 1/5. then multiply like normal and then convert to mixed number.
+Subgraph size: 3 nodes, 3 edges, density=1.000
+Subgraph edges:
+- False_Misconception:Inversion <-> True_Misconception:Inversion via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, n)
+- False_Misconception:Inversion <-> False_Misconception:Denominator-only_change via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, n)
+- False_Misconception:Denominator-only_change <-> True_Misconception:Inversion via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (d, e, n)
+Related misconceptions:
+- Inversion (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, n, o, m, i, n, a, t, o, r)
+- Denominator-only_change (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; d, e, n, o, m, i, n, a, t, o, r)","{""misconception_id"": ""True_Misconception:Inversion"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Inversion."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Additive,1.0,0.73,Evidence aligns with Additive.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.000243018817855,1.0,35,0,0,0.0,0.0,0.2,4,6,1.0,,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Additive'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- Because 15 is 5 more than 10 and if you do 9-5 it’s 4
+- Because 9+15 you have to add 6 onto it to get 15
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Additive <-> True_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (g, e, t)
+- True_Misconception:Additive <-> False_Misconception:Additive via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+- True_Misconception:Additive <-> False_Misconception:Adding_terms via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)
+Related misconceptions:
+- Additive (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , g, e, t,  , |,  , t, h, i, n, k)
+- Adding_terms (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , g, e, t,  , |,  , t, h, i, n, k)
+- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; g, e, t,  , |,  , t, h, i, n, k)","{""misconception_id"": ""True_Misconception:Additive"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Additive."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock
+True_Misconception:Incomplete,1.0,0.73,Evidence aligns with Incomplete.,['TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog'],36698,0.000212482875213,1.0,9,0,0,0.0,0.0,0.2,4,6,1.0,,,_ | a | d | e | g | i | l | r | t,"Candidate family: True_
+Short description: Student reasoning appears consistent with the misconception 'Incomplete'.
+Concept tags: none
+Cognitive roots: none
+Prerequisite concepts: none
+Matched trigger patterns: none
+Matched concept terms: none
+Ontology support score: 0.200
+Formal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.
+Remediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.
+Observed example evidence:
+- 3 out of 9 parts aren't shaded.
+- 3 out of 9 triangles are not shaded.
+Subgraph size: 4 nodes, 6 edges, density=1.000
+Subgraph edges:
+- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)
+Related misconceptions:
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)
+- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)
+- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d)","{""misconception_id"": ""True_Misconception:Incomplete"", ""affinity_score"": 1.0, ""confidence"": 0.73, ""reasoning_short"": ""Evidence aligns with Incomplete."", ""evidence_spans"": [""TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog""]}",knowledge_guided,mock

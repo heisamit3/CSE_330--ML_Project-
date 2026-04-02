@@ -1,0 +1,68 @@
+CELL 4 (code):
+
+# ============================================================================
+# CELL 4: Helper Functions
+# ============================================================================
+
+def log(msg):
+    print(msg, flush=True)
+
+
+def resolve_path(candidates, label="path", must_exist=True):
+    """Return the first existing path from a list of candidates."""
+    for p in candidates:
+        if os.path.exists(p):
+            log(f"  Found {label}: {p}")
+            return p
+    if must_exist:
+        raise FileNotFoundError(
+            f"Could not find {label}. Tried: {candidates}"
+        )
+    return None
+
+
+def find_model_path(base_path):
+    """Recursively find directory containing config.json + model weights."""
+    for depth in range(6):
+        pattern = os.path.join(base_path, *["*"] * depth, "config.json")
+        for cfg in glob.glob(pattern):
+            d = os.path.dirname(cfg)
+            weights = glob.glob(os.path.join(d, "model*.safetensors")) + \
+                      glob.glob(os.path.join(d, "pytorch_model*.bin"))
+            if weights:
+                return d
+    return base_path
+
+
+def find_adapter_path(base_path):
+    """Recursively find directory containing adapter_config.json."""
+    for depth in range(6):
+        pattern = os.path.join(base_path, *["*"] * depth, "adapter_config.json")
+        hits = glob.glob(pattern)
+        preferred = [h for h in hits if "adapter" in h or "full_train" in h]
+        if preferred:
+            return os.path.dirname(preferred[0])
+        if hits:
+            return os.path.dirname(hits[0])
+    return base_path
+
+
+def clear_gpu_memory():
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+        torch.cuda.synchronize()
+
+
+def format_input(row):
+    """Format a data row into the model's expected input text."""
+    x = "This answer is correct." if row["is_correct"] else "This answer is incorrect."
+    return (
+        f"Question: {row['QuestionText']}\n"
+        f"Answer: {row['MC_Answer']}\n"
+        f"{x}\n"
+        f"Student Explanation: {row['StudentExplanation']}"
+    )
+
+
+log("Helpers loaded.")

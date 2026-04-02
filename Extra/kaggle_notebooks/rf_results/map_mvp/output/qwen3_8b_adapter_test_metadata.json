@@ -1,0 +1,12 @@
+{
+  "split": "test",
+  "rows": 3,
+  "labels": 65,
+  "family_filter": true,
+  "top_k_export": 12,
+  "artifact_files": {
+    "wide_topk": "/kaggle/working/map_mvp/baseline_artifacts/qwen3_8b_adapter_test_topk.csv",
+    "long_scores": "/kaggle/working/map_mvp/baseline_artifacts/qwen3_8b_adapter_test_scores_long.csv",
+    "submission": "/kaggle/working/map_mvp/output/qwen3_8b_adapter_test_submission.csv"
+  }
+}

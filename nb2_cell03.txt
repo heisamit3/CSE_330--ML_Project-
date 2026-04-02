@@ -1,0 +1,75 @@
+CELL 3 (code):
+
+# ============================================================================
+# CELL 3: Configuration
+# ============================================================================
+
+# ----- Paths to competition data -----
+DATA_CANDIDATES = [
+    "/kaggle/input/competitions/map-charting-student-math-misunderstandings",
+    "/kaggle/input/map-ds/DS",
+    "/kaggle/input/map-charting-student-math-misunderstandings",
+]
+
+# ----- Paths to Qwen3-8B base model -----
+BASE_MODEL_CANDIDATES = [
+    "/kaggle/input/loaded-models/loaded_models/Qwen3-8B",
+    "/kaggle/input/loaded_models/loaded_models/Qwen3-8B",
+    "/kaggle/input/datasets/mkhanshovon43/base-modelsh7bq2-5-7b3-8b/loaded_models/Qwen3-8B",
+    "/kaggle/input/qwen3-8b/Qwen3-8B",
+    "/kaggle/input/qwen-qwen3-8b",
+]
+
+# ----- Paths to trained LoRA adapter -----
+ADAPTER_CANDIDATES = [
+    "/kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/adapter",
+    "/kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/adapter",
+    "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/adapter",
+    "/kaggle/input/map-qwen3-8b-qlora/adapter",
+]
+
+# ----- Paths to label encoder -----
+LABEL_ENC_CANDIDATES = [
+    "/kaggle/input/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib",
+    "/kaggle/input/map_qwen3_8b_trained/qwen3-8b-qlora/label_encoder.joblib",
+    "/kaggle/input/datasets/mkhanshovon43/map-qwen3-8b-trained/qwen3-8b-qlora/label_encoder.joblib",
+    "/kaggle/input/map-qwen3-8b-qlora/label_encoder.joblib",
+]
+
+# ----- Paths to rf.ipynb output (pre-computed pipeline artifacts) -----
+RF_OUTPUT_CANDIDATES = [
+    "/kaggle/input/datasets/mkhanshovon43/map-mvp/map_mvp",
+    "/kaggle/input/rf-pipeline-output/map_mvp",
+    "/kaggle/input/rf-notebook-output/map_mvp",
+    "/kaggle/input/kaggle-run-full/map_mvp",
+    "/kaggle/working/map_mvp",
+]
+
+# ----- Hyperparameters -----
+MAX_LEN      = 256
+BATCH_SIZE   = 4
+TOP_K        = 12
+TOP_K_SUBMIT = 3
+
+# ----- Ensemble weights (from rf.ipynb config) -----
+ENSEMBLE_WEIGHTS = {
+    "baseline_score":           0.18,
+    "kb_score":                 0.15,
+    "confidence":               0.07,
+    "ontology_support_score":   0.12,
+    "trigger_score":            0.06,
+    "concept_score":            0.05,
+    "subgraph_density":         0.04,
+    "causal_delta":             0.14,
+    "relative_delta":           0.08,
+    "causal_confidence":        0.07,
+    "style_preservation_score": 0.02,
+    "graph_neighbor_count":     0.01,
+    "trigger_match_count":      0.01,
+}
+XGB_BLEND = 0.3   # final = (1-XGB_BLEND)*weighted + XGB_BLEND*xgb
+
+EXPLAIN_SAMPLES  = 5
+MAX_NEW_TOKENS   = 250
+
+print("Configuration loaded.")

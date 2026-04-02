@@ -1,0 +1,36 @@
+CELL 1 (code):
+
+# ============================================================================
+# CELL 1: Optional Dependencies
+# ============================================================================
+import importlib.util
+import os, sys, subprocess
+
+def ensure_optional_bitsandbytes():
+    if importlib.util.find_spec("bitsandbytes") is not None:
+        print("bitsandbytes already available")
+        return
+
+    bnb_paths = [
+        "/kaggle/input/datasets/mdmarufhasanrubab/bnb-wheel/bitsandbytes-0.49.2-py3-none-manylinux_2_24_x86_64.whl",
+        "/kaggle/input/bitsandbytes-whl/bitsandbytes-0.45.3-py3-none-manylinux_2_24_x86_64.whl",
+        "/kaggle/input/bnb-whl/bitsandbytes-0.45.3-py3-none-manylinux_2_24_x86_64.whl",
+    ]
+
+    for p in bnb_paths:
+        if not os.path.exists(p):
+            continue
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", p])
+            print(f"Installed bitsandbytes from {p}")
+            return
+        except subprocess.CalledProcessError as exc:
+            print(f"Local bitsandbytes install failed from {p}: {exc}")
+
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "bitsandbytes>=0.46.1"])
+        print("Installed bitsandbytes from PyPI")
+    except subprocess.CalledProcessError as exc:
+        print("bitsandbytes could not be installed.", exc)
+
+ensure_optional_bitsandbytes()

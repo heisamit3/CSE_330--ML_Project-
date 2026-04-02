@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Misconception:Irrelevant",
+  "affinity_score": 1.0,
+  "confidence": 0.9912,
+  "reasoning_short": "Evidence aligns with Irrelevant.",
+  "evidence_spans": [
+    "think"
+  ],
+  "row_id": 36696,
+  "baseline_score": 1.1834501492558047e-05,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 36,
+  "trigger_match_count": 1,
+  "concept_match_count": 0,
+  "trigger_score": 0.16666666666666666,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.275,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "think",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Irrelevant'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: think\nMatched concept terms: none\nOntology support score: 0.275\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- 10 and 15 are both in 5 times table\r\n5 times 3 is 15 so i divided 9 by 3 then times 2\n- 10 is in the 5 x tables. 5x2=10 5x3=15    9 is in the 3 x tables.  3x3=9 3x2=6\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Neither:nan <-> False_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)\n- True_Neither:nan <-> True_Misconception:Irrelevant via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (t, h, i)\n- True_Neither:nan <-> False_Misconception:Wrong_fraction via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (t, h, i)\nRelated misconceptions:\n- Wrong_fraction (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; t, h, i, n, k,  , |,  , t, h, r, e, e,  , |,  , t, i, m, e, s)\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; t, h, i, n, k,  , |,  , t, i, m, e, s)\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; t, h, i, n, k,  , |,  , t, i, m, e, s)",
+  "raw_response": "{\"misconception_id\": \"True_Misconception:Irrelevant\", \"affinity_score\": 1.0, \"confidence\": 0.9912, \"reasoning_short\": \"Evidence aligns with Irrelevant.\", \"evidence_spans\": [\"think\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

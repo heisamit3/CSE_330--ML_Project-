@@ -1,0 +1,51 @@
+CELL 6 (code):
+
+# ============================================================================
+# CELL 6: Check for Pre-computed Scores from rf.ipynb Output
+# ============================================================================
+rf_output_dir = resolve_path(RF_OUTPUT_CANDIDATES, "rf.ipynb output", must_exist=False)
+
+HAS_FULL_SCORES    = False
+HAS_BASELINE_ONLY  = False
+full_scores_df     = None
+baseline_scores_df = None
+
+if rf_output_dir:
+    # Try loading full fused scores
+    full_path = os.path.join(rf_output_dir, "output", "test_full_scores.csv")
+    if os.path.exists(full_path):
+        full_scores_df = pd.read_csv(full_path)
+        HAS_FULL_SCORES = True
+        log(f"Loaded FULL scores: {full_scores_df.shape} from {full_path}")
+        log(f"  Columns: {list(full_scores_df.columns)}")
+
+    # Try loading baseline scores
+    bl_path = os.path.join(rf_output_dir, "baseline_artifacts",
+                           "qwen3_8b_adapter_test_scores_long.csv")
+    if os.path.exists(bl_path):
+        baseline_scores_df = pd.read_csv(bl_path)
+        HAS_BASELINE_ONLY = True
+        log(f"Loaded BASELINE scores: {baseline_scores_df.shape} from {bl_path}")
+
+    # Load KB and graph info
+    kb_path = os.path.join(rf_output_dir, "data", "misconception_kb.json")
+    if os.path.exists(kb_path):
+        with open(kb_path, "r") as f:
+            kb_data = json.load(f)
+        log(f"Loaded Knowledge Base: {len(kb_data)} entries")
+    else:
+        kb_data = None
+        log("Knowledge Base not found.")
+
+    graph_summary_path = os.path.join(rf_output_dir, "graph", "graph_summary.json")
+    if os.path.exists(graph_summary_path):
+        with open(graph_summary_path, "r") as f:
+            graph_summary = json.load(f)
+        log(f"Graph summary: {graph_summary}")
+
+if HAS_FULL_SCORES:
+    log("\n>>> FULL pre-computed scores available — will use ensemble fusion.")
+elif HAS_BASELINE_ONLY:
+    log("\n>>> Only BASELINE scores available — will use baseline ranking.")
+else:
+    log("\n>>> No pre-computed scores found — will run inference from scratch.")

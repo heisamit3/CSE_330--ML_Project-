@@ -1,0 +1,6 @@
+CELL 10 (markdown):
+
+---
+## Phase 2: Explainable AI
+
+Free GPU memory from classification, reload Qwen3-8B as a **CausalLM** (text generator), and produce natural-language explanations for a sample of predictions.

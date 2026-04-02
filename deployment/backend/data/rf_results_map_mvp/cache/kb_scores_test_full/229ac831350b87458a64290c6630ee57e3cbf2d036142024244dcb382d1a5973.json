@@ -1,0 +1,29 @@
+{
+  "misconception_id": "False_Misconception:Irrelevant",
+  "affinity_score": 1.0,
+  "confidence": 1.0,
+  "reasoning_short": "Evidence aligns with Irrelevant.",
+  "evidence_spans": [
+    "think",
+    "answer"
+  ],
+  "row_id": 36697,
+  "baseline_score": 9.96452035906259e-06,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 37,
+  "trigger_match_count": 3,
+  "concept_match_count": 0,
+  "trigger_score": 0.5,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.42500000000000004,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "think | answer | into",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: False_\nShort description: Student reasoning appears consistent with the misconception 'Irrelevant'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: think | answer | into\nMatched concept terms: none\nOntology support score: 0.425\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- 120 is in the times table\n- I used the 5 times table and got 24\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- False_Misconception:Irrelevant <-> True_Correct:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)\n- False_Misconception:Irrelevant <-> True_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)\n- False_Misconception:Irrelevant <-> False_Correct:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)\nRelated misconceptions:\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, n, s, w, e, r,  , |,  , d, i, v, i, d, e, d,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, n, s, w, e, r,  , |,  , d, i, v, i, d, e, d,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, n, s, w, e, r,  , |,  , g, e, t,  , |,  , t, h, i, n, k,  , |,  , t, i, m, e, s)",
+  "raw_response": "{\"misconception_id\": \"False_Misconception:Irrelevant\", \"affinity_score\": 1.0, \"confidence\": 1.0, \"reasoning_short\": \"Evidence aligns with Irrelevant.\", \"evidence_spans\": [\"think\", \"answer\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

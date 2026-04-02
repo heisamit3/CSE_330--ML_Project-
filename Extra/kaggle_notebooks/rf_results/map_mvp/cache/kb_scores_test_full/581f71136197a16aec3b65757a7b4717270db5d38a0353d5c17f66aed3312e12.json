@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Misconception:Additive",
+  "affinity_score": 1.0,
+  "confidence": 0.73,
+  "reasoning_short": "Evidence aligns with Additive.",
+  "evidence_spans": [
+    "TASK=score_candidate\nYou are a careful math misconception rater.\nUse the ontolog"
+  ],
+  "row_id": 36698,
+  "baseline_score": 0.000243018817855,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 35,
+  "trigger_match_count": 0,
+  "concept_match_count": 0,
+  "trigger_score": 0.0,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.2,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Additive'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: none\nMatched concept terms: none\nOntology support score: 0.200\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- Because 15 is 5 more than 10 and if you do 9-5 it’s 4\n- Because 9+15 you have to add 6 onto it to get 15\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Misconception:Additive <-> True_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (g, e, t)\n- True_Misconception:Additive <-> False_Misconception:Additive via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\n- True_Misconception:Additive <-> False_Misconception:Adding_terms via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, d, d)\nRelated misconceptions:\n- Additive (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , g, e, t,  , |,  , t, h, i, n, k)\n- Adding_terms (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; a, d, d,  , |,  , g, e, t,  , |,  , t, h, i, n, k)\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; g, e, t,  , |,  , t, h, i, n, k)",
+  "raw_response": "{\"misconception_id\": \"True_Misconception:Additive\", \"affinity_score\": 1.0, \"confidence\": 0.73, \"reasoning_short\": \"Evidence aligns with Additive.\", \"evidence_spans\": [\"TASK=score_candidate\\nYou are a careful math misconception rater.\\nUse the ontolog\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

@@ -1,0 +1,17 @@
+CELL 0 (markdown):
+
+# RF Full Pipeline — Inference + Explainable AI
+
+This notebook loads pre-computed pipeline outputs from the **`rf.ipynb`** Kaggle run and generates the final competition submission with explainable AI analysis.
+
+### Required Kaggle Datasets (attach before running):
+| Slug | Contents |
+|------|----------|
+| `map_ds` (or competition data) | `DS/train.csv`, `DS/test.csv` (`misconception_mapping.csv` optional) |
+| `Base_models` (Qwen3-8B) | `Qwen3-8B/` base model weights |
+| `MAP_qwen3_8b_trained` | `qwen3-8b-qlora/adapter/`, `label_encoder.joblib`, `run_config.json` |
+| **rf.ipynb output** (save as dataset) | `map_mvp/` — baseline_artifacts, data, graph, output |
+
+### Pipeline Phases:
+- **Phase 1 (Cells 1-9):** Load pre-computed scores → ensemble fusion → family filtering → `submission.csv`
+- **Phase 2 (Cells 10-14):** Load Qwen3-8B as CausalLM → generate explanations → `explanations.json`

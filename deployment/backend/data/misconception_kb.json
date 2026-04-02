@@ -1,772 +1,2385 @@
-{
-  "Incomplete": {
-    "plain_definition": "Incomplete refers to a misunderstanding where a student provides an answer that is partially correct but fails to fully simplify the fraction or recognize the correct numerator and denominator.",
-    "typical_wrong_thought": [
-      "Only counting the unshaded parts without considering the total number of parts",
-      "Failing to simplify the fraction to its lowest terms",
-      "Assuming the total number of parts is incorrect",
-      "Not recognizing that the shaded and unshaded parts should both be considered in the fraction"
+[
+  {
+    "misconception_id": "True_Correct:nan",
+    "misconception_name": "nan",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'nan'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "times",
+      "which",
+      "divided",
+      "1/3",
+      "answer"
     ],
-    "correct_rule": [
-      "To find the fraction of the shape that is not shaded, count the number of unshaded parts and divide by the total number of parts.",
-      "Simplify the resulting fraction to its lowest terms by dividing both the numerator and denominator by their greatest common divisor.",
-      "Ensure that the total number of parts is accurate and that the parts are equal in size."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "nan"
     ],
-    "fix_steps": [
-      "Identify the total number of equal parts in the shape.",
-      "Count the number of unshaded parts.",
-      "Write the fraction as unshaded parts over total parts.",
-      "Simplify the fraction by dividing both numerator and denominator by their greatest common divisor.",
-      "Check that the fraction is in its simplest form.",
-      "Verify that the parts are equal and the counting is accurate."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "0ne third is equal to tree nineth",
+      "1 / 3 because 6 over 9 is 2 thirds and 1 third is not shaded."
     ],
-    "quick_check": "What fraction of the shape is not shaded? Give your answer in its simplest form. [Image: A circle split into 8 equal parts. 5 of them are shaded.]",
-    "tiny_example": "Total parts: 8\nUnshaded parts: 3\nFraction: 3/8\nSimplified: 3/8"
+    "support_count": 14802,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Additive": {
-    "plain_definition": "Students make this mistake: Additive.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "True_Neither:nan",
+    "misconception_name": "nan",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'nan'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "answer",
+      "times",
+      "get",
+      "number",
+      "out"
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "nan"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1 3rd is half of 3 6th, so it is simplee to understand.",
+      "1 goes into everything and 3 goes into nine"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "support_count": 5265,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Duplication": {
-    "plain_definition": "Duplication is a misconception where students multiply both the numerator and denominator of a fraction by the same number, even when they should only multiply the numerator by the number.",
-    "typical_wrong_thought": [
-      "Multiplying the denominator by the whole number is necessary to keep the fraction equivalent.",
-      "To multiply a fraction by a whole number, both parts of the fraction must be multiplied by that number.",
-      "The denominator should always be multiplied by the whole number to maintain the value of the fraction."
+  {
+    "misconception_id": "True_Misconception:Incomplete",
+    "misconception_name": "Incomplete",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Incomplete'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "triangles",
+      "shaded",
+      "shaded.",
+      "out",
+      "triangles not",
+      "not"
     ],
-    "correct_rule": [
-      "To multiply a fraction by a whole number, multiply the numerator of the fraction by the whole number.",
-      "The denominator of the fraction remains unchanged unless the fraction is being multiplied by another fraction.",
-      "Simplifying the result is a separate step after multiplication."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Incomplete"
     ],
-    "fix_steps": [
-      "Identify the fraction and the whole number being multiplied.",
-      "Multiply the numerator of the fraction by the whole number.",
-      "Keep the denominator of the fraction the same.",
-      "Simplify the resulting fraction if possible.",
-      "Check if the answer makes sense in relation to the original fraction.",
-      "Use visual models or number lines to reinforce the concept."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "3 out of 9 parts aren't shaded.",
+      "3 out of 9 triangles are not shaded."
     ],
-    "quick_check": "Calculate $ \\frac{3}{4} \\times 6 $",
-    "tiny_example": "To multiply $ \\frac{2}{3} \\times 5 $, multiply 2 by 5 to get 10. The denominator stays 3. So, the answer is $ \\frac{10}{3} $, not $ \\frac{10}{15} $."
+    "support_count": 8,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Subtraction": {
-    "plain_definition": "Students make this mistake: Subtraction.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "True_Misconception:WNB",
+    "misconception_name": "WNB",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'WNB'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "3/6",
+      "there",
+      "not",
+      "not shaded",
+      "shaded",
+      "1/3."
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "WNB"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "Because there are 6 triangles and 3 are white. That is 3/6 simplified to 1/3.",
+      "I know this because, I counted all of the blue triangles and I got 6 and because there are 3 white triangle that are not shaded, my answer is 3/6. If you simpli"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "support_count": 8,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Positive": {
-    "plain_definition": "The misconception is believing that subtracting a negative number always results in a positive number, without considering the actual operation of subtraction.",
-    "typical_wrong_thought": [
-      "Two minuses make a positive",
-      "Negative minus negative is always positive",
-      "Subtracting a negative is like adding a positive"
+  {
+    "misconception_id": "False_Neither:nan",
+    "misconception_name": "nan",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'nan'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "there",
+      "not",
+      "answer",
+      "times",
+      "number"
     ],
-    "correct_rule": [
-      "Subtracting a negative number is the same as adding its positive counterpart.",
-      "To subtract a negative, you add the opposite of that number.",
-      "The result of (-8) - (-5) is (-8) + 5 = -3."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "nan"
     ],
-    "fix_steps": [
-      "Understand that subtracting a negative number is equivalent to adding its positive version.",
-      "Rewrite the expression as addition of the opposite: (-8) - (-5) becomes (-8) + 5.",
-      "Perform the addition: (-8) + 5 = -3.",
-      "Check your answer by considering the signs and operations involved.",
-      "Use a number line to visualize the movement when subtracting a negative.",
-      "Practice with different negative numbers to reinforce the concept."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "! simplefined it and that was what i got",
+      "1 / 2"
     ],
-    "quick_check": "What is (-7) - (-4)?",
-    "tiny_example": "(-8) - (-5) = (-8) + 5 = -3\nSubtracting a negative is like adding a positive.\nUse a number line to see the result."
+    "support_count": 6542,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Wrong_term": {
-    "plain_definition": "Wrong_term refers to a misunderstanding where a student incorrectly identifies the pattern or rule governing a sequence, leading to an incorrect answer.",
-    "typical_wrong_thought": [
-      "The pattern is simply adding 4 each time",
-      "The difference between terms is always 4",
-      "The next term is found by adding 4 to the previous term",
-      "The pattern is linear with a constant difference"
+  {
+    "misconception_id": "False_Misconception:WNB",
+    "misconception_name": "WNB",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'WNB'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "shaded",
+      "not",
+      "there",
+      "not shaded",
+      "think",
+      "triangles"
     ],
-    "correct_rule": [
-      "The sequence increases by 4 each time",
-      "The pattern is an arithmetic sequence with a common difference of 4",
-      "Each term is 4 more than the previous term",
-      "The nth term can be found by starting at 6 and adding 4(n-1)"
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "WNB"
     ],
-    "fix_steps": [
-      "Identify the difference between consecutive terms in the sequence.",
-      "Check if the difference is consistent across all terms.",
-      "Confirm that the pattern is arithmetic with a common difference of 4.",
-      "Use the formula for the nth term of an arithmetic sequence: a_n = a_1 + (n-1)d.",
-      "Apply the formula to find the next term in the sequence.",
-      "Verify the answer by counting the dots in the next pattern if possible."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "3 IS SHADED AND 6  IS NOT",
+      "3 OUT OF 6 SPOTS ARE NOT SHADED SO THE FRACTION IS 3/6"
     ],
-    "quick_check": "Dots have been arranged in these patterns: [Image: Pattern 1 consists of 6 dots, Pattern 2 consists of 10 dots, Pattern 3 consists of 14 dots and Pattern 4 consists of 18 dots] How many dots would the 5th pattern have?",
-    "tiny_example": "Pattern 1: 6 dots\nPattern 2: 10 dots\nPattern 3: 14 dots\nPattern 4: 18 dots\nPattern 5: 22 dots"
+    "support_count": 291,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Irrelevant": {
-    "plain_definition": "Irrelevant refers to a misconception where a student uses information that is not directly related to the problem at hand to solve it.",
-    "typical_wrong_thought": [
-      "Focusing on numbers that are not part of the equation",
-      "Using patterns or tables that don't apply to the current problem",
-      "Ignoring the structure of the equation and focusing on unrelated facts"
+  {
+    "misconception_id": "False_Misconception:Incomplete",
+    "misconception_name": "Incomplete",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Incomplete'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "there",
+      "shaded",
+      "not",
+      "triangles",
+      "not shaded",
+      "there triangles"
     ],
-    "correct_rule": [
-      "Always focus on the relationship between the numbers in the equation.",
-      "Use cross-multiplication to solve proportions correctly.",
-      "Check that all steps are relevant to solving for the unknown variable."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Incomplete"
     ],
-    "fix_steps": [
-      "Identify the equation and the unknown variable you are solving for.",
-      "Write down the correct method for solving proportions (cross-multiplication).",
-      "Apply the method step by step, ensuring each step is relevant to the problem.",
-      "Check your answer by substituting it back into the original equation.",
-      "Review the problem to ensure you are not using irrelevant information.",
-      "Practice with similar problems to reinforce correct problem-solving strategies."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "9 triangles in total and 3 are not shaded and 6 are.",
+      "Because there are 3 triangles not shaded in."
     ],
-    "quick_check": "\\( \\frac{x}{5} = \\frac{4}{10} \\) What is the value of \\( x \\)?",
-    "tiny_example": "In the equation \\( \\frac{A}{10} = \\frac{9}{15} \\), the correct approach is to cross-multiply: 15A = 90, so A = 6. Students who answer 3 are using irrelevant information like the 3 times table, which does not apply here."
+    "support_count": 1446,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Wrong_fraction": {
-    "plain_definition": "Wrong_fraction is a misconception where students incorrectly interpret or calculate fractions, often leading to errors in finding parts of a whole or comparing fractions.",
-    "typical_wrong_thought": [
-      "Multiplying the numerator by the denominator to find the total",
-      "Dividing the denominator by the numerator to find the total",
-      "Adding the numerator and denominator to find the total",
-      "Misapplying fraction multiplication or division rules"
+  {
+    "misconception_id": "False_Correct:nan",
+    "misconception_name": "nan",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'nan'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "answer",
+      "times",
+      "divided",
+      "which",
+      "there"
     ],
-    "correct_rule": [
-      "To find a fraction of a quantity, multiply the quantity by the fraction.",
-      "To find the remaining part, subtract the given fraction from 1 and multiply by the total.",
-      "Fractions represent parts of a whole, so the denominator is the total number of parts."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "nan"
     ],
-    "fix_steps": [
-      "Understand that a fraction like 3/8 means 3 parts out of 8 total parts.",
-      "Calculate the total number of parts by multiplying the denominator by the total quantity.",
-      "Find the number of parts represented by the fraction by multiplying the numerator by the total quantity.",
-      "Subtract the number of parts represented by the fraction from the total to find the remaining parts.",
-      "Check if the answer makes sense in the context of the problem."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "Because 3 of 9 are not shaded as a simplified fraction it would be 1 3rd",
+      "Because the fraction is 3/9 and if you simplify that by three (because 3 and 9 are both in the three times tables) then you get 1/3"
     ],
-    "quick_check": "A pizza is cut into 6 slices. If you eat 2/6 of the pizza, how many slices did you eat?",
-    "tiny_example": "If 3/8 of 24 balls are yellow, first find 1/8 of 24 (which is 3), then multiply by 3 to get 9 yellow balls. Subtract 9 from 24 to find 15 green balls."
+    "support_count": 227,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Inversion": {
-    "plain_definition": "Inversion refers to the incorrect belief that when multiplying a fraction by a whole number, only the denominator is multiplied, while the numerator remains unchanged.",
-    "typical_wrong_thought": [
-      "Multiplying a fraction by a whole number only affects the denominator.",
-      "The numerator stays the same when multiplying by a whole number.",
-      "You only multiply the denominator by the whole number."
+  {
+    "misconception_id": "False_Misconception:SwapDividend",
+    "misconception_name": "SwapDividend",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'SwapDividend'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "divided",
+      "divide",
+      "think",
+      "which",
+      "half",
+      "1/2"
     ],
-    "correct_rule": [
-      "When multiplying a fraction by a whole number, multiply the numerator by the whole number and keep the denominator the same.",
-      "The whole number is multiplied by the numerator of the fraction.",
-      "The denominator remains unchanged during multiplication."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "SwapDividend"
     ],
-    "fix_steps": [
-      "Identify the fraction and the whole number in the problem.",
-      "Multiply the numerator of the fraction by the whole number.",
-      "Keep the denominator of the fraction unchanged.",
-      "Write the result as a new fraction with the new numerator and original denominator.",
-      "Simplify the fraction if possible."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1 / 2 divided by 6 is 3",
+      "1 / 2 of a dividend by 6 is also 6 dividedd by 1 half and that's 3."
     ],
-    "quick_check": "Calculate $ \\frac{3}{4} \\times 6 $",
-    "tiny_example": "To multiply $ \\frac{2}{3} \\times 5 $, multiply 2 by 5 to get 10, and keep the denominator 3. The result is $ \\frac{10}{3} $."
+    "support_count": 198,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Mult": {
-    "plain_definition": "The misconception 'Mult' refers to a student's incorrect understanding of division involving fractions, where they may incorrectly interpret the operation as a multiplication or misapply the concept of 'how many times' a number fits into another.",
-    "typical_wrong_thought": [
-      "Dividing by a number is the same as multiplying by that number.",
-      "The division of a fraction by a whole number is the same as finding half of that number.",
-      "The result of dividing a fraction by a whole number is always a larger number."
+  {
+    "misconception_id": "False_Misconception:Mult",
+    "misconception_name": "Mult",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Mult'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "half",
+      "think",
+      "1/2",
+      "which",
+      "six",
+      "times"
     ],
-    "correct_rule": [
-      "Dividing a fraction by a whole number is the same as multiplying the fraction by the reciprocal of the whole number.",
-      "To divide a fraction by a whole number, you can multiply the fraction by 1 over that whole number.",
-      "The result of dividing a fraction by a whole number is generally a smaller number, not necessarily larger."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Mult"
     ],
-    "fix_steps": [
-      "Understand that dividing by a number is the same as multiplying by its reciprocal.",
-      "Convert the division problem into a multiplication problem by using the reciprocal of the divisor.",
-      "Multiply the fraction by the reciprocal of the whole number.",
-      "Simplify the resulting fraction if possible.",
-      "Check if the answer makes sense in terms of size relative to the original fraction.",
-      "Use visual models or number lines to reinforce the concept of division with fractions.",
-      "Practice with multiple examples to solidify the correct understanding."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1 / 2 of 6 is 3, so the snswer is B.",
+      "1 12 times 1 2 times so it goes into 6 3 times because 3 is half of 6."
     ],
-    "quick_check": "Calculate $ \\frac{3}{4} \\div 2 $",
-    "tiny_example": "To divide $ \\frac{1}{2} $ by 6, you multiply $ \\frac{1}{2} $ by $ \\frac{1}{6} $, which gives $ \\frac{1}{12} $. The correct answer is $ \\frac{1}{12} $, not 3."
+    "support_count": 345,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Denominator-only_change": {
-    "plain_definition": "Students make this mistake: Denominator-only_change.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "False_Misconception:FlipChange",
+    "misconception_name": "FlipChange",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'FlipChange'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "divided",
+      "think",
+      "divide",
+      "half",
+      "which",
+      "get"
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "FlipChange"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1/2 is like 2 and 2 divided by 6 = 3",
+      "1/2 is like 2 and 2 divided by 6 = 3"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "support_count": 74,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Whole_numbers_larger": {
-    "plain_definition": "Whole numbers are the set of numbers that include all positive integers and zero. They are used to count objects and represent quantities without fractions or decimals.",
-    "typical_wrong_thought": [
-      "Whole numbers are larger than any other type of number.",
-      "The term 'whole number' means the number itself is large.",
-      "If a number is a whole number, it automatically has a greater value than others."
+  {
+    "misconception_id": "True_Misconception:SwapDividend",
+    "misconception_name": "SwapDividend",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'SwapDividend'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "1/2",
+      "1/12",
+      "divided",
+      "times",
+      "into",
+      "have"
     ],
-    "correct_rule": [
-      "Whole numbers are not inherently larger than other numbers; their size depends on their actual value.",
-      "To compare numbers, you must look at their numerical value, not their classification as whole numbers.",
-      "The term 'whole number' refers to the type of number, not its magnitude."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "SwapDividend"
     ],
-    "fix_steps": [
-      "Understand that 'whole number' is a category, not a measure of size.",
-      "Compare numbers based on their actual numerical value, not their type.",
-      "Review the definition of whole numbers: they include 0, 1, 2, 3, and so on.",
-      "Practice comparing numbers across different types (e.g., whole numbers, fractions, decimals).",
-      "Use number lines to visualize the relative sizes of numbers.",
-      "Ask yourself: 'Is the number's value the reason it is considered greater?'"
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1/2 goes into 6, 12 times so I put 1/12 but I'm not that sure",
+      "1/2÷6 is impossible so I did 6÷1/2 equals 12 so it’s 1/12"
     ],
-    "quick_check": "Which number is greater: 5 or 10?",
-    "tiny_example": "Whole numbers are 0, 1, 2, 3, etc.\\n5 is a whole number, but 10 is also a whole number.\\n10 is greater than 5 because it has a larger value."
+    "support_count": 8,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Adding_across": {
-    "plain_definition": "Adding_across is a misconception where students add numerators and denominators separately instead of finding a common denominator first.",
-    "typical_wrong_thought": [
-      "You just add the top numbers and the bottom numbers together.",
-      "Adding the numerators and denominators gives the correct answer.",
-      "The denominator doesn't need to be the same when adding fractions."
+  {
+    "misconception_id": "True_Misconception:Mult",
+    "misconception_name": "Mult",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Mult'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "half",
+      "times",
+      "1/2",
+      "think",
+      "can",
+      "think half"
     ],
-    "correct_rule": [
-      "To add fractions, they must have the same denominator.",
-      "Find a common denominator by using the least common multiple of the denominators.",
-      "Rewrite each fraction with the common denominator.",
-      "Add the numerators and keep the common denominator."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Mult"
     ],
-    "fix_steps": [
-      "Identify the denominators of the fractions.",
-      "Find the least common denominator (LCD) of the two denominators.",
-      "Convert each fraction to an equivalent fraction with the LCD as the denominator.",
-      "Add the numerators of the equivalent fractions and keep the common denominator.",
-      "Simplify the resulting fraction if possible."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "2x6 is 12 and half of 12 is 6",
+      "Because if you can’t divide you times"
     ],
-    "quick_check": "\\( \\frac{2}{4}+\\frac{1}{6}= \\)",
-    "tiny_example": "To add \\( \\frac{1}{2} + \\frac{1}{3} \\):\\n1. Find LCD of 2 and 3, which is 6.\\n2. Convert fractions: \\( \\frac{3}{6} + \\( \\frac{2}{6} \\).\\n3. Add numerators: \\( 3 + 2 = 5 \\).\\n4. Result: \\( \\frac{5}{6} \\)."
+    "support_count": 8,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "WNB": {
-    "plain_definition": "Students make this mistake: WNB.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "True_Misconception:FlipChange",
+    "misconception_name": "FlipChange",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'FlipChange'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "divided",
+      "will",
+      "think",
+      "1/12",
+      "divided will",
+      "will 1/12"
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "FlipChange"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "Because if you are divided 2 by 6 it will be 12 and it = 1/12",
+      "I put a because 2times3 is 6 and I thought 2 dived by 6 is 12"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "support_count": 4,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Tacking": {
-    "plain_definition": "Tacking is a common misconception where students incorrectly add or subtract the absolute values of numbers without considering the signs, leading to errors in operations involving negative numbers.",
-    "typical_wrong_thought": [
-      "Ignoring the signs when subtracting negative numbers",
-      "Adding the absolute values and applying a negative sign to the result",
-      "Thinking that subtracting a negative is like subtracting its positive counterpart"
+  {
+    "misconception_id": "False_Misconception:Irrelevant",
+    "misconception_name": "Irrelevant",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Irrelevant'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "think",
+      "answer",
+      "divided",
+      "get",
+      "into"
     ],
-    "correct_rule": [
-      "Subtracting a negative number is the same as adding its positive counterpart.",
-      "When subtracting integers, change the subtraction sign to addition and change the sign of the second number.",
-      "Always consider the signs of the numbers when performing operations."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Irrelevant"
     ],
-    "fix_steps": [
-      "Remember that subtracting a negative number is like adding its positive version.",
-      "Convert the problem to addition by changing the minus sign to a plus sign and flipping the sign of the second number.",
-      "For example, (-8) - (-5) becomes (-8) + 5.",
-      "Simplify the expression by adding the numbers: -8 + 5 = -3.",
-      "Check your answer by using a number line or counting up/down from the first number.",
-      "Practice with multiple examples to reinforce the concept."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "120 is in the times table",
+      "I used the 5 times table and got 24"
     ],
-    "quick_check": "What number belongs in the box?\n(-7) - (-4) = \n\\square",
-    "tiny_example": "(-8) - (-5) = (-8) + 5 = -3\nSubtracting a negative is like adding its positive.\nAlways flip the sign of the second number when subtracting."
+    "support_count": 409,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Unknowable": {
-    "plain_definition": "The 'Unknowable' misconception occurs when a student believes that certain mathematical problems cannot be solved with the given information, even though the information is sufficient to find a solution.",
-    "typical_wrong_thought": [
-      "You need more information to solve the problem.",
-      "The problem is impossible to answer with the given data.",
-      "There isn't enough data to form an equation."
+  {
+    "misconception_id": "False_Misconception:Wrong_Fraction",
+    "misconception_name": "Wrong_Fraction",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Wrong_Fraction' in the fraction concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "120",
+      "48.",
+      "divided",
+      "times",
+      "120 divided",
+      "which"
     ],
-    "correct_rule": [
-      "If the problem provides enough information to calculate the unknown, it is solvable.",
-      "In regular polygons, each interior angle can be used to find the number of sides using the formula: (n-2)*180/n = interior angle.",
-      "You don't need to know the sum of all angles to find the number of sides if one angle is given."
+    "formal_counterexample": "Convert to equivalent fractions with a common denominator before combining them.",
+    "remediation_hint": "Focus on unit size and denominator meaning before adding or comparing fractions.",
+    "aliases": [
+      "Wrong_Fraction"
     ],
-    "fix_steps": [
-      "Identify what information is given in the problem.",
-      "Determine if the information is sufficient to solve for the unknown.",
-      "Recall the formula for interior angles of regular polygons.",
-      "Apply the formula to the given angle to find the number of sides.",
-      "Check if the answer makes sense in the context of polygon properties.",
-      "If unsure, try plugging in possible values to test the solution.",
-      "Use diagrams or examples to verify the logic of the solution."
+    "concept_tags": [
+      "fraction"
     ],
-    "quick_check": "This is part of a regular polygon. How many sides does it have? [Image: A diagram showing an obtuse angle labelled 144 degrees]",
-    "tiny_example": "Given an interior angle of 144° in a regular polygon, the formula (n-2)*180/n = 144 can be solved for n. Plugging in, 144n = 180n - 360 → 36n = 360 → n = 10. So the polygon has 10 sides."
+    "cognitive_roots": [
+      "part-whole reasoning",
+      "structure-preserving arithmetic"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "I did 120 divided by 5 then that answer times 2",
+      "1 / 5 equals 24 so 2 of those will be 48."
+    ],
+    "support_count": 273,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Wrong_Fraction": {
-    "plain_definition": "Wrong_Fraction is a misconception where students incorrectly apply fraction operations, often by misunderstanding how to multiply fractions by whole numbers or misinterpreting the numerator and denominator.",
-    "typical_wrong_thought": [
-      "I think fractions are about dividing the whole into parts and then subtracting.",
-      "Multiplying the denominator by the whole number gives the correct answer.",
-      "The numerator is the total number of items, and the denominator is the number of groups."
+  {
+    "misconception_id": "False_Misconception:Additive",
+    "misconception_name": "Additive",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Additive'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "add",
+      "away",
+      "get",
+      "take",
+      "9-5"
     ],
-    "correct_rule": [
-      "To find a fraction of a whole number, multiply the fraction by the whole number.",
-      "The numerator represents how many parts you are taking, and the denominator represents the total number of equal parts.",
-      "When multiplying a fraction by a whole number, you can multiply the numerator by the whole number and keep the denominator the same."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Additive"
     ],
-    "fix_steps": [
-      "Understand that a fraction like 3/5 means 3 parts out of 5 equal parts.",
-      "To find 3/5 of 120, first divide 120 by 5 to find one part (24).",
-      "Then multiply that result by 3 to find three parts (24 x 3 = 72).",
-      "Check that the answer is less than the original number if the fraction is less than 1.",
-      "Use visual models or number lines to represent the fraction and the whole number.",
-      "Practice with different fractions and whole numbers to reinforce the concept."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "10 pkus 5 is 15, and 4 plus 3 is 9.",
+      "10 plus five is 15 and 4 plus 5 is 9"
     ],
-    "quick_check": "A box contains 150 counters. 2/3 of the counters are green. How many green counters are there?",
-    "tiny_example": "To find 2/3 of 150: 150 ÷ 3 = 50; 50 × 2 = 100. So, 100 counters are green."
+    "support_count": 891,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "SwapDividend": {
-    "plain_definition": "SwapDividend is a misconception where students incorrectly swap the dividend and divisor when dividing fractions, leading to incorrect results.",
-    "typical_wrong_thought": [
-      "Dividing by a number is the same as multiplying by that number.",
-      "Fractions can be divided by flipping the divisor and multiplying.",
-      "The order of numbers in division doesn't matter."
+  {
+    "misconception_id": "True_Misconception:Irrelevant",
+    "misconception_name": "Irrelevant",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Irrelevant'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "think",
+      "table",
+      "times table",
+      "three",
+      "both"
     ],
-    "correct_rule": [
-      "Dividing by a number is the same as multiplying by its reciprocal.",
-      "To divide fractions, multiply the first fraction by the reciprocal of the second fraction.",
-      "The order of the numbers in division matters; dividing by 6 is not the same as dividing 6."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Irrelevant"
     ],
-    "fix_steps": [
-      "Understand that division by a number is equivalent to multiplication by its reciprocal.",
-      "Identify the dividend and divisor in the problem.",
-      "Convert the divisor to its reciprocal by flipping the numerator and denominator.",
-      "Multiply the dividend by the reciprocal of the divisor.",
-      "Simplify the resulting fraction if possible.",
-      "Check your answer by estimating or using a different method.",
-      "Use visual models or real-world examples to reinforce the concept."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "10 and 15 are both in 5 times table\r\n5 times 3 is 15 so i divided 9 by 3 then times 2",
+      "10 is in the 5 x tables. 5x2=10 5x3=15    9 is in the 3 x tables.  3x3=9 3x2=6"
     ],
-    "quick_check": "Calculate $ \\frac{3}{4} \\div 2 $",
-    "tiny_example": "To divide $ \\frac{1}{2} \\div 6 $, you multiply $ \\frac{1}{2} $ by $ \\frac{1}{6} $, which gives $ \\frac{1}{12} $. If you swap them, you get $ 6 \\div \\frac{1}{2} = 12 $, which is different."
+    "support_count": 88,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Scale": {
-    "plain_definition": "Scale refers to the factor by which a quantity is multiplied or divided to change its size, often in the context of graphs, models, or measurements.",
-    "typical_wrong_thought": [
-      "Scale is the same as size or magnitude without any reference point.",
-      "Scale is only used in math problems and not in real life.",
-      "Scale is a way to measure time or distance directly, not as a ratio."
+  {
+    "misconception_id": "True_Misconception:Additive",
+    "misconception_name": "Additive",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Additive'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "add",
+      "got",
+      "get",
+      "did",
+      "difference"
     ],
-    "correct_rule": [
-      "Scale is a ratio that compares the size of a representation to the actual size.",
-      "Scale is used to enlarge or reduce drawings, maps, or models proportionally.",
-      "Scale is essential for interpreting graphs, charts, and diagrams accurately."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Additive"
     ],
-    "fix_steps": [
-      "Understand that scale is a ratio, not an absolute value.",
-      "Identify the scale factor by comparing the representation to the actual size.",
-      "Apply the scale factor consistently to all measurements in the representation.",
-      "Use scale to interpret and create proportional drawings or models.",
-      "Check that the scale is applied correctly in all directions (length, width, height).",
-      "Practice converting between scaled measurements and actual measurements."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "Because 15 is 5 more than 10 and if you do 9-5 it’s 4",
+      "Because 9+15 you have to add 6 onto it to get 15"
     ],
-    "quick_check": "A map has a scale of 1:100,000. If a distance on the map is 2 cm, how many kilometers is that in real life?",
-    "tiny_example": "If a model car is 1/10 the size of the real car, and the real car is 4 meters long, the model is 0.4 meters long. Scale = 1:10."
+    "support_count": 38,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Not_variable": {
-    "plain_definition": "A variable is a symbol that represents an unknown value in a mathematical expression. It can take on different values depending on the context.",
-    "typical_wrong_thought": [
-      "Variables are fixed numbers, not symbols that can change.",
-      "I can guess the value of a variable by looking at other numbers in the problem.",
-      "I think the variable is a letter that just stands for itself, not a placeholder for a number."
+  {
+    "misconception_id": "True_Misconception:Not_variable",
+    "misconception_name": "Not_variable",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Not_variable' in the algebra concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "12is",
+      "12is why",
+      "sort guessing",
+      "think 12is",
+      "guessing",
+      "sort"
     ],
-    "correct_rule": [
-      "A variable is a symbol (usually a letter) that represents an unknown number in an equation.",
-      "To solve for a variable, you need to isolate it on one side of the equation.",
-      "Variables can take on different values depending on the equation."
+    "formal_counterexample": "Check whether each operation preserves equality on both sides of the equation.",
+    "remediation_hint": "State what each symbol represents, then justify each transformation step.",
+    "aliases": [
+      "Not_variable"
     ],
-    "fix_steps": [
-      "Understand that a variable is a symbol that stands for an unknown number.",
-      "Learn that variables can be solved for by performing inverse operations on both sides of the equation.",
-      "Practice identifying variables in equations and solving for them step by step.",
-      "Use algebraic methods to isolate the variable and find its value.",
-      "Check your solution by substituting the value back into the original equation.",
-      "Review the concept of variables in different contexts to reinforce understanding."
+    "concept_tags": [
+      "algebra"
     ],
-    "quick_check": "Solve for x in the equation 3x = 15.",
-    "tiny_example": "In the equation 2y = 24, y is a variable that represents the unknown number. To find y, divide both sides by 2: y = 24 ÷ 2 = 12. So, y = 12."
+    "cognitive_roots": [
+      "symbol interpretation",
+      "equation balancing"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "i think because 2*12is 24 so that's why im sort of guessing"
+    ],
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Firstterm": {
-    "plain_definition": "The first term is the initial value in a sequence, usually represented as the value of the sequence at the first position (n = 1).",
-    "typical_wrong_thought": [
-      "The first term is the same as the common difference.",
-      "The first term is the number of terms in the sequence.",
-      "The first term is the value that increases by the same amount each time."
+  {
+    "misconception_id": "False_Misconception:Adding_terms",
+    "misconception_name": "Adding_terms",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Adding_terms'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "add",
+      "get",
+      "24.",
+      "would",
+      "which"
     ],
-    "correct_rule": [
-      "The first term is the value of the sequence when n = 1.",
-      "It is the starting point of the sequence and is not necessarily related to the common difference.",
-      "It is used in formulas for arithmetic and geometric sequences."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Adding_terms"
     ],
-    "fix_steps": [
-      "Identify the first pattern in the sequence (usually Pattern 1).",
-      "Count the number of dots or items in that first pattern.",
-      "This count is the first term of the sequence.",
-      "Verify that the first term is not confused with the common difference or the number of terms.",
-      "Use the first term in any sequence formula or pattern recognition.",
-      "Check if the first term is consistent across different types of sequences."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "24 - 2 = 22 so if y is 22 it adds up",
+      "24 is not equal to 2 because 22 more needs to be added for it to = 24."
     ],
-    "quick_check": "Dots have been arranged in these patterns: [Image: Pattern 1 consists of 3 dots, Pattern 2 consists of 7 dots, Pattern 3 consists of 11 dots] How many dots would the first term be?",
-    "tiny_example": "Pattern 1: 3 dots\nPattern 2: 7 dots\nPattern 3: 11 dots\nFirst term: 3"
+    "support_count": 97,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Adding_terms": {
-    "plain_definition": "Adding_terms is a misconception where students incorrectly add the coefficient to the constant term instead of dividing both sides by the coefficient to isolate the variable.",
-    "typical_wrong_thought": [
-      "I think I should add the coefficient to the constant term to find the variable.",
-      "If I add the number to the coefficient, it will equal the total.",
-      "The variable is the number that, when added to the coefficient, gives the total."
+  {
+    "misconception_id": "False_Misconception:Not_variable",
+    "misconception_name": "Not_variable",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Not_variable' in the algebra concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "number",
+      "must",
+      "same",
+      "24.",
+      "equal"
     ],
-    "correct_rule": [
-      "To solve an equation like 2y = 24, you should divide both sides by the coefficient of the variable (2) to isolate y.",
-      "The goal is to get the variable by itself on one side of the equation.",
-      "Division is the inverse operation of multiplication and is used to undo the coefficient."
+    "formal_counterexample": "Check whether each operation preserves equality on both sides of the equation.",
+    "remediation_hint": "State what each symbol represents, then justify each transformation step.",
+    "aliases": [
+      "Not_variable"
     ],
-    "fix_steps": [
-      "Start with the equation: 2y = 24.",
-      "Identify the coefficient of the variable, which is 2 in this case.",
-      "Divide both sides of the equation by 2: (2y)/2 = 24/2.",
-      "Simplify both sides: y = 12.",
-      "Check your answer by substituting y = 12 back into the original equation: 2(12) = 24.",
-      "Verify that both sides of the equation are equal, confirming the solution is correct."
+    "concept_tags": [
+      "algebra"
     ],
-    "quick_check": "What is the value of x in the equation 3x = 15?",
-    "tiny_example": "Equation: 3x = 15\nWrong thought: 3 + x = 15, so x = 12\nCorrect step: Divide both sides by 3: x = 15/3 = 5"
+    "cognitive_roots": [
+      "symbol interpretation",
+      "equation balancing"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "(y) = 24 so i chosr 4/a.",
+      "2 + any of those numbers don't = 24 but 2y if y is 4 it is 24"
+    ],
+    "support_count": 153,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Multiplying_by_4": {
-    "plain_definition": "Students make this mistake: Multiplying_by_4.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "False_Misconception:Inverse_operation",
+    "misconception_name": "Inverse_operation",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Inverse_operation' in the ratio concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "48.",
+      "think",
+      "which",
+      "double",
+      "equals",
+      "would"
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Compare multiplicative relationships rather than subtracting the two quantities.",
+    "remediation_hint": "Describe the multiplicative relationship in words before computing.",
+    "aliases": [
+      "Inverse_operation"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [
+      "ratio"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "cognitive_roots": [
+      "multiplicative reasoning"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "i think it is 4 because 2 * 24 = 48.",
+      "24 is double to 48 so it could be becausee of the math."
+    ],
+    "support_count": 21,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "FlipChange": {
-    "plain_definition": "FlipChange is a misconception where students incorrectly apply the rule of flipping the divisor when dividing fractions, leading to errors in calculations.",
-    "typical_wrong_thought": [
-      "Dividing by a fraction is the same as multiplying by its denominator.",
-      "You flip the divisor and multiply when dividing fractions, even when the divisor is a whole number.",
-      "Dividing by a number is the same as dividing the numerator by that number."
+  {
+    "misconception_id": "True_Misconception:Inversion",
+    "misconception_name": "Inversion",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Inversion'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "multiply",
+      "numerator",
+      "keep numerator",
+      "keep",
+      "multiply denominator",
+      "denominator"
     ],
-    "correct_rule": [
-      "Dividing by a whole number is the same as multiplying by its reciprocal.",
-      "To divide by a whole number, you can multiply by the reciprocal of that number.",
-      "For example, $ \\frac{1}{2} \\div 6 $ is the same as $ \\frac{1}{2} \\times \\frac{1}{6} $."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Inversion"
     ],
-    "fix_steps": [
-      "Understand that dividing by a whole number is the same as multiplying by its reciprocal.",
-      "Identify the divisor (the number you are dividing by) and find its reciprocal.",
-      "Multiply the original fraction by the reciprocal of the divisor.",
-      "Simplify the resulting fraction if possible.",
-      "Check your answer by estimating or using a different method.",
-      "Use visual models or number lines to reinforce the concept."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "Then you multiply the denominator by 5 and keep the numerator the same.",
+      "first you have to turn 5 into a fraction, so it turns into 1/5. then multiply like normal and then convert to mixed number."
     ],
-    "quick_check": "Calculate $ \\frac{3}{4} \\div 2 $",
-    "tiny_example": "To divide $ \\frac{1}{2} $ by 6, you multiply $ \\frac{1}{2} $ by $ \\frac{1}{6} $, which gives $ \\frac{1}{12} $."
+    "support_count": 5,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Division": {
-    "plain_definition": "Division is the operation of splitting a quantity into equal parts. It is the inverse of multiplication.",
-    "typical_wrong_thought": [
-      "Dividing is always the way to find a fraction of something.",
-      "You can always subtract fractions to find a part of a part.",
-      "Multiplication is the only operation needed when dealing with fractions."
+  {
+    "misconception_id": "True_Misconception:Duplication",
+    "misconception_name": "Duplication",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Duplication'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "number",
+      "mixed",
+      "fifteenths",
+      "its 2x5",
+      "fifteenths but"
     ],
-    "correct_rule": [
-      "To find a fraction of a fraction, you multiply the two fractions.",
-      "To find how much of a part is eaten or taken, you multiply the fraction of the whole by the fraction of the part.",
-      "Subtraction is used when you are finding the remaining part after some has been taken away."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Duplication"
     ],
-    "fix_steps": [
-      "Identify the whole and the part you are working with.",
-      "Determine what fraction of the part is being taken or eaten.",
-      "Multiply the fraction of the whole by the fraction of the part to find the fraction of the whole that has been taken.",
-      "Check if the question is asking for the remaining part or the taken part to decide whether to subtract or multiply.",
-      "Use visual models or real-world examples to understand the relationship between the fractions.",
-      "Practice with different types of fraction problems to build conceptual understanding."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "as you just multiply across and 5 times 2 is 10 and 5 times 3 is 15",
+      "because u have to times the numerator by the whole number and that would have given you 10/15 and you can make it a mixed number"
     ],
-    "quick_check": "What fraction of the whole cake has Robert eaten if Sally has 1/2 of a cake and Robert eats 1/4 of that piece?",
-    "tiny_example": "Sally has 1/2 of a cake. Robert eats 1/4 of that piece. To find how much of the whole cake Robert ate, multiply 1/2 by 1/4. 1/2 × 1/4 = 1/8. So Robert ate 1/8 of the whole cake."
+    "support_count": 6,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Definition": {
-    "plain_definition": "A regular polygon is a polygon that is both equiangular and equilateral, meaning all sides are equal in length and all interior angles are equal in measure.",
-    "typical_wrong_thought": [
-      "A polygon with more sides must have a larger angle.",
-      "The number of sides can be guessed by doubling or halving the number of sides of a common polygon.",
-      "An obtuse angle in a polygon automatically means it has a specific number of sides."
+  {
+    "misconception_id": "False_Misconception:Duplication",
+    "misconception_name": "Duplication",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Duplication'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "think",
+      "10/15",
+      "2x5",
+      "15.",
+      "answer"
     ],
-    "correct_rule": [
-      "In a regular polygon, the measure of each interior angle is given by the formula: (n-2)*180/n, where n is the number of sides.",
-      "To find the number of sides, rearrange the formula to solve for n: n = 360/(180 - interior angle).",
-      "Each interior angle in a regular polygon is directly related to the number of sides."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Duplication"
     ],
-    "fix_steps": [
-      "Identify the measure of the interior angle from the diagram.",
-      "Use the formula for the interior angle of a regular polygon: (n-2)*180/n.",
-      "Rearrange the formula to solve for n: n = 360/(180 - interior angle).",
-      "Plug in the given angle measure and calculate n.",
-      "Check that the result is a whole number, as the number of sides must be an integer.",
-      "Verify that the calculated angle matches the given angle using the formula."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "2/3 x by 5 is 5 2/3 as i know that 2x5 is 10 and 3x5 is 15",
+      "I know this because i used my white board to do 5 x 2 and 5x 3."
     ],
-    "quick_check": "This is part of a regular polygon. How many sides does it have? [Image: A diagram showing an obtuse angle labelled 135 degrees]",
-    "tiny_example": "If an interior angle is 135 degrees, then n = 360/(180 - 135) = 360/45 = 8. So the polygon has 8 sides."
+    "support_count": 698,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Interior": {
-    "plain_definition": "The interior angle of a regular polygon is the angle formed inside the polygon at one of its vertices.",
-    "typical_wrong_thought": [
-      "Interior angles are the same as exterior angles.",
-      "Interior angles can be calculated by multiplying the number of sides by the exterior angle.",
-      "The sum of interior angles is always 360 degrees regardless of the number of sides."
+  {
+    "misconception_id": "False_Misconception:Inversion",
+    "misconception_name": "Inversion",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Inversion'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "2/15",
+      "denominator",
+      "1/5",
+      "which",
+      "think"
     ],
-    "correct_rule": [
-      "The sum of the interior angles of a regular polygon is (n-2)*180 degrees.",
-      "Each interior angle of a regular polygon is [(n-2)*180]/n degrees.",
-      "The sum of an interior angle and its corresponding exterior angle is 180 degrees."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Inversion"
     ],
-    "fix_steps": [
-      "Identify the given interior angle measure.",
-      "Recall the formula for each interior angle: [(n-2)*180]/n.",
-      "Set up the equation with the given angle measure and solve for n.",
-      "Check that the solution makes sense in the context of polygon angles.",
-      "Verify by calculating the sum of interior angles using the found number of sides.",
-      "Ensure that the answer is a whole number, as polygons have whole numbers of sides."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "I think this is because 53 = 15 and then carry the 2 over so it would be 2/15.",
+      "i chose c because i did 2/3x5/1,then i flipped it around to 2/3x1/5 and got 2/15."
     ],
-    "quick_check": "What is the number of sides of a regular polygon if each interior angle is 120 degrees?",
-    "tiny_example": "If an interior angle is 120 degrees, then [(n-2)*180]/n = 120. Solving gives n = 6. A hexagon has 6 sides."
+    "support_count": 409,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Longer_is_bigger": {
-    "plain_definition": "The misconception that longer numbers are always bigger is incorrect. The length of a number does not determine its size; the position of digits (place value) is what matters.",
-    "typical_wrong_thought": [
-      "A number with more digits is always larger.",
-      "A number with more decimal places is larger.",
-      "The more digits after the decimal, the bigger the number."
+  {
+    "misconception_id": "False_Misconception:Wrong_Operation",
+    "misconception_name": "Wrong_Operation",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Wrong_Operation' in the ratio concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "just",
+      "2/3",
+      "times",
+      "fractions",
+      "add",
+      "number"
     ],
-    "correct_rule": [
-      "Compare numbers digit by digit starting from the leftmost digit.",
-      "If the digits are the same up to a certain place, the number with the larger digit in that place is greater.",
-      "Decimal places matter only in relation to their position (tenths, hundredths, etc.)."
+    "formal_counterexample": "Compare multiplicative relationships rather than subtracting the two quantities.",
+    "remediation_hint": "Describe the multiplicative relationship in words before computing.",
+    "aliases": [
+      "Wrong_Operation"
     ],
-    "fix_steps": [
-      "Understand that place value determines the size of a number, not the number of digits or decimal places.",
-      "Compare numbers starting from the leftmost digit and move right until a difference is found.",
-      "If one number has fewer digits, it is smaller than a number with more digits (unless the shorter number is a decimal with leading zeros).",
-      "When comparing decimals, align the decimal points and compare each place value step by step.",
-      "Practice comparing numbers with different lengths and decimal places.",
-      "Use visual aids like place value charts to reinforce the concept.",
-      "Check your answers by estimating the size of the numbers before comparing."
+    "concept_tags": [
+      "ratio"
     ],
-    "quick_check": "Which number is greater: 0.999 or 1.0?",
-    "tiny_example": "Compare 0.5 and 0.500. They are equal. Compare 0.3 and 0.25. 0.3 is larger because 3 tenths is more than 2 tenths."
+    "cognitive_roots": [
+      "multiplicative reasoning"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "I used my knowledge of fractions and remembered that if you do 2/3 times something, you just put the whole number first followed by the fraction.",
+      "i  chose c because   if you turn five  into  5/1 and then times it by  2/3 you will get c."
+    ],
+    "support_count": 6,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Ignores_zeroes": {
-    "plain_definition": "Ignores_zeroes is a misconception where students overlook or misinterpret the significance of zeros in decimal numbers, especially when comparing their values.",
-    "typical_wrong_thought": [
-      "Zeros in decimal numbers don't affect the value of the number.",
-      "The number of zeros determines the size of the number.",
-      "Trailing zeros after the decimal point are not important for comparison."
+  {
+    "misconception_id": "False_Misconception:Whole_numbers_larger",
+    "misconception_name": "Whole_numbers_larger",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Whole_numbers_larger'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "whole",
+      "number",
+      "decimal",
+      "whole number",
+      "think",
+      "numbers"
     ],
-    "correct_rule": [
-      "Zeros in decimal numbers can affect the value depending on their position.",
-      "Leading zeros (before the first non-zero digit) do not change the value of a number.",
-      "Trailing zeros (after the decimal point) can affect the precision but not the magnitude when comparing numbers.",
-      "When comparing decimal numbers, start from the leftmost digit and move right, considering the place value of each digit."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Whole_numbers_larger"
     ],
-    "fix_steps": [
-      "Understand that zeros in different positions have different effects on the value of a number.",
-      "Practice comparing numbers with varying numbers of zeros in different positions.",
-      "Identify the place value of each digit in a decimal number.",
-      "Compare numbers digit by digit, starting from the highest place value.",
-      "Use visual aids like number lines or place value charts to reinforce understanding.",
-      "Review examples where zeros are critical in determining the size of a number.",
-      "Ask questions that require careful attention to the placement of zeros in decimal numbers."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "(because it is a whoke number)",
+      "6 because all the other are decimal"
     ],
-    "quick_check": "Which number is greater: 0.05 or 0.50?",
-    "tiny_example": "Compare 0.05 and 0.50. The correct answer is 0.50 because the 5 in the tenths place is greater than the 0 in the tenths place of 0.05. Zeros in the hundredths place do not affect the comparison when the tenths place differs."
+    "support_count": 328,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Shorter_is_bigger": {
-    "plain_definition": "The misconception that a number with fewer decimal places is larger than one with more decimal places.",
-    "typical_wrong_thought": [
-      "More decimal places make a number smaller.",
-      "Numbers with fewer digits are always bigger.",
-      "The position of digits in a decimal number determines size in reverse."
+  {
+    "misconception_id": "False_Misconception:Longer_is_bigger",
+    "misconception_name": "Longer_is_bigger",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Longer_is_bigger'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "more",
+      "bigger",
+      "there",
+      "most",
+      "place"
     ],
-    "correct_rule": [
-      "When comparing decimals, start from the leftmost digit and compare each place value in order.",
-      "A number with more digits in the whole number part is larger, regardless of decimal places.",
-      "If the whole number parts are equal, compare the decimal places from left to right."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Longer_is_bigger"
     ],
-    "fix_steps": [
-      "Review the place value chart to understand the value of each digit in a decimal number.",
-      "Compare whole number parts first; if they are different, the larger whole number is the larger number.",
-      "If whole number parts are the same, compare the decimal places starting from the tenths place.",
-      "Use visual aids like number lines or place value grids to reinforce the concept.",
-      "Practice comparing decimals with different numbers of decimal places.",
-      "Check your answers by converting decimals to fractions or using estimation."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "The more decimal places you have the bigger the number.",
+      "the overs look bigger but they go into decimals"
     ],
-    "quick_check": "Which number is greater: 3.45 or 3.6?",
-    "tiny_example": "Compare 5.1 and 5.09.\nWhole number parts are equal (5).\nCompare decimal places: 1 (tenths) vs 0 (tenths).\nSince 1 > 0, 5.1 is greater than 5.09."
+    "support_count": 23,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Base_rate": {
-    "plain_definition": "Base rate is a misunderstanding where students assume that increasing the number of workers directly divides the total time without considering the proportional relationship between workers and time.",
-    "typical_wrong_thought": [
-      "More people mean less time, so just divide the total time by the number of people.",
-      "The total time is fixed, so adding more people doesn't change the time needed.",
-      "The number of people and time are inversely proportional, so dividing time by people gives the correct answer."
+  {
+    "misconception_id": "False_Misconception:Ignores_zeroes",
+    "misconception_name": "Ignores_zeroes",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Ignores_zeroes'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "6.79",
+      "zeros",
+      "bigger",
+      "think",
+      "greatest",
+      "numbers"
     ],
-    "correct_rule": [
-      "When more people work on a task, the time required decreases proportionally.",
-      "The total work is constant, so time is inversely proportional to the number of workers.",
-      "Use the formula: Time = (Total Work) / (Number of Workers)."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Ignores_zeroes"
     ],
-    "fix_steps": [
-      "Identify the total work done by the original number of workers.",
-      "Calculate the work rate per worker by dividing total work by the number of workers.",
-      "Multiply the work rate by the new number of workers to find the total work.",
-      "Divide the total work by the new number of workers to find the new time.",
-      "Check that the new time is less than the original time when more workers are added."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because it doesn't matter how many zeros there is",
+      "6.0001 is the same as 6.1 because the zero doesn't mean anything."
     ],
-    "quick_check": "If 4 people can paint a house in 6 hours, how long would it take 12 people?",
-    "tiny_example": "3 people take 192 hours to build a wall. Total work = 3 * 192 = 576 person-hours. 12 people: 576 / 12 = 48 hours."
+    "support_count": 23,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Inverse_operation": {
-    "plain_definition": "Inverse operation refers to the opposite mathematical operation used to solve for a variable.",
-    "typical_wrong_thought": [
-      "Multiplying both sides by the coefficient instead of dividing",
-      "Thinking that the operation is applied to the result instead of the original number",
-      "Confusing the inverse operation with the same operation"
+  {
+    "misconception_id": "False_Misconception:Shorter_is_bigger",
+    "misconception_name": "Shorter_is_bigger",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Shorter_is_bigger'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "have",
+      "number",
+      "bigger number",
+      "decimal",
+      "smaller",
+      "bigger"
     ],
-    "correct_rule": [
-      "To solve an equation like 2y = 24, you should divide both sides by 2 to isolate y.",
-      "The inverse operation of multiplication is division.",
-      "Always perform the same operation on both sides of the equation to maintain equality."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Shorter_is_bigger"
     ],
-    "fix_steps": [
-      "Identify the operation being used in the equation (in this case, multiplication).",
-      "Determine the inverse operation (in this case, division).",
-      "Apply the inverse operation to both sides of the equation to isolate the variable.",
-      "Simplify both sides of the equation to find the value of the variable.",
-      "Check your answer by substituting it back into the original equation.",
-      "Ensure that the operations are applied correctly and consistently to both sides."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because the bigger the number in the decimal the smaller the number gets so, i put a",
+      "i think this because 6 doesn't have numbers at the end which makes it greater."
     ],
-    "quick_check": "Solve 3x = 15. What is the value of x?",
-    "tiny_example": "Equation: 2y = 24\nStep 1: Identify the operation (multiplication)\nStep 2: Use inverse operation (division)\nStep 3: Divide both sides by 2: y = 24 / 2\nStep 4: Simplify: y = 12"
+    "support_count": 6,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Certainty": {
-    "plain_definition": "Certainty refers to an event that is guaranteed to happen, with a probability of exactly 1.0.",
-    "typical_wrong_thought": [
-      "A probability close to 1 means the event is certain.",
-      "If an event has a high probability, it is always certain.",
-      "0.9 is close to 1, so it must be certain."
+  {
+    "misconception_id": "True_Misconception:Whole_numbers_larger",
+    "misconception_name": "Whole_numbers_larger",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Whole_numbers_larger'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "decimal numbers",
+      "numbers",
+      "than",
+      "than decimal",
+      "decimal",
+      "bigger than"
     ],
-    "correct_rule": [
-      "A probability of 1.0 means the event is certain.",
-      "Probabilities between 0 and 1 indicate varying levels of likelihood, not certainty.",
-      "A probability of 0.9 means there is a 90% chance, but not a 100% chance."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Whole_numbers_larger"
     ],
-    "fix_steps": [
-      "Understand that certainty corresponds to a probability of exactly 1.0.",
-      "Recognize that probabilities near 1.0 (like 0.9) indicate high likelihood, but not certainty.",
-      "Compare the given probability to 1.0 to determine if it is certain or not.",
-      "Use precise language: 'certain' only applies when the probability is exactly 1.0.",
-      "Avoid using 'certain' for probabilities that are close to 1.0 but not exactly 1.0.",
-      "Practice identifying certainty in different probability scenarios."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "6 is bigger than decimal numbers"
     ],
-    "quick_check": "The probability of an event is 1.0. Which word best describes the likelihood of the event occurring?",
-    "tiny_example": "Probability = 1.0 → Certain\nProbability = 0.9 → Likely, not Certain\nProbability = 0.5 → Equally Likely\nProbability = 0 → Impossible"
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Incorrect_equivalent_fraction_addition": {
-    "plain_definition": "Students make this mistake: Incorrect_equivalent_fraction_addition.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "True_Misconception:Shorter_is_bigger",
+    "misconception_name": "Shorter_is_bigger",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Shorter_is_bigger'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "number",
+      "6.2",
+      "decimal",
+      "smaller",
+      "numbers",
+      "bigger"
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Shorter_is_bigger"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "6.2 is greater because 6 is just a whole number and all the others have zero in the numbers",
+      "beacause the closed the digit is to a whole number the bigger it gets"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "support_count": 17,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   },
-  "Wrong_Operation": {
-    "plain_definition": "Students make this mistake: Wrong_Operation.",
-    "typical_wrong_thought": [
-      "They apply an incorrect rule or shortcut."
+  {
+    "misconception_id": "True_Misconception:Longer_is_bigger",
+    "misconception_name": "Longer_is_bigger",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Longer_is_bigger'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "which makes",
+      "same",
+      "number",
+      "makes bigger",
+      "decimal",
+      "also decimal"
     ],
-    "correct_rule": [
-      "Use the correct definition and check carefully."
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Longer_is_bigger"
     ],
-    "fix_steps": [
-      "Restate the goal.",
-      "Write the correct rule.",
-      "Apply step-by-step.",
-      "Check with an easy example."
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "d because it has a 6 the same as a but it also has a decimal number which makes it bigger"
     ],
-    "quick_check": "Can you test your rule on a simpler number?",
-    "tiny_example": "Example: Compare decimals by place value, not by digit count."
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Wrong_fraction",
+    "misconception_name": "Wrong_fraction",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Wrong_fraction' in the fraction concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "3/8",
+      "times",
+      "divided",
+      "took",
+      "away",
+      "get"
+    ],
+    "formal_counterexample": "Convert to equivalent fractions with a common denominator before combining them.",
+    "remediation_hint": "Focus on unit size and denominator meaning before adding or comparing fractions.",
+    "aliases": [
+      "Wrong_fraction"
+    ],
+    "concept_tags": [
+      "fraction"
+    ],
+    "cognitive_roots": [
+      "part-whole reasoning",
+      "structure-preserving arithmetic"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "24 divided by 8 equals 3 and 3 times 3 equals 9",
+      "3/8 are worth 9. i took it away from 24"
+    ],
+    "support_count": 6,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Wrong_fraction",
+    "misconception_name": "Wrong_fraction",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Wrong_fraction' in the fraction concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "divided",
+      "think",
+      "3/8",
+      "three",
+      "which"
+    ],
+    "formal_counterexample": "Convert to equivalent fractions with a common denominator before combining them.",
+    "remediation_hint": "Focus on unit size and denominator meaning before adding or comparing fractions.",
+    "aliases": [
+      "Wrong_fraction"
+    ],
+    "concept_tags": [
+      "fraction"
+    ],
+    "cognitive_roots": [
+      "part-whole reasoning",
+      "structure-preserving arithmetic"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "This is a good explanation of why the answer choices do not match, because it states that both B and C are incorrect. Also, youu cannot use 3x8 to get 24; only",
+      "1 / 8 = 3 so i dud 3 x 3 to get 9."
+    ],
+    "support_count": 412,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Adding_across",
+    "misconception_name": "Adding_across",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Adding_across'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "1/3",
+      "2/5",
+      "5/15 2/5",
+      "6/15",
+      "answer must",
+      "5/15"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Adding_across"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1/3 is 5/15\r\n2/5 is 6/15\r\n5+6 is 11 so the answer must be d"
+    ],
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Denominator-only_change",
+    "misconception_name": "Denominator-only_change",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Denominator-only_change'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "answer",
+      "think answer",
+      "think",
+      "together",
+      "same",
+      "same which"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Denominator-only_change"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because first you have to make the denominator the same which is 15 and then the two numerators together which is 3",
+      "i think this because 3 x 5 =15 and 1 + 2 is 3 the answer is 3/15"
+    ],
+    "support_count": 4,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Incorrect_equivalent_fraction_addition",
+    "misconception_name": "Incorrect_equivalent_fraction_addition",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Incorrect_equivalent_fraction_addition' in the fraction concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "out",
+      "11/30",
+      "worked",
+      "once worked",
+      "worked out",
+      "once"
+    ],
+    "formal_counterexample": "Convert to equivalent fractions with a common denominator before combining them.",
+    "remediation_hint": "Focus on unit size and denominator meaning before adding or comparing fractions.",
+    "aliases": [
+      "Incorrect_equivalent_fraction_addition"
+    ],
+    "concept_tags": [
+      "fraction"
+    ],
+    "cognitive_roots": [
+      "part-whole reasoning",
+      "structure-preserving arithmetic"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because once worked out is 11/30",
+      "because you add 5 to 6 to get 11 then out it over 30"
+    ],
+    "support_count": 2,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Denominator-only_change",
+    "misconception_name": "Denominator-only_change",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Denominator-only_change'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "add",
+      "denominator",
+      "times",
+      "3/15",
+      "think",
+      "which"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Denominator-only_change"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "3 and 5 lcm is 15 so then 1 + 2 = 3 so its 3\r\n                                                                           -",
+      "3x5=15 so you do 3 times 5 then 5 times 3 and then add the numbers together."
+    ],
+    "support_count": 332,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Incorrect_equivalent_fraction_addition",
+    "misconception_name": "Incorrect_equivalent_fraction_addition",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Incorrect_equivalent_fraction_addition' in the fraction concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "think",
+      "equals",
+      "times",
+      "into",
+      "add",
+      "one"
+    ],
+    "formal_counterexample": "Convert to equivalent fractions with a common denominator before combining them.",
+    "remediation_hint": "Focus on unit size and denominator meaning before adding or comparing fractions.",
+    "aliases": [
+      "Incorrect_equivalent_fraction_addition"
+    ],
+    "concept_tags": [
+      "fraction"
+    ],
+    "cognitive_roots": [
+      "part-whole reasoning",
+      "structure-preserving arithmetic"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "3 x 5 equals 15 add 15 and 15 together to get 30",
+      "I think it is this one because 15 times 2 equals 15 so that is why it would be 11 30."
+    ],
+    "support_count": 7,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Adding_across",
+    "misconception_name": "Adding_across",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Adding_across'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "add",
+      "think",
+      "3/8",
+      "answer",
+      "top",
+      "plus"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Adding_across"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1 + 2 = 3 5 + 3 = 8 put it as a fraction and it equals 3/8",
+      "1 + 2 = 3 5 + 3 = 8 take it as a fraction and it equals 3/8"
+    ],
+    "support_count": 306,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Division",
+    "misconception_name": "Division",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Division'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "work",
+      "three.",
+      "out",
+      "work out",
+      "third",
+      "remainder"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Division"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "If you needd to work out a third of something, you do this by dividing it by three.",
+      "One third of two thirds is equal to one third divided by two threes so to work out what the remainder is you need to multiply one by twice three."
+    ],
+    "support_count": 5,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Subtraction",
+    "misconception_name": "Subtraction",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Subtraction'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "fridge",
+      "1/3",
+      "fridge ate",
+      "2/3",
+      "there 2/3",
+      "2/3-1/3."
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Subtraction"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "i think this because if there is 2/3 in the fridge and he ate 1/3 it is 2/3-1/3.",
+      "you have to find the common denominator then take away the numerator"
+    ],
+    "support_count": 2,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Subtraction",
+    "misconception_name": "Subtraction",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Subtraction'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "1/3",
+      "2/3",
+      "away",
+      "robert",
+      "take",
+      "cake"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Subtraction"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because it tells you how much the whole cake was then take 1/3 from that witch was 2/3",
+      "cause if you do 2 take away 1 it = answer1"
+    ],
+    "support_count": 618,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Division",
+    "misconception_name": "Division",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Division'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "1/3",
+      "2/3",
+      "divide",
+      "divided",
+      "think",
+      "cake"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Division"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1/3 divided by 2/3=1/3 or 1 divided by 2= 1 and  the denominator stays the same so the answer is 1/3",
+      "2 thirds divided by 1 third will= the answer\r\ne.g. deduction"
+    ],
+    "support_count": 58,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Unknowable",
+    "misconception_name": "Unknowable",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Unknowable'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "sides",
+      "not",
+      "enough",
+      "there",
+      "know",
+      "angle"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Unknowable"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "144 degrees only you cant have just an angle and decipher the actual shape that 143 makes.",
+      "144 degrees only you cant have just an angle and decipher the actual shape that 144 makes"
+    ],
+    "support_count": 282,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Definition",
+    "misconception_name": "Definition",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Definition'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "polygon",
+      "sides",
+      "regular",
+      "sides.",
+      "polygon sides",
+      "regular polygon"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Definition"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "a polygon can have all sides suggested: 5, 6, 10",
+      "a polygon has 3 or more sides."
+    ],
+    "support_count": 51,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Interior",
+    "misconception_name": "Interior",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Interior'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "720",
+      "144",
+      "which",
+      "144 720",
+      "720 which",
+      "interior"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Interior"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "if i x it by five it gives me 720 but theres no information for how to working it out so i chose this",
+      "x by five gives me 720 but theres no information for how to working it out so i chose this instead"
+    ],
+    "support_count": 50,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Definition",
+    "misconception_name": "Definition",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Definition'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "polygon",
+      "have",
+      "have double",
+      "side",
+      "polygon side",
+      "double"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Definition"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "I think you have to double it because a polygon has 3 side so then you need to triple it.",
+      "because a number of polygon have 10 sides"
+    ],
+    "support_count": 3,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Positive",
+    "misconception_name": "Positive",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Positive'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "positive",
+      "two",
+      "negative",
+      "negatives",
+      "make",
+      "two negatives"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Positive"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "- and - = to plus so i add them together",
+      "- in the negative is like plus"
+    ],
+    "support_count": 564,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Tacking",
+    "misconception_name": "Tacking",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Tacking'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "negative",
+      "add",
+      "but",
+      "minus",
+      "-13",
+      "numbers"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Tacking"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "-13 because 8 plus 5 is 13 but these are minus numbers so its -14 because 13 plus 8 is 13.",
+      "-13 because it’s in brackets two negatives makes a positive doesn’t work so you do 8+5 which is 13 then you add -1 which makes it -14"
+    ],
+    "support_count": 128,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Tacking",
+    "misconception_name": "Tacking",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Tacking'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "8-5",
+      "negative",
+      "but",
+      "add",
+      "minus",
+      "just"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Tacking"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "-3 because 8-5 is 3 and if you make it a negative number you get -3",
+      "-3 is the amswer as 8-5=3."
+    ],
+    "support_count": 162,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Positive",
+    "misconception_name": "Positive",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Positive'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "two",
+      "minuses",
+      "which makes",
+      "sum",
+      "-3.",
+      "sum make"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Positive"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "two minuses sum up to make a plus so we do -8+-5 which makes -3.",
+      "two negative numbers always subtract to a positive"
+    ],
+    "support_count": 2,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Wrong_term",
+    "misconception_name": "Wrong_term",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Wrong_term'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "each",
+      "time",
+      "add",
+      "pattern",
+      "each time",
+      "every"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Wrong_term"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "22 because it is going up in 4's",
+      "Because it adds a row of 4 each time."
+    ],
+    "support_count": 550,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Firstterm",
+    "misconception_name": "Firstterm",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Firstterm'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "would",
+      "times",
+      "add",
+      "pattern",
+      "dots",
+      "6x6"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Firstterm"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "each time there is added 6 meaning from pattern 4 plus 6 there are 20.",
+      "Becausee it goes up by 6."
+    ],
+    "support_count": 96,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Wrong_term",
+    "misconception_name": "Wrong_term",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Wrong_term'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "adds",
+      "each",
+      "pattern",
+      "every",
+      "time",
+      "pattern adds"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Wrong_term"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "2+6=8 and because every pattern adds 3 on so pattern6 is 26",
+      "all your doing is adding five dots more for each one"
+    ],
+    "support_count": 8,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Firstterm",
+    "misconception_name": "Firstterm",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Firstterm'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "each",
+      "time",
+      "each time",
+      "add",
+      "pattern",
+      "times"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Firstterm"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because if there is 18 in pattern 4 we add 12 dots more to pattern 6 meaning we have 30 but then we take 4",
+      "because it adds on 6 each time"
+    ],
+    "support_count": 11,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Base_rate",
+    "misconception_name": "Base_rate",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Base_rate' in the ratio concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "192",
+      "divided",
+      "192 divided",
+      "hours",
+      "64.",
+      "answer"
+    ],
+    "formal_counterexample": "Compare multiplicative relationships rather than subtracting the two quantities.",
+    "remediation_hint": "Describe the multiplicative relationship in words before computing.",
+    "aliases": [
+      "Base_rate"
+    ],
+    "concept_tags": [
+      "ratio"
+    ],
+    "cognitive_roots": [
+      "multiplicative reasoning"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "To build the wall takes 192 hours but every person works 16 hours instead of 64.",
+      "to build the wall still takes 192 hours but every person works 16 hours instead of 64"
+    ],
+    "support_count": 22,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Base_rate",
+    "misconception_name": "Base_rate",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Base_rate' in the ratio concept area.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "192",
+      "divide 192",
+      "divide"
+    ],
+    "formal_counterexample": "Compare multiplicative relationships rather than subtracting the two quantities.",
+    "remediation_hint": "Describe the multiplicative relationship in words before computing.",
+    "aliases": [
+      "Base_rate"
+    ],
+    "concept_tags": [
+      "ratio"
+    ],
+    "cognitive_roots": [
+      "multiplicative reasoning"
+    ],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because you divide by 3 from 192"
+    ],
+    "support_count": 1,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "True_Misconception:Multiplying_by_4",
+    "misconception_name": "Multiplying_by_4",
+    "family": "True_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Multiplying_by_4'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "times",
+      "one",
+      "person",
+      "person times",
+      "one person",
+      "need divide"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Multiplying_by_4"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because you go to one person and then times by 12",
+      "i think this because you need to divide 192 by 3 and then you need to times that answer by 12 to get your final answer."
+    ],
+    "support_count": 3,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Multiplying_by_4",
+    "misconception_name": "Multiplying_by_4",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Multiplying_by_4'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "192",
+      "times",
+      "768",
+      "think",
+      "divided",
+      "which"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Multiplying_by_4"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because i divided it by three then multiplied it by 12",
+      "because i divided it by three then multiplied it times 12."
+    ],
+    "support_count": 93,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Certainty",
+    "misconception_name": "Certainty",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Certainty'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "certain",
+      "0.9",
+      "closer",
+      "0.9 closer",
+      "since",
+      "will"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Certainty"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "1 is certain and since 0.9 is closer to 1 than it’s certain",
+      "I think this is cause it's almost certain to happen, 0.9 is likee 90%."
+    ],
+    "support_count": 18,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
+  },
+  {
+    "misconception_id": "False_Misconception:Scale",
+    "misconception_name": "Scale",
+    "family": "False_",
+    "short_description": "Student reasoning appears consistent with the misconception 'Scale'.",
+    "prerequisite_concepts": [],
+    "trigger_patterns": [
+      "0.9",
+      "not",
+      "unlikely",
+      "but",
+      "number",
+      "low"
+    ],
+    "formal_counterexample": "Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.",
+    "remediation_hint": "Ask the student to restate the rule in words and test it on a simple counterexample.",
+    "aliases": [
+      "Scale"
+    ],
+    "concept_tags": [],
+    "cognitive_roots": [],
+    "graph_links": {
+      "causes": [],
+      "exacerbates": [],
+      "shares_cognitive_root_with": []
+    },
+    "evidence_examples": [
+      "because it will add up to 1 so it would be a one percent chance of not happening",
+      "c2 is a little better than it would seem, because though it's 0.1% off, it stilll is too low."
+    ],
+    "support_count": 179,
+    "source_notes": [
+      "competition_metadata",
+      "train_response_patterns"
+    ]
   }
-}
+]

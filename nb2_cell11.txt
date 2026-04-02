@@ -1,0 +1,18 @@
+CELL 11 (code):
+
+# ============================================================================
+# CELL 10: Free GPU & Load Qwen3-8B as CausalLM for Explanations
+# ============================================================================
+clear_gpu_memory()
+log("Loading Qwen3-8B as CausalLM for explanation generation...")
+
+# Model was saved in 4-bit NF4 format; bitsandbytes handles dequantization on load.
+explainer_model = AutoModelForCausalLM.from_pretrained(
+    base_model_path,
+    trust_remote_code=True,
+    torch_dtype=torch.float16,
+    device_map="auto",
+    local_files_only=True,
+)
+explainer_model.eval()
+log(f"Explainer model loaded: {sum(p.numel() for p in explainer_model.parameters()):,} params")

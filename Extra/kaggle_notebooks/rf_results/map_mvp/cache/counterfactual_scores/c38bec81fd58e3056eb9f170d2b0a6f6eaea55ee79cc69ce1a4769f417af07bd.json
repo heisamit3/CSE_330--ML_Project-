@@ -1,0 +1,29 @@
+{
+  "misconception_id": "False_Misconception:WNB",
+  "affinity_score": 1.0,
+  "confidence": 1.0,
+  "reasoning_short": "Evidence aligns with WNB.",
+  "evidence_spans": [
+    "shaded",
+    "not"
+  ],
+  "row_id": 36697,
+  "baseline_score": 0.9991455674171448,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 33,
+  "trigger_match_count": 3,
+  "concept_match_count": 0,
+  "trigger_score": 0.8333333333333334,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.575,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "shaded | not | not shaded",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: False_\nShort description: Student reasoning appears consistent with the misconception 'WNB'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: shaded | not | not shaded\nMatched concept terms: none\nOntology support score: 0.575\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- 3 IS SHADED AND 6  IS NOT\n- 3 OUT OF 6 SPOTS ARE NOT SHADED SO THE FRACTION IS 3/6\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Misconception:Incomplete <-> True_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\n- True_Misconception:Incomplete <-> False_Misconception:WNB via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\n- True_Misconception:Incomplete <-> False_Misconception:Incomplete via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, o, t)\nRelated misconceptions:\n- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , n, o, t,  , s, h, a, d, e, d,  , |,  , s, h, a, d, e, d,  , |,  , t, h, e, r, e,  , |,  , t, r, i, a, n, g, l, e, s)\n- WNB (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , n, o, t,  , s, h, a, d, e, d,  , |,  , s, h, a, d, e, d,  , |,  , t, h, e, r, e)\n- Incomplete (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, o, t,  , |,  , s, h, a, d, e, d,  , |,  , t, r, i, a, n, g, l, e, s)",
+  "raw_response": "{\"misconception_id\": \"False_Misconception:WNB\", \"affinity_score\": 1.0, \"confidence\": 1.0, \"reasoning_short\": \"Evidence aligns with WNB.\", \"evidence_spans\": [\"shaded\", \"not\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}

@@ -1,0 +1,42 @@
+CELL 12:
+
+# ============================================================================
+# CELL 12: Generate Explanations for TRAINING Samples (Demo)
+# ============================================================================
+
+log("\n" + "="*80)
+log("EXPLAINABLE AI — DEMO ON TRAINING SAMPLES")
+log("="*80)
+
+# Prepare training data for explanation demo
+train_df['is_correct'] = train_df['Category'].str.startswith('True').astype(int)
+
+# Sample diverse cases from training set (mix of correct and incorrect)
+rng = np.random.default_rng(42)
+incorrect_samples = train_df[train_df['is_correct'] == 0].sample(n=min(4, len(train_df)), random_state=42)
+correct_samples = train_df[train_df['is_correct'] == 1].sample(n=min(1, len(train_df)), random_state=42)
+demo_samples = pd.concat([incorrect_samples, correct_samples]).head(EXPLAIN_SAMPLES)
+
+log(f"Generating explanations for {len(demo_samples)} training samples...")
+
+explanations = []
+
+for idx, (_, row) in enumerate(demo_samples.iterrows()):
+    log(f"\n{'─'*80}")
+    log(f"SAMPLE {idx + 1} / {len(demo_samples)}")
+    log(f"{'─'*80}")
+    log(f"Question: {str(row['QuestionText'])[:150]}")
+    log(f"Student Answer: {row['MC_Answer']}")
+    log(f"Student Explanation: {str(row['StudentExplanation'])[:150]}")
+    log(f"True Label: {row['target']}")
+    
+    try:
+        result = explain_student_work(row)
+        explanations.append(result)
+        log(f"\n--- MODEL FEEDBACK ---")
+        log(result['feedback'])
+    except Exception as e:
+        log(f"ERROR: {e}")
+        explanations.append({"error": str(e)})
+
+log(f"\n\nGenerated {len(explanations)} explanations.")

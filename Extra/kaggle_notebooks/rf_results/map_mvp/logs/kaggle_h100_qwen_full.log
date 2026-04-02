@@ -1,0 +1,13 @@
+2026-03-26 15:37:39 | INFO | kaggle_h100_qwen_full | Trying HF backend candidate: /kaggle/input/datasets/mkhanshovon43/base-modelsh7bq2-5-7b3-8b/loaded_models/Qwen2.5-7B-Instruct
+2026-03-26 15:37:45 | WARNING | kaggle_h100_qwen_full | Could not load HF backend candidate /kaggle/input/datasets/mkhanshovon43/base-modelsh7bq2-5-7b3-8b/loaded_models/Qwen2.5-7B-Instruct (FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.)
+2026-03-26 15:37:45 | INFO | kaggle_h100_qwen_full | Trying HF backend candidate: Qwen/Qwen2.5-7B-Instruct
+2026-03-26 15:37:57 | WARNING | kaggle_h100_qwen_full | Could not load HF backend candidate Qwen/Qwen2.5-7B-Instruct (FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.)
+2026-03-26 15:37:57 | INFO | kaggle_h100_qwen_full | Skipping missing local model candidate: /kaggle/input/loaded-models/loaded_models/Qwen3-8B
+2026-03-26 15:37:58 | INFO | kaggle_h100_qwen_full | Skipping missing local model candidate: /kaggle/input/loaded_models/loaded_models/Qwen3-8B
+2026-03-26 15:37:58 | INFO | kaggle_h100_qwen_full | Skipping missing local model candidate: /kaggle/input/qwen3-8b
+2026-03-26 15:37:58 | INFO | kaggle_h100_qwen_full | Skipping missing local model candidate: /kaggle/input/qwen3-8b-instruct
+2026-03-26 15:37:58 | WARNING | kaggle_h100_qwen_full | All HF backend candidates failed. Falling back to mock backend.
+2026-03-26 15:38:02 | INFO | kaggle_h100_qwen_full | Loaded train=36696 rows, test=3 rows, candidates=65
+2026-03-26 15:38:02 | INFO | kaggle_h100_qwen_full | Running mode=full on 3 inference rows.
+2026-03-26 15:38:09 | INFO | kaggle_h100_qwen_full | Baseline TF-IDF retriever fitted on 65 candidates.
+2026-03-26 15:38:09 | INFO | kaggle_h100_qwen_full | Loaded 440388 external baseline candidate rows.

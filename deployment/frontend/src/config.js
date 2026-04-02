@@ -3,9 +3,16 @@
  * Uses environment variables for flexibility.
  */
 
+// Public frontend fallbacks so static hosts still boot when .env.local is not present.
+// Supabase anon keys are intended to be exposed in browser apps.
+const DEFAULT_SUPABASE_URL = 'https://fzpbrcyucmipoivdyxcb.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJz' +
+  'dXBhYmFzZSIsInJlZiI6ImZ6cGJyY3l1Y21pcG9pdmR5eGNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ1' +
+  'MjEzOTUsImV4cCI6MjA5MDA5NzM5NX0.npsKu53NcomXgBZt0pYMCRq7cBkPTzQyH8_ZSPC15FU';
+
 // Supabase configuration
-export const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || '';
-export const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
+export const SUPABASE_URL = process.env.REACT_APP_SUPABASE_URL || DEFAULT_SUPABASE_URL;
+export const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY || DEFAULT_SUPABASE_ANON_KEY;
 
 const config = {
   // API base URL - set via REACT_APP_API_BASE_URL environment variable

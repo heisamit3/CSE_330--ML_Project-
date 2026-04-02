@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useScore } from '../hooks/useScore';
 import NotificationBell from './NotificationBell';
+import BrandMark from './BrandMark';
 
 function Navbar({ theme, onToggleTheme, user, profile, onSignOut }) {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ function Navbar({ theme, onToggleTheme, user, profile, onSignOut }) {
       <div className="nav-container">
         <Link to="/" className="nav-brand">
           <div className="brand-icon">
-            <i className="fas fa-graduation-cap"></i>
+            <BrandMark />
           </div>
           <div className="brand-text">
             <span className="brand-name">MAP</span>

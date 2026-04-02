@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
 # Model configuration
-BASE_MODEL_PATH: str = os.getenv("BASE_MODEL_PATH", "Qwen/Qwen3-4B")
+BASE_MODEL_PATH: str = os.getenv("BASE_MODEL_PATH", "Qwen/Qwen3-8B")
 ADAPTER_PATH: str = os.getenv("ADAPTER_PATH", str(DATA_DIR / "adapter"))
 USE_4BIT_QUANTIZATION: bool = os.getenv("USE_4BIT_QUANTIZATION", "true").lower() == "true"
 TORCH_DTYPE: str = os.getenv("TORCH_DTYPE", "float16")

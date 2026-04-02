@@ -43,30 +43,20 @@ async function getAnsweredQuestionIds(studentId) {
  */
 async function fetchTeacherQuestion(answeredIds) {
   try {
-    // Build query for active questions not yet answered
-    let query = supabase
+    const teacherAnsweredIds = Array.from(answeredIds).filter((id) => id.includes('-'));
+
+    // Get count of available questions
+    let countQuery = supabase
       .from('teacher_questions')
-      .select('*')
+      .select('*', { count: 'exact', head: true })
       .eq('status', 'active');
 
     // Exclude answered questions
-    if (answeredIds.size > 0) {
-      const answeredArray = Array.from(answeredIds);
-      // Filter to only UUIDs (teacher question IDs have dashes)
-      const teacherAnsweredIds = answeredArray.filter((id) => id.includes('-'));
-      if (teacherAnsweredIds.length > 0) {
-        query = query.not('id', 'in', `(${teacherAnsweredIds.join(',')})`);
-      }
+    if (teacherAnsweredIds.length > 0) {
+      countQuery = countQuery.not('id', 'in', `(${teacherAnsweredIds.join(',')})`);
     }
 
-    // Get count of available questions
-    const { count, error: countError } = await supabase
-      .from('teacher_questions')
-      .select('*', { count: 'exact', head: true })
-      .eq('status', 'active')
-      .not('id', 'in', answeredIds.size > 0
-        ? `(${Array.from(answeredIds).filter((id) => id.includes('-')).join(',') || 'null'})`
-        : '(null)');
+    const { count, error: countError } = await countQuery;
 
     if (countError || !count || count === 0) {
       return null;
@@ -82,7 +72,6 @@ async function fetchTeacherQuestion(answeredIds) {
       .eq('status', 'active');
 
     // Exclude answered questions
-    const teacherAnsweredIds = Array.from(answeredIds).filter((id) => id.includes('-'));
     if (teacherAnsweredIds.length > 0) {
       fetchQuery = fetchQuery.not('id', 'in', `(${teacherAnsweredIds.join(',')})`);
     }

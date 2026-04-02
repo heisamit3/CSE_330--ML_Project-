@@ -1,0 +1,54 @@
+CELL 14 (code):
+
+# ============================================================================
+# CELL 13: Pipeline Summary & Score Analysis
+# ============================================================================
+
+log("=" * 60)
+log("PIPELINE SUMMARY")
+log("=" * 60)
+
+# Submission stats
+log(f"\nSubmission rows : {len(submission)}")
+log(f"Output files    : submission.csv, explanations.json")
+
+# Prediction distribution
+all_preds = []
+for p in submission["Category:Misconception"]:
+    all_preds.extend(p.split())
+
+categories = [p.split(":")[0] if ":" in p else p for p in all_preds]
+cat_dist = Counter(categories)
+log(f"\nTop-3 prediction category distribution:")
+for cat, cnt in cat_dist.most_common(10):
+    log(f"  {cat}: {cnt}")
+
+# Family distribution in submission
+fam_dist = Counter()
+for p in all_preds:
+    if p.startswith("True_"):
+        fam_dist["True_"] += 1
+    elif p.startswith("False_"):
+        fam_dist["False_"] += 1
+    else:
+        fam_dist["Other"] += 1
+log(f"\nFamily distribution in predictions: {dict(fam_dist)}")
+
+# Score source
+if HAS_FULL_SCORES:
+    log(f"\nScore source: Full ensemble (14 features, weighted fusion + XGBoost)")
+    log(f"Ensemble weights: {ENSEMBLE_WEIGHTS}")
+elif HAS_BASELINE_ONLY:
+    log(f"\nScore source: Baseline Qwen3-8B classifier only")
+else:
+    log(f"\nScore source: Live Qwen3-8B + LoRA inference")
+
+# KB stats
+if kb_data:
+    log(f"\nKnowledge Base: {len(kb_data)} misconception entries")
+    sample_kb = kb_data[0] if isinstance(kb_data, list) else list(kb_data.values())[0]
+    log(f"  KB entry fields: {list(sample_kb.keys()) if isinstance(sample_kb, dict) else 'N/A'}")
+
+log(f"\nExplanations: {len(explanations)} samples explained")
+log("=" * 60)
+log("Done.")

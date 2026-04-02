@@ -1,0 +1,12 @@
+{
+  "split": "train",
+  "rows": 36696,
+  "labels": 65,
+  "family_filter": true,
+  "top_k_export": 12,
+  "artifact_files": {
+    "wide_topk": "/kaggle/working/map_mvp/baseline_artifacts/qwen3_8b_adapter_train_topk.csv",
+    "long_scores": "/kaggle/working/map_mvp/baseline_artifacts/qwen3_8b_adapter_train_scores_long.csv",
+    "submission": "/kaggle/working/map_mvp/output/qwen3_8b_adapter_train_submission.csv"
+  }
+}

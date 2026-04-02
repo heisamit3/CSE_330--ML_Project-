@@ -1,0 +1,2 @@
+2026-03-26 15:37:35 | INFO | build_kb | Loaded train=36696 rows, test=3 rows, candidates=65
+2026-03-26 15:37:36 | INFO | build_kb | Wrote 65 KB entries to /kaggle/working/map_mvp/data/misconception_kb.json

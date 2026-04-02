@@ -1,0 +1,28 @@
+{
+  "misconception_id": "True_Misconception:Duplication",
+  "affinity_score": 1.0,
+  "confidence": 0.9912,
+  "reasoning_short": "Evidence aligns with Duplication.",
+  "evidence_spans": [
+    "its 2x5"
+  ],
+  "row_id": 36696,
+  "baseline_score": 4.474480010685511e-05,
+  "kb_score": 1.0,
+  "graph_neighbor_count": 27,
+  "trigger_match_count": 1,
+  "concept_match_count": 0,
+  "trigger_score": 0.16666666666666666,
+  "concept_score": 0.0,
+  "ontology_support_score": 0.275,
+  "subgraph_node_count": 4,
+  "subgraph_edge_count": 6,
+  "subgraph_density": 1.0,
+  "matched_trigger_patterns": "its 2x5",
+  "matched_concept_terms": "",
+  "neighbor_relation_types": "_ | a | d | e | g | i | l | r | t",
+  "context_block": "Candidate family: True_\nShort description: Student reasoning appears consistent with the misconception 'Duplication'.\nConcept tags: none\nCognitive roots: none\nPrerequisite concepts: none\nMatched trigger patterns: its 2x5\nMatched concept terms: none\nOntology support score: 0.275\nFormal counterexample: Provide a minimal worked example that shows the intended rule and contrasts it with the mistaken rule.\nRemediation hint: Ask the student to restate the rule in words and test it on a simple counterexample.\nObserved example evidence:\n- as you just multiply across and 5 times 2 is 10 and 5 times 3 is 15\n- because u have to times the numerator by the whole number and that would have given you 10/15 and you can make it a mixed number\nSubgraph size: 4 nodes, 6 edges, density=1.000\nSubgraph edges:\n- True_Neither:nan <-> False_Neither:nan via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (a, n, s)\n- True_Neither:nan <-> True_Misconception:Duplication via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, u, m)\n- True_Neither:nan <-> False_Misconception:Wrong_Operation via r, e, l, a, t, e, d, _, t, r, i, g, g, e, r (n, u, m)\nRelated misconceptions:\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r,  , |,  , t, i, m, e, s)\n- Wrong_Operation (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r,  , |,  , t, i, m, e, s)\n- nan (r, e, l, a, t, e, d, _, t, r, i, g, g, e, r; n, u, m, b, e, r,  , |,  , t, i, m, e, s)",
+  "raw_response": "{\"misconception_id\": \"True_Misconception:Duplication\", \"affinity_score\": 1.0, \"confidence\": 0.9912, \"reasoning_short\": \"Evidence aligns with Duplication.\", \"evidence_spans\": [\"its 2x5\"]}",
+  "prompt_type": "knowledge_guided",
+  "scoring_backend": "mock"
+}
