@@ -64,9 +64,6 @@ function PredictionRanker({ predictions, rankings, onChange, disabled }) {
                     className="confidence-fill"
                     style={{ width: `${(pred.confidence * 100).toFixed(0)}%` }}
                   />
-                  <span className="confidence-text">
-                    {(pred.confidence * 100).toFixed(1)}%
-                  </span>
                 </div>
               </div>
               <div className="rank-selector">

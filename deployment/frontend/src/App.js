@@ -54,7 +54,7 @@ function AppLayout({ children }) {
         <div className="footer-content">
           <div className="footer-brand">
             <BrandMark className="footer-brand-mark" />
-            <span>MAP Student Practice</span>
+            <span>Math Practice</span>
           </div>
           <div className="footer-info">
             <span>MCQ + explanation + misconception feedback</span>

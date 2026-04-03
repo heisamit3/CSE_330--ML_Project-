@@ -32,7 +32,9 @@ function Navbar({ theme, onToggleTheme, user, profile, onSignOut }) {
           </div>
           <div className="brand-text">
             <span className="brand-name">MAP</span>
-            <span className="brand-sub">{profile?.role === 'teacher' ? 'Teacher' : 'Student'} Practice</span>
+            <span className="brand-sub">
+              {profile?.role === 'teacher' ? 'Teacher Dashboard' : 'Math Practice'}
+            </span>
           </div>
         </Link>
 

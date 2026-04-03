@@ -443,7 +443,6 @@ Write:
 - 1-2 lines: what the student seems to think
 - 1 line: misconception in simple words
 - 4-7 short steps: correct logic
-- 1 line: self-check question
 Keep it concise and encouraging.
 """
             feedback = self._llm_generate(prompt, MAX_NEW_TOKENS)
@@ -476,7 +475,6 @@ Keep it concise and encouraging.
                 "Apply it step-by-step.",
                 "Check with a simpler example."
             ])
-            quick_check = card.get("quick_check", "Does your rule still work if the numbers change slightly?")
 
             steps_text = "\n".join(f"{i+1}) {step}" for i, step in enumerate(fix_steps))
 
@@ -488,8 +486,6 @@ What's happening: {definition}
 
 Steps to fix:
 {steps_text}
-
-Self-check: {quick_check}
 """
         else:
             return f"""Teacher Feedback
@@ -501,8 +497,6 @@ Steps to fix:
 2) Write down the correct mathematical rule.
 3) Apply it step-by-step.
 4) Check with a simpler example.
-
-Self-check: Does your rule still work if the numbers change slightly?
 """
 
     def cleanup(self):

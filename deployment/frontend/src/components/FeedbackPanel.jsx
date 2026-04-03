@@ -102,9 +102,6 @@ function FeedbackPanel({ feedback, questionId, onNext }) {
                     style={{ width: `${Math.min(pred.confidence * 100, 100)}%` }}
                   ></div>
                 </div>
-                <div className="prediction-confidence">
-                  {(pred.confidence * 100).toFixed(1)}%
-                </div>
               </div>
             ))}
           </div>
@@ -158,12 +155,6 @@ function FeedbackPanel({ feedback, questionId, onNext }) {
                     <li key={i}>{step}</li>
                   ))}
                 </ol>
-              </div>
-            )}
-            {feedback.misconception_card.quick_check && (
-              <div className="kb-section">
-                <h4><i className="fas fa-question"></i> Self-Check Question</h4>
-                <p className="quick-check">{feedback.misconception_card.quick_check}</p>
               </div>
             )}
           </div>

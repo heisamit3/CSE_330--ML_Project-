@@ -1,4 +1,4 @@
--- Supabase Schema for MAP Student Practice
+-- Supabase Schema for Math Practice
 -- Run this in Supabase SQL Editor for a FRESH database
 -- https://supabase.com/dashboard/project/YOUR_PROJECT/sql
 
